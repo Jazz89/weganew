@@ -1,5 +1,5 @@
 <?php
- 
+
   $megamenu = $helper->renderModule('pavmegamenu');
   if( isset($_COOKIE[$themeName .'_skin']) && $_COOKIE[$themeName .'_skin'] ){
     $skin = trim($_COOKIE[$themeName .'_skin']);
@@ -7,8 +7,8 @@
 ?>
      <!-- menu -->
           <div id="pav-mainnav" class="pav-mainnav"><div class="pav-megamenu">
-          <button data-toggle="offcanvas" class="btn btn-primary canvas-menu hidden-lg hidden-md" type="button"><span class="zmdi zmdi-menu zmdi-hc-fw"></span></button>
-                
+          <!-- <button data-toggle="offcanvas" class="btn btn-primary canvas-menu hidden-lg hidden-md" type="button"><span class="zmdi zmdi-menu zmdi-hc-fw"></span></button> -->
+
           <?php
           /**
           * Main Menu modules: as default if do not put megamenu, the theme will use categories menu for main menu
@@ -41,5 +41,5 @@
           </div>
           </nav>
           <?php } ?>
-          </div></div> 
-        <!-- menu -->  
+          </div></div>
+        <!-- menu -->

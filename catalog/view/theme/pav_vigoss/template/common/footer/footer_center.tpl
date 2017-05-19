@@ -2,15 +2,23 @@
   <div class="container">
     <div class="inside">
        <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <?php if( $content=$helper->getLangConfig('widget_logo_footer') ) {?>
-              <?php echo $content; ?>
-          <?php } ?>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <?php
-            echo $helper->renderModule('pavpopulartags');
-          ?> 
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="panel box-infor">
+ 					  <div class="panel-body">
+              <div id="logo">
+                <p class="logo-text v3">Wega Srebro</p>
+              </div>
+ 					    <hr>
+ 					    <ul class="list-inline social">
+ 					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-facebook"></i></a></li>
+ 					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-twitter"></i></a></li>
+ 					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-google-plus"></i></a></li>
+ 					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-tumblr"></i></a></li>
+ 					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-wifi"></i></a></li>
+ 					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-skype"></i></a></li>
+ 					    </ul>
+ 					  </div>
+ 					</div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 column">
           <div class="panel panel-v1">
@@ -25,7 +33,7 @@
                 <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
               </ul>
             </div>
-          </div>         
+          </div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
           <div class="panel panel-v1">
@@ -41,7 +49,7 @@
                 <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
               </ul>
             </div>
-          </div>      
+          </div>
         </div>
         <div class="col-sm-2 col-md-2 col-sm-6 col-xs-12 column">
              <div class="panel panel-v1">
@@ -57,10 +65,9 @@
                 <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
               </ul>
             </div>
-          </div>            
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-

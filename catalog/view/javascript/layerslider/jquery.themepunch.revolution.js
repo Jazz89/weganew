@@ -340,10 +340,13 @@
 
 									// IF THE ITEM ALREADY IN A RESIZED FORM
 									if (opt.width!=opt.startwidth) {
+										if(opt.width<420){
+												container.height(400);
+										}else{
+											opt.height = Math.round(opt.startheight * (opt.width/opt.startwidth));
+											container.height(opt.height);
 
-										opt.height = Math.round(opt.startheight * (opt.width/opt.startwidth));
-
-										container.height(opt.height);
+										}
 
 									}
 
@@ -460,7 +463,7 @@
 							{scrollTop:(container.offset().top+(container.find('>ul >li').height())-oy)+"px"},{duration:400});
 					})
 				},
-				
+
 		// METHODE PAUSE
 		revredraw: function(oy) {
 					return this.each(function() {
@@ -1246,13 +1249,17 @@
 
 				//opt.height= opt.startheight * opt.bh;
 				opt.height = Math.round(opt.startheight * (opt.width/opt.startwidth));
+				if (opt.height>opt.startheight && opt.autoHeight!="on"){
+					opt.height=opt.startheight;
+				}
 
+				if($(window).width() <= 765){
+					opt.height=500;
+				}
 
-
-
-
-				if (opt.height>opt.startheight && opt.autoHeight!="on") opt.height=opt.startheight;
-
+				if(opt.height < 300){
+					opt.height=300;
+				}
 
 
 				if (opt.fullScreen=="on") {
@@ -3567,9 +3574,9 @@
 						}
 
 					}
-					
-					
-	
+
+
+
 
 
 				////////////////////////
@@ -3655,7 +3662,7 @@
 
 										nextcaption.find('iframe').each(function() {
 												var ifr=jQuery(this);
-												
+
 
 												// START YOUTUBE HANDLING
 												opt.nextslideatend = nextcaption.data('nextslideatend');
@@ -3786,7 +3793,7 @@
 
 
 
-																if (html5vid.closest('.tp-caption').data('forcecover')==1) 
+																if (html5vid.closest('.tp-caption').data('forcecover')==1)
 																	updateHTML5Size(html5vid,opt.container);
 
 
@@ -4886,4 +4893,3 @@ function revslider_showDoubleJqueryError(sliderID) {
 	errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>"
 		jQuery(sliderID).show().html(errorMessage);
 }
-

@@ -1,12 +1,12 @@
 function wpo_play_owl_carousel( owl ){
-  var $ = jQuery; 
+  var $ = jQuery;
   var config = {
       navigation : false, // Show next and prev buttons
       slideSpeed : 300,
       paginationSpeed : 400,
       pagination : $(owl).data( 'pagination' )
-  }; 
-     
+  };
+
   if( $(owl).data('show') == 1 ){
       config.singleItem = true;
   }else {
@@ -15,11 +15,11 @@ function wpo_play_owl_carousel( owl ){
   $(owl).owlCarousel( config );
   $('.left',$(owl).parent()).click(function(){
         owl.trigger('owl.prev');
-        return false; 
+        return false;
   });
   $('.right',$(owl).parent()).click(function(){
       owl.trigger('owl.next');
-      return false; 
+      return false;
   });
 }
 // 1. Jquery Framework ( not edit )
@@ -45,11 +45,11 @@ $(document).ready(function() {
   $(".owl-carousel-play .owl-carousel").each( function(){
     var owl = $(this);
     wpo_play_owl_carousel( owl );
-  }); 
+  });
 
   // Adding the clear Fix
   cols1 = $('#column-right, #column-left').length;
-    
+
   if(cols1 == 2){
     $('#content .product-layout:nth-child(2n+2)').after('<div class="clearfix visible-md visible-sm"></div>');
   }else if(cols1 == 1){
@@ -74,7 +74,7 @@ $(document).ready(function() {
      $(this).removeClass('fa-minus-square').addClass('fa-plus-square');
      $(this).parent().find('.dropdown-menu:first').toggle();
  });
- 
+
   // Offcanvas Search
   $('#offcanvas-search input[name=\'search\']').parent().find('button').on('click', function() {
     url = $('base').attr('href') + 'index.php?route=product/search';
@@ -177,7 +177,7 @@ $(document).ready(function() {
 
   // Quantity Adder at Product page
   $(".quantity-adder .add-action").click(function(){
-    if( $(this).hasClass('add-up') ) {  
+    if( $(this).hasClass('add-up') ) {
         $("[name=quantity]",'.quantity-adder').val( parseInt($("[name=quantity]",'.quantity-adder').val()) + 1 );
     }else {
       if( parseInt($("[name=quantity]",'.quantity-adder').val())  > 1 ) {
@@ -185,13 +185,13 @@ $(document).ready(function() {
       }
     }
   });
-  
+
 }); // end document
 
 
 // 2. Customize other function script
 $(document).ready(function(){
-  
+
   //search
   $('#search input[name=\'search\']').parent().find('button').on('click', function() {
     url = $('base').attr('href') + 'index.php?route=product/search';
@@ -265,9 +265,9 @@ var cart = {
         $('#cart > button').button('reset');
       },
       success: function(json) {
-        
+
         $('#cart-total').html(json['total']);
-        
+
         if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
           location = 'index.php?route=checkout/cart';
         } else {
@@ -345,5 +345,3 @@ var compare = {
 
   }
 }
-
-

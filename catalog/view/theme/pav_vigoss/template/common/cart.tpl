@@ -1,16 +1,15 @@
 <div id="cart" class="clearfix">
-    <div data-toggle="dropdown" data-loading-text="<?php echo $text_loading; ?>" class="dropdown-toggle">      
+    <div data-toggle="dropdown" class="hidden-xs" data-loading-text="<?php echo $text_loading; ?>" class="dropdown-toggle">
       <div class="cart-inner">
         <a href="">
-          <i class="fa fa-shopping-cart pull-left"></i>
-          <div class="pull-left  hidden-xs"> 
-            <div class="wrap-cart">        
-          <span class="text-cart"><?php echo $objlang->get("text_heading_title"); ?></span>
-          </div>
-          <span id="cart-total" class="cart-total radius-x "><?php echo $text_items; ?></span>
-          </div>
+          <img src="image/shopping-cart.png">
         </a>
       </div>
+    </div>
+    <div class="btn-cart hidden-md hidden-lg hidden-sm pull-right">
+      <a href="<?php echo $checkout; ?>">
+        <img src="image/shopping-cart.png">
+      </a>
     </div>
   <ul class="dropdown-menu pull-right">
     <?php if ($products || $vouchers) { ?>

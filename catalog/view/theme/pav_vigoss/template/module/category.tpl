@@ -1,6 +1,6 @@
 <?php $ckey = time().rand(); ?>
 <div class="panel panel-left category">
-  <div class="panel-heading"><h4 class="panel-title"><?php echo $heading_title; ?></h4></div>
+
   <div class="panel-body">
   <div class="tree-menu">
     <ul id="accordion<?php echo $ckey; ?>" class="box-category list-group">
@@ -15,7 +15,7 @@
         <div class="accordion-heading pull-right">
             <span data-toggle="collapse" data-parent="#accordion<?php echo $key.$ckey; ?>" data-target="#collapse_<?php echo $key.$ckey ;?>" class="bg"><i class='zmdi zmdi-chevron-right zmdi-hc-fw'></i></span>
         </div>
-        
+
         <ul id="collapse_<?php echo $key.$ckey ;?>" class="collapse accordion-body <?php if($category['category_id'] == $category_id) echo "in"; ?>">
           <?php foreach ($category['children'] as $child) { ?>
           <li>
@@ -47,4 +47,3 @@
         });
     });
 </script>
-

@@ -1,3 +1,12 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.5
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Czas wygenerowania: 19 Maj 2017, 19:05
+-- Wersja serwera: 5.5.32-cll
+-- Wersja PHP: 5.3.17
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -32,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `oc_address` (
   `custom_field` text NOT NULL,
   PRIMARY KEY (`address_id`),
   KEY `customer_id` (`customer_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
 --
 -- Zrzut danych tabeli `oc_address`
@@ -40,7 +49,30 @@ CREATE TABLE IF NOT EXISTS `oc_address` (
 
 INSERT INTO `oc_address` (`address_id`, `customer_id`, `firstname`, `lastname`, `company`, `address_1`, `address_2`, `city`, `postcode`, `country_id`, `zone_id`, `custom_field`) VALUES
 (1, 1, 'quynh', 'cola', '', 'ha noi', '', 'brainos', 'quynh', 230, 3776, ''),
-(2, 2, 'demo', 'demo', '', 'ha noi', '', 'brainos', 'demo', 230, 3776, '');
+(2, 2, 'demo', 'demo', '', 'ha noi', '', 'brainos', 'demo', 230, 3776, ''),
+(3, 3, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(4, 4, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(5, 5, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(6, 6, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(7, 7, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(8, 8, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(9, 9, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(10, 10, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(11, 11, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(12, 12, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(13, 13, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(14, 14, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(15, 15, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(16, 16, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(17, 17, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(18, 18, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(19, 19, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(20, 20, 'Marek', 'Stz', '', 'adsdasdasdasdasd', '', 'Poznań', '', 170, 2645, ''),
+(21, 21, 'asdasd', 'asdasdas', '', 'sdasdasd', '', 'asdsadasd', '', 170, 2645, ''),
+(22, 22, 'ZXZX', 'zXZX', '', 'asdsdasd', '', 'asdasd', '', 170, 2635, ''),
+(23, 23, 'asdsdfsdf', 'dsfdfsdf', '', 'asdasda', '', 'asdasd', '', 170, 2642, ''),
+(24, 24, 'cvxvxcvv', 'xcvxcv', '', 'asdasdad', '', 'asdasd', '', 166, 2517, ''),
+(25, 25, 'sadasdasd', 'asdasdsada', '', 'asdasdas', '', 'asdasdasd', '', 170, 2635, '');
 
 -- --------------------------------------------------------
 
@@ -248,17 +280,6 @@ INSERT INTO `oc_attribute_description` (`attribute_id`, `language_id`, `name`) V
 (10, 1, 'test 7'),
 (11, 1, 'test 8'),
 (3, 1, 'Clockspeed'),
-(1, 2, 'Description'),
-(2, 2, 'No. of Cores'),
-(4, 2, 'test 1'),
-(5, 2, 'test 2'),
-(6, 2, 'test 3'),
-(7, 2, 'test 4'),
-(8, 2, 'test 5'),
-(9, 2, 'test 6'),
-(10, 2, 'test 7'),
-(11, 2, 'test 8'),
-(3, 2, 'Clockspeed'),
 (1, 3, 'Description'),
 (2, 3, 'No. of Cores'),
 (4, 3, 'test 1'),
@@ -315,10 +336,6 @@ INSERT INTO `oc_attribute_group_description` (`attribute_group_id`, `language_id
 (4, 1, 'Technical'),
 (5, 1, 'Motherboard'),
 (6, 1, 'Processor'),
-(3, 2, 'Memory'),
-(4, 2, 'Technical'),
-(5, 2, 'Motherboard'),
-(6, 2, 'Processor'),
 (3, 3, 'Memory'),
 (4, 3, 'Technical'),
 (5, 3, 'Motherboard'),
@@ -397,9 +414,6 @@ CREATE TABLE IF NOT EXISTS `oc_banner_image_description` (
 INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `banner_id`, `title`) VALUES
 (79, 1, 7, 'iPhone 6'),
 (87, 1, 6, 'HP Banner'),
-(122, 2, 8, 'logo'),
-(87, 2, 6, 'HP Banner'),
-(79, 2, 7, 'iPhone 6'),
 (122, 1, 8, 'logo'),
 (80, 1, 7, 'MacBookAir'),
 (121, 1, 8, 'logo'),
@@ -407,12 +421,6 @@ INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `ba
 (119, 1, 8, 'logo'),
 (118, 1, 8, 'logo'),
 (117, 1, 8, 'logo'),
-(80, 2, 7, 'MacBookAir'),
-(121, 2, 8, 'logo'),
-(120, 2, 8, 'logo'),
-(119, 2, 8, 'logo'),
-(118, 2, 8, 'logo'),
-(117, 2, 8, 'logo'),
 (79, 3, 7, 'iPhone 6'),
 (87, 3, 6, 'HP Banner'),
 (122, 3, 8, 'logo'),
@@ -440,7 +448,7 @@ CREATE TABLE IF NOT EXISTS `oc_cart` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`cart_id`),
   KEY `cart_id` (`customer_id`,`session_id`,`product_id`,`recurring_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 --
 -- Zrzut danych tabeli `oc_cart`
@@ -471,7 +479,7 @@ CREATE TABLE IF NOT EXISTS `oc_category` (
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`category_id`),
   KEY `parent_id` (`parent_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=76 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=101 ;
 
 --
 -- Zrzut danych tabeli `oc_category`
@@ -479,11 +487,11 @@ CREATE TABLE IF NOT EXISTS `oc_category` (
 
 INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`, `sort_order`, `status`, `date_added`, `date_modified`) VALUES
 (25, '', 0, 1, 1, 3, 1, '2009-01-31 01:04:25', '2016-01-22 16:07:37'),
-(27, '', 20, 0, 0, 2, 1, '2009-01-31 01:55:34', '2016-01-22 16:09:00'),
-(20, '', 0, 1, 1, 1, 1, '2009-01-05 21:49:43', '2016-01-22 16:08:27'),
+(82, '', 77, 0, 1, 0, 1, '2017-04-21 22:40:18', '2017-04-21 22:40:18'),
+(76, '', 0, 0, 1, 0, 1, '2017-04-08 12:38:11', '2017-04-08 12:38:11'),
 (24, '', 0, 1, 1, 5, 1, '2009-01-20 02:36:26', '2016-01-22 16:17:52'),
 (18, 'catalog/demo/hp_2.jpg', 0, 1, 0, 2, 1, '2009-01-05 21:49:15', '2016-01-22 16:12:54'),
-(17, '', 20, 1, 1, 4, 1, '2009-01-03 21:08:57', '2016-01-22 16:09:49'),
+(80, '', 77, 0, 1, 0, 1, '2017-04-08 12:40:44', '2017-04-08 12:40:44'),
 (28, '', 25, 0, 0, 1, 1, '2009-02-02 13:11:12', '2016-01-22 16:07:03'),
 (26, '', 18, 0, 0, 1, 1, '2009-01-31 01:55:14', '2016-01-22 16:13:28'),
 (29, '', 25, 0, 0, 1, 1, '2009-02-02 13:11:37', '2016-03-15 14:55:00'),
@@ -500,7 +508,7 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 (59, '', 34, 0, 1, 0, 1, '2015-12-23 14:05:07', '2016-01-22 16:16:59'),
 (45, '', 18, 0, 0, 0, 1, '2010-09-24 18:29:16', '2016-01-22 16:14:53'),
 (46, '', 18, 0, 0, 0, 1, '2010-09-24 18:29:31', '2016-01-22 16:13:46'),
-(57, '', 20, 1, 1, 3, 1, '2011-04-26 08:53:16', '2016-01-22 16:10:25'),
+(81, '', 76, 0, 1, 0, 1, '2017-04-21 22:38:49', '2017-04-21 22:38:49'),
 (62, '', 33, 0, 1, 0, 1, '2015-12-29 10:33:38', '2015-12-29 10:33:38'),
 (63, '', 33, 0, 1, 0, 1, '2015-12-29 10:34:02', '2015-12-29 10:34:02'),
 (64, '', 33, 0, 1, 0, 1, '2015-12-29 10:34:34', '2015-12-29 10:34:34'),
@@ -510,11 +518,29 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 (68, '', 66, 0, 1, 0, 1, '2015-12-29 14:34:07', '2016-01-22 16:12:11'),
 (69, '', 66, 0, 1, 0, 1, '2015-12-29 16:47:08', '2015-12-29 16:47:08'),
 (70, '', 66, 0, 1, 0, 1, '2015-12-29 16:47:58', '2016-01-22 16:11:42'),
-(71, '', 20, 0, 1, 0, 1, '2015-12-29 16:53:11', '2016-01-22 16:09:26'),
-(72, '', 20, 0, 1, 0, 1, '2016-01-22 16:23:46', '2016-01-22 16:23:46'),
-(73, '', 20, 0, 1, 0, 1, '2016-01-22 16:25:24', '2016-01-22 16:25:53'),
+(79, '', 77, 0, 1, 0, 1, '2017-04-08 12:40:21', '2017-04-08 12:40:21'),
+(78, '', 0, 0, 1, 0, 1, '2017-04-08 12:39:28', '2017-04-08 12:39:28'),
+(77, '', 76, 0, 1, 0, 1, '2017-04-08 12:38:36', '2017-04-08 12:38:58'),
 (74, '', 33, 0, 1, 0, 1, '2016-01-22 16:27:46', '2016-01-22 16:28:04'),
-(75, '', 33, 0, 1, 0, 1, '2016-01-22 16:28:47', '2016-03-15 15:01:53');
+(75, '', 33, 0, 1, 0, 1, '2016-01-22 16:28:47', '2016-03-15 15:01:53'),
+(83, '', 81, 0, 1, 0, 1, '2017-04-21 22:41:59', '2017-04-21 22:41:59'),
+(84, '', 81, 0, 1, 0, 1, '2017-04-21 22:43:00', '2017-04-21 22:43:00'),
+(85, '', 81, 0, 1, 0, 1, '2017-04-21 22:43:48', '2017-04-21 22:43:48'),
+(86, '', 81, 0, 1, 0, 1, '2017-04-21 22:44:37', '2017-04-21 22:44:37'),
+(87, '', 77, 0, 1, 0, 1, '2017-04-21 22:45:10', '2017-04-21 22:45:10'),
+(88, '', 0, 0, 1, 0, 1, '2017-04-21 22:46:44', '2017-04-21 22:46:44'),
+(89, '', 88, 0, 1, 0, 1, '2017-04-21 22:47:21', '2017-04-21 22:47:21'),
+(90, '', 88, 0, 1, 0, 1, '2017-04-21 22:51:07', '2017-04-21 22:51:07'),
+(91, '', 0, 0, 1, 0, 1, '2017-04-21 22:52:06', '2017-04-21 22:52:06'),
+(92, '', 91, 0, 1, 0, 1, '2017-04-21 22:53:22', '2017-04-21 22:53:22'),
+(93, '', 91, 0, 1, 0, 1, '2017-04-21 22:54:42', '2017-04-21 22:54:42'),
+(94, '', 91, 0, 1, 0, 1, '2017-04-21 22:55:28', '2017-04-21 22:55:28'),
+(95, '', 91, 0, 1, 0, 1, '2017-04-21 22:55:59', '2017-04-21 22:55:59'),
+(96, '', 91, 0, 1, 0, 1, '2017-04-21 22:57:00', '2017-04-21 22:57:00'),
+(97, '', 91, 0, 1, 0, 1, '2017-04-21 22:57:48', '2017-04-21 22:57:48'),
+(98, '', 0, 0, 1, 0, 1, '2017-04-22 01:34:37', '2017-04-22 01:34:37'),
+(99, '', 0, 0, 1, 0, 1, '2017-04-22 01:34:56', '2017-04-22 01:34:56'),
+(100, '', 0, 0, 1, 0, 1, '2017-04-22 01:35:50', '2017-04-22 01:35:50');
 
 -- --------------------------------------------------------
 
@@ -539,80 +565,75 @@ CREATE TABLE IF NOT EXISTS `oc_category_description` (
 --
 
 INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `description`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(20, 2, 'Accessories', '&lt;div&gt;&lt;/div&gt;', 'Accessories', 'Example of category description', ''),
 (38, 1, 'Clothing', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Clothing', '', ''),
 (36, 1, 'Rings', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Rings', '', ''),
 (26, 1, 'Men''s Watches', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Men''s Watches', '', ''),
-(26, 2, 'Men''s Watches', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Men''s Watches', '', ''),
-(59, 2, 'Bags', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Bags', '', ''),
-(18, 2, 'Watches', '&lt;p&gt;\r\n Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\r\n', 'Watches', '', ''),
 (59, 1, 'Bags', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Bags', '', ''),
 (60, 1, 'Shoes', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Shoes', '', ''),
-(60, 2, 'Shoes', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Shoes', '', ''),
-(24, 2, 'Bags', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Bags', '', ''),
 (61, 1, 'Multifunctions', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Multifunctions', '', ''),
 (28, 1, 'Brooches', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Brooches', '', ''),
 (33, 1, 'Jewelry', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Jewelry', '', ''),
 (32, 1, 'Charms', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Charms', '', ''),
 (31, 1, 'Earrings', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Earrings', '', ''),
 (29, 1, 'Mice and Trackballs', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Mice and Trackballs', '', ''),
-(27, 1, 'Cuff Links', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Cuff Links', '', ''),
-(17, 2, 'Fragrance', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Fragrance', '', ''),
+(100, 3, 'Buciki', '', 'Buciki', '', ''),
+(100, 1, 'Buciki', '', 'Buciki', '', ''),
 (25, 1, 'Collections', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Collections', '', ''),
 (24, 1, 'Bags', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Bags', '', ''),
-(20, 1, 'Accessories', '&lt;div&gt;&lt;/div&gt;', 'Accessories', 'Example of category description', ''),
-(35, 2, 'Bracelets', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Bracelets', '', ''),
-(36, 2, 'Rings', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Rings', '', ''),
-(38, 2, 'Clothing', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Clothing', '', ''),
+(77, 3, 'Męskie', '', 'Męskie', '', ''),
+(77, 1, 'Męskie', '', 'Męskie', '', ''),
+(78, 3, 'Damskie', '', 'Damskie', '', ''),
+(78, 1, 'Damskie', '', 'Damskie', '', ''),
+(79, 3, 'Na sznureczku', '', 'Na sznureczku', '', ''),
+(79, 1, 'Na sznureczku', '', 'Na sznureczku', '', ''),
 (35, 1, 'Bracelets', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Bracelets', '', ''),
-(34, 2, 'New Arrivals', '&lt;p&gt;With the ability to print, copy and scan photos and documents using a single device, you''ll be able to complete office tasks with ease. Plus, print directly from your smartphone or tablet using Apple® AirPrint and HP ePrint.&lt;/p&gt;', 'New Arrivals', '', ''),
 (34, 1, 'New Arrivals', '&lt;p&gt;With the ability to print, copy and scan photos and documents using a single device, you''ll be able to complete office tasks with ease. Plus, print directly from your smartphone or tablet using Apple® AirPrint and HP ePrint.&lt;/p&gt;', 'New Arrivals', '', ''),
 (18, 1, 'Watches', '&lt;p&gt;\r\n Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\r\n', 'Watches', '', ''),
 (45, 1, 'Watchmaking Legacy', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Watchmaking Legacy', '', ''),
 (46, 1, 'Women''s Watches', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Women''s Watches', '', ''),
 (30, 1, 'Watch Service', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Watch Service', '', ''),
-(61, 2, 'Multifunctions', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Multifunctions', '', ''),
 (62, 1, 'Digital camcorders', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Digital camcorders', '', ''),
-(62, 2, 'Digital camcorders', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Digital camcorders', '', ''),
 (63, 1, 'Dash cams', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Dash cams', '', ''),
-(63, 2, 'Dash cams', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Dash cams', '', ''),
 (64, 1, 'Action camcorders', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Action camcorders', '', ''),
-(64, 2, 'Action camcorders', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Action camcorders', '', ''),
 (65, 1, 'Drones', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Drones', '', ''),
-(65, 2, 'Drones', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Drones', '', ''),
-(66, 2, 'Engagement', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Engagement', '', ''),
 (66, 1, 'Engagement', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Engagement', '', ''),
-(67, 2, 'Women''s Wedding', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Women''s Wedding', '', ''),
 (67, 1, 'Women''s Wedding', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Women''s Wedding', '', ''),
 (68, 1, 'Consult A Tiffany ', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Consult A Tiffany ', '', ''),
 (69, 1, 'Data Storage', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Data Storage', '', ''),
-(69, 2, 'Data Storage', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Data Storage', '', ''),
-(70, 2, 'Browse Tiffany', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Browse Tiffany', '', ''),
 (70, 1, 'Browse Tiffany', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Browse Tiffany', '', ''),
-(17, 1, 'Fragrance', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Fragrance', '', ''),
-(57, 1, 'Silver Accessories', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Silver Accessories', '', ''),
-(71, 2, 'Sunglasses', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Sunglasses', '', ''),
-(71, 1, 'Sunglasses', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Sunglasses', '', ''),
-(33, 2, 'Jewelry', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Jewelry', '', ''),
-(31, 2, 'Earrings', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Earrings', '', ''),
-(32, 2, 'Charms', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Charms', '', ''),
-(28, 2, 'Brooches', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Brooches', '', ''),
-(25, 2, 'Collections', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Collections', '', ''),
-(27, 2, 'Cuff Links', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Cuff Links', '', ''),
-(57, 2, 'Silver Accessories', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Silver Accessories', '', ''),
-(68, 2, 'Consult A Tiffany ', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Consult A Tiffany ', '', ''),
-(46, 2, 'Women''s Watches', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Women''s Watches', '', ''),
-(30, 2, 'Watch Service', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Watch Service', '', ''),
-(45, 2, 'Watchmaking Legacy', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Watchmaking Legacy', '', ''),
-(72, 1, 'Writing Instruments', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Writing Instruments', '', ''),
-(72, 2, 'Writing Instruments', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Writing Instruments', '', ''),
-(73, 2, 'Tights &amp; Socks', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Tights &amp; Socks', '', ''),
-(73, 1, 'Tights &amp; Socks', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Tights &amp; Socks', '', ''),
-(74, 2, 'Necklaces', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Necklaces', '', ''),
+(97, 3, 'Linka - Snake', '', 'Linka - Snake', '', ''),
+(97, 1, 'Snake', '', 'Snake', '', ''),
+(98, 3, 'Smoczki', '', 'Smoczki', '', ''),
+(98, 1, 'Smoczki', '', 'Smoczki', '', ''),
+(99, 3, 'Łyżeczki', '', 'Łyżeczki', '', ''),
+(86, 1, 'Silver', '', 'Silver', '', ''),
+(87, 3, 'Srebro', '', 'Srebro', '', ''),
+(87, 1, 'Silver', '', 'Silver', '', ''),
+(88, 3, 'Kolczyki', '', 'Kolczyki', '', ''),
+(88, 1, 'Earrings', '', 'Earrings', '', ''),
+(89, 3, 'Srebro', '', 'Srebro', '', ''),
+(89, 1, 'Silver', '', 'Silver', '', ''),
+(90, 3, 'Cyrkonie', '', 'Cyrkonie', '', ''),
+(90, 1, 'Zircons', '', 'Zircons', '', ''),
+(91, 3, 'Łańcuszki', '', 'Łańcuszki ', '', ''),
+(91, 1, 'Chains', '', 'Chains', '', ''),
+(92, 3, 'Pozłacane', '', 'Pozłacane', '', ''),
+(92, 1, 'Gold plating', '', 'Gold plating', '', ''),
+(93, 3, 'Srebrne', '', 'Srebrne', '', ''),
+(93, 1, 'Silver', '', 'Silver', '', ''),
+(94, 3, 'Figaro', '', 'Figaro', '', ''),
+(94, 1, 'Figaro', '', 'Figaro', '', ''),
+(95, 3, 'Singapur', '', 'Singapur', '', ''),
+(83, 1, 'On a string', '', 'On a string', '', ''),
+(84, 3, 'Kamień naturalny', '', 'Kamień naturalny', '', ''),
+(84, 1, 'Natural stone', '', 'Natural stone', '', ''),
+(85, 3, 'Cyrkonie', '', 'Cyrkonie', '', ''),
+(85, 1, 'Zircons', '', 'Zircons', '', ''),
+(81, 3, 'Damskie', '', 'Damskie', '', ''),
+(81, 1, 'Woman', '', 'Woman', '', ''),
+(82, 3, 'Skóra', '', 'Skóra', '', ''),
 (74, 1, 'Necklaces', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Necklaces', '', ''),
-(75, 2, 'Bracelets', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Bracelets', '', ''),
 (75, 1, 'Bracelets', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Bracelets', '', ''),
-(29, 2, 'Mice and Trackballs', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Mice and Trackballs', '', ''),
 (38, 3, 'Clothing', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Clothing', '', ''),
 (36, 3, 'Rings', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Rings', '', ''),
 (26, 3, 'Men''s Watches', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Men''s Watches', '', ''),
@@ -624,10 +645,11 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 (32, 3, 'Charms', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Charms', '', ''),
 (31, 3, 'Earrings', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Earrings', '', ''),
 (29, 3, 'Mice and Trackballs', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Mice and Trackballs', '', ''),
-(27, 3, 'Cuff Links', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Cuff Links', '', ''),
+(99, 1, 'Spoons', '', 'Spoons', '', ''),
 (25, 3, 'Collections', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Collections', '', ''),
 (24, 3, 'Bags', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Bags', '', ''),
-(20, 3, 'Accessories', '&lt;div&gt;&lt;/div&gt;', 'Accessories', 'Example of category description', ''),
+(76, 3, 'Bransoletki', '', 'Bransoletki', '', ''),
+(76, 1, 'Bransoletki', '', 'Bransoletki', '', ''),
 (35, 3, 'Bracelets', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Bracelets', '', ''),
 (34, 3, 'New Arrivals', '&lt;p&gt;With the ability to print, copy and scan photos and documents using a single device, you''ll be able to complete office tasks with ease. Plus, print directly from your smartphone or tablet using Apple® AirPrint and HP ePrint.&lt;/p&gt;', 'New Arrivals', '', ''),
 (18, 3, 'Watches', '&lt;p&gt;\r\n Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\r\n', 'Watches', '', ''),
@@ -643,11 +665,14 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 (68, 3, 'Consult A Tiffany ', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Consult A Tiffany ', '', ''),
 (69, 3, 'Data Storage', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Data Storage', '', ''),
 (70, 3, 'Browse Tiffany', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Browse Tiffany', '', ''),
-(17, 3, 'Fragrance', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Fragrance', '', ''),
-(57, 3, 'Silver Accessories', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Silver Accessories', '', ''),
-(71, 3, 'Sunglasses', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Sunglasses', '', ''),
-(72, 3, 'Writing Instruments', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Writing Instruments', '', ''),
-(73, 3, 'Tights &amp; Socks', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Tights &amp; Socks', '', ''),
+(95, 1, 'Singapur', '', 'Singapur', '', ''),
+(96, 3, 'Kulka', '', 'Kulka', '', ''),
+(96, 1, 'Ball', '', 'Ball', '', ''),
+(86, 3, 'Srebro', '', 'Srebro', '', ''),
+(82, 1, 'Leather', '', 'Leather', '', ''),
+(83, 3, 'Na sznureczku', '', 'Na sznureczku', '', ''),
+(80, 3, 'Kauczuk', '', 'Kauczuk', '', ''),
+(80, 1, 'Kauczuk', '', 'Kauczuk', '', ''),
 (74, 3, 'Necklaces', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Necklaces', '', ''),
 (75, 3, 'Bracelets', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Bracelets', '', '');
 
@@ -668,21 +693,6 @@ CREATE TABLE IF NOT EXISTS `oc_category_filter` (
 --
 
 INSERT INTO `oc_category_filter` (`category_id`, `filter_id`) VALUES
-(20, 1),
-(20, 2),
-(20, 3),
-(20, 4),
-(20, 5),
-(20, 6),
-(20, 7),
-(20, 8),
-(20, 9),
-(20, 10),
-(20, 11),
-(20, 12),
-(20, 13),
-(20, 15),
-(20, 16),
 (75, 9),
 (75, 13);
 
@@ -721,9 +731,9 @@ INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 (31, 31, 1),
 (32, 25, 0),
 (32, 32, 1),
-(20, 20, 0),
-(27, 20, 0),
-(27, 27, 1),
+(82, 76, 0),
+(81, 76, 0),
+(81, 81, 1),
 (26, 18, 0),
 (26, 26, 1),
 (24, 24, 0),
@@ -732,7 +742,7 @@ INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 (45, 45, 1),
 (46, 18, 0),
 (46, 46, 1),
-(17, 17, 1),
+(80, 76, 0),
 (33, 33, 0),
 (34, 34, 0),
 (38, 34, 0),
@@ -743,7 +753,7 @@ INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 (60, 34, 0),
 (59, 59, 1),
 (59, 34, 0),
-(57, 57, 1),
+(80, 80, 2),
 (62, 33, 0),
 (62, 62, 1),
 (63, 33, 0),
@@ -761,18 +771,56 @@ INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 (69, 69, 1),
 (70, 66, 0),
 (70, 70, 1),
-(17, 20, 0),
-(57, 20, 0),
-(71, 20, 0),
-(71, 71, 1),
-(72, 20, 0),
-(72, 72, 1),
-(73, 73, 1),
-(73, 20, 0),
+(79, 79, 2),
+(80, 77, 1),
+(79, 76, 0),
+(79, 77, 1),
+(77, 76, 0),
+(78, 78, 0),
+(77, 77, 1),
+(76, 76, 0),
 (74, 74, 1),
 (74, 33, 0),
 (75, 33, 0),
-(75, 75, 1);
+(75, 75, 1),
+(82, 77, 1),
+(82, 82, 2),
+(83, 76, 0),
+(83, 81, 1),
+(83, 83, 2),
+(84, 76, 0),
+(84, 81, 1),
+(84, 84, 2),
+(85, 76, 0),
+(85, 81, 1),
+(85, 85, 2),
+(86, 76, 0),
+(86, 81, 1),
+(86, 86, 2),
+(87, 76, 0),
+(87, 77, 1),
+(87, 87, 2),
+(88, 88, 0),
+(89, 88, 0),
+(89, 89, 1),
+(90, 88, 0),
+(90, 90, 1),
+(91, 91, 0),
+(92, 91, 0),
+(92, 92, 1),
+(93, 91, 0),
+(93, 93, 1),
+(94, 91, 0),
+(94, 94, 1),
+(95, 91, 0),
+(95, 95, 1),
+(96, 91, 0),
+(96, 96, 1),
+(97, 91, 0),
+(97, 97, 1),
+(98, 98, 0),
+(99, 99, 0),
+(100, 100, 0);
 
 -- --------------------------------------------------------
 
@@ -792,7 +840,7 @@ CREATE TABLE IF NOT EXISTS `oc_category_to_layout` (
 --
 
 INSERT INTO `oc_category_to_layout` (`category_id`, `store_id`, `layout_id`) VALUES
-(20, 0, 0),
+(76, 0, 0),
 (35, 0, 0),
 (34, 0, 0),
 (38, 0, 0),
@@ -811,24 +859,42 @@ INSERT INTO `oc_category_to_layout` (`category_id`, `store_id`, `layout_id`) VAL
 (68, 0, 0),
 (69, 0, 0),
 (70, 0, 0),
-(17, 0, 0),
-(57, 0, 0),
-(71, 0, 0),
+(80, 0, 0),
+(81, 0, 0),
+(79, 0, 0),
 (33, 0, 0),
 (31, 0, 0),
 (32, 0, 0),
 (28, 0, 0),
 (25, 0, 0),
-(27, 0, 0),
+(82, 0, 0),
 (18, 0, 0),
 (46, 0, 0),
 (45, 0, 0),
 (24, 0, 0),
-(72, 0, 0),
-(73, 0, 0),
+(78, 0, 0),
+(77, 0, 0),
 (74, 0, 0),
 (75, 0, 0),
-(29, 0, 0);
+(29, 0, 0),
+(83, 0, 0),
+(84, 0, 0),
+(85, 0, 0),
+(86, 0, 0),
+(87, 0, 0),
+(88, 0, 0),
+(89, 0, 0),
+(90, 0, 0),
+(91, 0, 0),
+(92, 0, 0),
+(93, 0, 0),
+(94, 0, 0),
+(95, 0, 0),
+(96, 0, 0),
+(97, 0, 0),
+(98, 0, 0),
+(99, 0, 0),
+(100, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -847,13 +913,10 @@ CREATE TABLE IF NOT EXISTS `oc_category_to_store` (
 --
 
 INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
-(17, 0),
 (18, 0),
-(20, 0),
 (24, 0),
 (25, 0),
 (26, 0),
-(27, 0),
 (28, 0),
 (29, 0),
 (30, 0),
@@ -866,7 +929,6 @@ INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
 (38, 0),
 (45, 0),
 (46, 0),
-(57, 0),
 (59, 0),
 (60, 0),
 (61, 0),
@@ -879,11 +941,33 @@ INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
 (68, 0),
 (69, 0),
 (70, 0),
-(71, 0),
-(72, 0),
-(73, 0),
 (74, 0),
-(75, 0);
+(75, 0),
+(76, 0),
+(77, 0),
+(78, 0),
+(79, 0),
+(80, 0),
+(81, 0),
+(82, 0),
+(83, 0),
+(84, 0),
+(85, 0),
+(86, 0),
+(87, 0),
+(88, 0),
+(89, 0),
+(90, 0),
+(91, 0),
+(92, 0),
+(93, 0),
+(94, 0),
+(95, 0),
+(96, 0),
+(97, 0),
+(98, 0),
+(99, 0),
+(100, 0);
 
 -- --------------------------------------------------------
 
@@ -1252,16 +1336,17 @@ CREATE TABLE IF NOT EXISTS `oc_currency` (
   `status` tinyint(1) NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`currency_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Zrzut danych tabeli `oc_currency`
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(1, 'Pound Sterling', 'GBP', '£', '', '2', 0.80199999, 1, '2017-04-07 06:28:53'),
-(2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2017-04-07 06:30:39'),
-(3, 'Euro', 'EUR', '', '€', '2', 0.93900001, 1, '2017-04-07 06:28:53');
+(1, 'Pound Sterling', 'GBP', '£', '', '2', 0.19890000, 1, '2017-05-10 20:01:49'),
+(2, 'US Dollar', 'USD', '$', '', '2', 0.25740001, 0, '2017-05-10 20:01:49'),
+(3, 'Euro', 'EUR', '', '€', '2', 0.23720001, 1, '2017-05-10 20:01:49'),
+(4, 'Polski Złoty', 'PLN', '', 'zł', '2', 1.00000000, 1, '2017-05-11 00:04:39');
 
 -- --------------------------------------------------------
 
@@ -1293,7 +1378,7 @@ CREATE TABLE IF NOT EXISTS `oc_customer` (
   `code` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
 --
 -- Zrzut danych tabeli `oc_customer`
@@ -1301,7 +1386,30 @@ CREATE TABLE IF NOT EXISTS `oc_customer` (
 
 INSERT INTO `oc_customer` (`customer_id`, `customer_group_id`, `store_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `password`, `salt`, `cart`, `wishlist`, `newsletter`, `address_id`, `custom_field`, `ip`, `status`, `approved`, `safe`, `token`, `code`, `date_added`) VALUES
 (1, 1, 0, 'quynh', 'cola', 'dothiquynh94@gmail.com', '1234567890', '', 'f5e9c80c1d1ea697195bd9f018d73f0885a7d5d4', '4C546aWsK', NULL, NULL, 0, 1, '', '::1', 1, 1, 0, '', '', '2016-03-22 17:21:27'),
-(2, 1, 0, 'demo', 'demo', 'demo@gmail.com', '0123456789', '', '29b093320363245d52dd7acc19463fa70e123422', 'zqiWCvehL', NULL, NULL, 0, 2, '', '::1', 1, 1, 0, '', '', '2016-03-30 10:30:39');
+(2, 1, 0, 'demo', 'demo', 'demo@gmail.com', '0123456789', '', '29b093320363245d52dd7acc19463fa70e123422', 'zqiWCvehL', NULL, NULL, 0, 2, '', '::1', 1, 1, 0, '', '', '2016-03-30 10:30:39'),
+(3, 1, 0, 'Marek', 'Stz', 'marek.styzinski@gmail.com', '5555555555', '', '7653f4f2fbb12795f35dca2d2c5d155461eea643', 'FQovtE9YZ', NULL, NULL, 0, 3, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 22:08:38'),
+(4, 1, 0, 'Marek', 'Stz', 'zep34264@diwaq.com', '5555555555', '', '5a3833f9e5d842d3228e71d404ae44bac5e0067d', '9Xwz04BmK', NULL, NULL, 0, 4, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 22:10:18'),
+(5, 1, 0, 'Marek', 'Stz', 'hxx51211@diwaq.com', '5555555555', '', 'f9b9540a34dc359d4fdcc19e7d9023435804397e', 'NnUy8sVSj', NULL, NULL, 0, 5, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 22:11:57'),
+(6, 1, 0, 'Marek', 'Stz', 'mvl75271@diwaq.com', '5555555555', '', '61f2cc7923075ee5c2ed128c1bf2c587463632ee', 'dRetGTgrh', NULL, NULL, 0, 6, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 22:14:42'),
+(7, 1, 0, 'Marek', 'Stz', 'wsa04396@diwaq.com', '5555555555', '', '412291e0f6e56b6522f420b9e94a5df7d8f674d9', 'ZqeOFXJ9v', NULL, NULL, 0, 7, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 22:18:30'),
+(8, 1, 0, 'Marek', 'Stz', 'otl97240@diwaq.com', '5555555555', '', '17da020a8c0c23b35abdc7065972041304df554d', 'Q36dwVGvy', NULL, NULL, 0, 8, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 22:20:02'),
+(9, 1, 0, 'Marek', 'Stz', 'rng58132@diwaq.com', '5555555555', '', '1b5be93efed966caa840128735e78ac19fe7b25e', 'sem6anxFk', NULL, NULL, 0, 9, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 22:24:56'),
+(10, 1, 0, 'Marek', 'Stz', 'wwm69440@diwaq.com', '5555555555', '', '4fa31b88b042210d64b6f7fe067bd8258f219e87', 'yBjrQVptE', NULL, NULL, 0, 10, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 22:54:15'),
+(11, 1, 0, 'Marek', 'Stz', 'pla39237@diwaq.com', '5555555555', '', '826f27fde0059b1d0092c5639f9648f79ed0a987', 'RZEVjRsne', NULL, NULL, 0, 11, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 22:56:16'),
+(12, 1, 0, 'Marek', 'Stz', 'cre19057@diwaq.com', '5555555555', '', '3bc951bfed6f9b7dad0b4657cfce809bbb1c7de2', 'xtBilKEX0', NULL, NULL, 0, 12, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 22:57:29'),
+(13, 1, 0, 'Marek', 'Stz', 'bur27613@diwaq.com', '5555555555', '', '6088afb86d00258b1084cbadd5120433771b6555', 'YlvzIAFjp', NULL, NULL, 0, 13, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 23:04:23'),
+(14, 1, 0, 'Marek', 'Stz', 'aft26366@diwaq.com', '5555555555', '', '46e41865549a18baf539a90f6a5f10270e72cf42', 'PGkVKm9RC', NULL, NULL, 0, 14, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 23:06:31'),
+(15, 1, 0, 'Marek', 'Stz', 'jbv77216@diwaq.com', '5555555555', '', '2b8831c93eab3c628e048d4e3eb2077e922376de', 'jkgSh1OTd', NULL, NULL, 0, 15, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 23:07:57'),
+(16, 1, 0, 'Marek', 'Stz', 'yyj67929@diwaq.com', '5555555555', '', '2ab18f7b6931ad7bdb3f69bd2ca5f8c0df8af358', 'tDxnB2FsD', NULL, NULL, 0, 16, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 23:13:38'),
+(17, 1, 0, 'Marek', 'Stz', 'nnl32253@diwaq.com', '5555555555', '', '66d1a2d2a78af3d348ad319e91be391b49d65d3b', 'Z2UQGvzje', NULL, NULL, 0, 17, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 23:19:56'),
+(18, 1, 0, 'Marek', 'Stz', 'cnj43029@diwaq.com', '5555555555', '', '63f1b414be2ca0eef3f181c40c923d6b325eca49', 'pi0j05nuQ', NULL, NULL, 0, 18, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 23:24:40'),
+(19, 1, 0, 'Marek', 'Stz', 'khu44687@diwaq.com', '5555555555', '', 'd8b2380c7ee93bdb200840edaf40ada3f85cdb88', 'jwr6NFsOD', NULL, NULL, 0, 19, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 23:41:30'),
+(20, 1, 0, 'Marek', 'Stz', 'jni39895@diwaq.com', '5555555555', '', '87b2d8b9b766878fbd1282aa01fe0bf97107ca80', 'r1U0LxTug', NULL, NULL, 0, 20, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 23:45:41'),
+(21, 1, 0, 'asdasd', 'asdasdas', 'xac60248@diwaq.com', '234234234234', '', 'e2d7178f3714c9c286eb80f1b7a7a7d9e094be0e', 'iga8yoPkN', NULL, NULL, 0, 21, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-10 23:51:08'),
+(22, 1, 0, 'ZXZX', 'zXZX', 'qch57811@diwaq.com', '342424', '', '7b26622eff041708e6b46841ba62698a207fef18', '0IwRXwLJs', NULL, NULL, 0, 22, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-11 00:02:23'),
+(23, 1, 0, 'asdsdfsdf', 'dsfdfsdf', 'whu50514@diwaq.com', '3432434', '', 'cb2ccb1a4ecc97183f35bf5adffc320f27c77de8', 'Et3sNggRD', NULL, NULL, 0, 23, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-11 00:13:31'),
+(24, 1, 0, 'cvxvxcvv', 'xcvxcv', 'ptg71031@diwaq.com', '213123123', '', 'f65a612511e2cb6d3427f90ed3c4a6919b528763', 'lg7K0oB88', NULL, NULL, 0, 24, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-11 00:15:26'),
+(25, 1, 0, 'sadasdasd', 'asdasdsada', 'rli51135@diwaq.com', '43543553', '', '4f3cda5059d179dd035415ed4cfe56e39021c922', 'Rfc03qKXO', NULL, NULL, 0, 25, '', '178.37.161.126', 1, 1, 0, '', '', '2017-05-11 00:22:48');
 
 -- --------------------------------------------------------
 
@@ -1317,7 +1425,7 @@ CREATE TABLE IF NOT EXISTS `oc_customer_activity` (
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_activity_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- Zrzut danych tabeli `oc_customer_activity`
@@ -1329,7 +1437,13 @@ INSERT INTO `oc_customer_activity` (`customer_activity_id`, `customer_id`, `key`
 (3, 1, 'order_account', '{"customer_id":"1","name":"quynh cola","order_id":5}', '::1', '2016-03-23 10:36:23'),
 (4, 2, 'register', '{"customer_id":2,"name":"demo demo"}', '::1', '2016-03-30 10:30:40'),
 (5, 2, 'login', '{"customer_id":"2","name":"demo demo"}', '::1', '2016-03-30 10:31:23'),
-(6, 2, 'order_account', '{"customer_id":"2","name":"demo demo","order_id":6}', '::1', '2016-03-30 10:35:17');
+(6, 2, 'order_account', '{"customer_id":"2","name":"demo demo","order_id":6}', '::1', '2016-03-30 10:35:17'),
+(7, 20, 'register', '{"customer_id":20,"name":"Marek Stz"}', '178.37.161.126', '2017-05-10 23:45:43'),
+(8, 21, 'register', '{"customer_id":21,"name":"asdasd asdasdas"}', '178.37.161.126', '2017-05-10 23:51:10'),
+(9, 22, 'register', '{"customer_id":22,"name":"ZXZX zXZX"}', '178.37.161.126', '2017-05-11 00:02:25'),
+(10, 23, 'register', '{"customer_id":23,"name":"asdsdfsdf dsfdfsdf"}', '178.37.161.126', '2017-05-11 00:13:32'),
+(11, 24, 'register', '{"customer_id":24,"name":"cvxvxcvv xcvxcv"}', '178.37.161.126', '2017-05-11 00:15:27'),
+(12, 25, 'register', '{"customer_id":25,"name":"sadasdasd asdasdsada"}', '178.37.161.126', '2017-05-11 00:22:50');
 
 -- --------------------------------------------------------
 
@@ -1400,7 +1514,7 @@ CREATE TABLE IF NOT EXISTS `oc_customer_ip` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_ip_id`),
   KEY `ip` (`ip`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Zrzut danych tabeli `oc_customer_ip`
@@ -1408,7 +1522,13 @@ CREATE TABLE IF NOT EXISTS `oc_customer_ip` (
 
 INSERT INTO `oc_customer_ip` (`customer_ip_id`, `customer_id`, `ip`, `date_added`) VALUES
 (1, 1, '::1', '2016-03-22 17:21:30'),
-(2, 2, '::1', '2016-03-30 10:30:40');
+(2, 2, '::1', '2016-03-30 10:30:40'),
+(3, 20, '178.37.161.126', '2017-05-10 23:45:43'),
+(4, 21, '178.37.161.126', '2017-05-10 23:51:10'),
+(5, 22, '178.37.161.126', '2017-05-11 00:02:25'),
+(6, 23, '178.37.161.126', '2017-05-11 00:13:32'),
+(7, 24, '178.37.161.126', '2017-05-11 00:15:27'),
+(8, 25, '178.37.161.126', '2017-05-11 00:22:50');
 
 -- --------------------------------------------------------
 
@@ -1768,7 +1888,7 @@ CREATE TABLE IF NOT EXISTS `oc_information` (
   `sort_order` int(3) NOT NULL DEFAULT '0',
   `status` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`information_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Zrzut danych tabeli `oc_information`
@@ -1778,7 +1898,8 @@ INSERT INTO `oc_information` (`information_id`, `bottom`, `sort_order`, `status`
 (3, 1, 3, 1),
 (4, 1, 1, 1),
 (5, 1, 4, 1),
-(6, 1, 2, 1);
+(6, 1, 2, 1),
+(8, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -1802,18 +1923,16 @@ CREATE TABLE IF NOT EXISTS `oc_information_description` (
 --
 
 INSERT INTO `oc_information_description` (`information_id`, `language_id`, `title`, `description`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(4, 2, 'حول بنا', '&lt;p&gt;&lt;span id=&quot;result_box&quot; class=&quot;short_text&quot; lang=&quot;ar&quot;&gt;&lt;span&gt;حول&lt;/span&gt; &lt;span class=&quot;&quot;&gt;بنا&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'حول بنا', '', ''),
-(6, 2, 'معلومات التوصيل', '&lt;p&gt;&lt;span id=&quot;result_box&quot; class=&quot;short_text&quot; lang=&quot;ar&quot;&gt;&lt;span class=&quot;&quot;&gt;معلومات التوصيل&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'معلومات التوصيل', '', ''),
-(3, 2, 'سياسة الخصوصية', '&lt;p&gt;&lt;span id=&quot;result_box&quot; class=&quot;short_text&quot; lang=&quot;ar&quot;&gt;&lt;span&gt;سياسة&lt;/span&gt; &lt;span class=&quot;&quot;&gt;الخصوصية&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'سياسة الخصوصية', '', ''),
-(5, 2, 'شروط و أحكام', '&lt;p&gt;&lt;span id=&quot;result_box&quot; class=&quot;short_text&quot; lang=&quot;ar&quot;&gt;&lt;span class=&quot;&quot;&gt;شروط و أحكام&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'شروط و أحكام', '', ''),
-(4, 1, 'About Us', '&lt;p&gt;\r\n About Us&lt;/p&gt;\r\n', 'About Us', '', ''),
 (6, 1, 'Delivery Information', '&lt;p&gt;\r\n Delivery Information&lt;/p&gt;\r\n', 'Delivery Information', '', ''),
 (3, 1, 'Privacy Policy', '&lt;p&gt;\r\n Privacy Policy&lt;/p&gt;\r\n', 'Privacy Policy', '', ''),
 (5, 1, 'Terms &amp; Conditions', '&lt;p&gt;\r\n Terms &amp;amp; Conditions&lt;/p&gt;\r\n', 'Terms &amp; Conditions', '', ''),
-(4, 3, 'About Us', '&lt;p&gt;\r\n About Us&lt;/p&gt;\r\n', 'About Us', '', ''),
-(6, 3, 'Delivery Information', '&lt;p&gt;\r\n Delivery Information&lt;/p&gt;\r\n', 'Delivery Information', '', ''),
-(3, 3, 'Privacy Policy', '&lt;p&gt;\r\n Privacy Policy&lt;/p&gt;\r\n', 'Privacy Policy', '', ''),
-(5, 3, 'Terms &amp; Conditions', '&lt;p&gt;\r\n Terms &amp;amp; Conditions&lt;/p&gt;\r\n', 'Terms &amp; Conditions', '', '');
+(6, 3, 'Dostawa', '&lt;p&gt;\r\n Delivery Information&lt;/p&gt;\r\n', 'Dostawa', '', ''),
+(3, 3, 'Polityka prywatności', '&lt;p&gt;\r\n Privacy Policy&lt;/p&gt;\r\n', 'Polityka prywatności', '', ''),
+(5, 3, 'Regulamin sklepu', '&lt;p&gt;\r\n Regulamin sklepu&lt;/p&gt;\r\n', 'Regulamin sklepu', '', ''),
+(4, 1, 'About Us', '&lt;p&gt;\r\n About Us&lt;/p&gt;\r\n', 'About Us', '', ''),
+(4, 3, 'O Nas', '&lt;div class=&quot;pav-container  &quot;&gt;\r\n			&lt;div class=&quot;pav-inner container&quot;&gt;\r\n		 \r\n				    &lt;div class=&quot;row row-level-1 &quot;&gt;\r\n				    	&lt;div class=&quot;row-inner clearfix&quot;&gt;\r\n					        					            &lt;div class=&quot;col-lg-12 col-md-12 col-sm-12 col-xs-12 &quot;&gt;\r\n					            	&lt;div class=&quot;col-inner &quot;&gt;\r\n\r\n					            		 						                							                     		\r\n&lt;div class=&quot;widget-image banner-3  &quot;&gt;\r\n\r\n	&lt;div class=&quot;custom-v1&quot;&gt;	\r\n				&lt;h3 class=&quot;custom-heading&quot;&gt;O Nas&lt;/h3&gt;\r\n				&lt;div class=&quot;description&quot;&gt;\r\n		 &lt;p class=&quot;MsoNormal&quot; align=&quot;center&quot; style=&quot;text-align: justify;&quot;&gt;&lt;i&gt;&lt;span style=&quot;font-family:&amp;quot;Cambria&amp;quot;,serif;\r\nmso-ascii-theme-font:major-latin;mso-hansi-theme-font:major-latin;background:\r\n#FEFEFE&quot;&gt;Firma Wega od 1998r zajmuję się hurtową sprzedażą biżuterii srebrnej\r\n925 na terenie całego kraju.&amp;nbsp;&lt;/span&gt;&lt;/i&gt;&lt;i&gt;&lt;span style=&quot;font-family:&amp;quot;Cambria&amp;quot;,serif;\r\nmso-ascii-theme-font:major-latin;mso-hansi-theme-font:major-latin;background:\r\n#FEFEFE&quot;&gt;W 2012 roku został otwarty sklep jubilerski, dzięki czemu wyszliśmy z\r\nofertą naszych produktów do klienta indywidualnego. Jako jedyni w Lesznie\r\nposiadamy usługi naprawcze, najnowszą mikrospawarką PUK.&amp;nbsp;W 2016r poszerzyliśmy usługi o Laser\r\nFibrowy, który umożliwia nam znakowanie tworzyw takich jak srebro, złoto oraz\r\nskóra, drewno, plastik, stal, miedź itd.&amp;nbsp;&lt;/span&gt;&lt;/i&gt;&lt;i&gt;&lt;span style=&quot;font-family:&amp;quot;Cambria&amp;quot;,serif;\r\nmso-ascii-theme-font:major-latin;mso-hansi-theme-font:major-latin;background:\r\n#FEFEFE&quot;&gt;Naszą pasją jest biżuteria. Jesteśmy otwarci na wszystkie pomysły i\r\npropozycje. Sumiennie realizujemy wszystkie projekty zlecone przez naszych\r\nklientów.&lt;/span&gt;&lt;/i&gt;&lt;/p&gt;		&lt;/div&gt;\r\n	&lt;/div&gt;	 \r\n&lt;/div&gt;\r\n					                   								                						               \r\n						                					               \r\n					            	&lt;/div&gt;\r\n					        	&lt;/div&gt;\r\n					        					            &lt;div class=&quot;col-lg-4 col-md-4 col-sm-5 col-xs-12 &quot;&gt;\r\n					            	&lt;div class=&quot;col-inner &quot;&gt;\r\n\r\n					            		 						                							                     		&lt;div class=&quot;widget-images panel  &quot;&gt;\r\n		&lt;div class=&quot;widget-inner img-adv box-content clearfix&quot;&gt;\r\n		 &lt;div class=&quot;image-item&quot;&gt;\r\n		 &lt;a href=&quot;&quot;&gt;\r\n		 	&lt;div class=&quot;banner-2-img&quot;&gt;\r\n		 	&lt;img class=&quot;img-responsive&quot; alt=&quot; &quot; src=&quot;http://silverwega.xaa.pl/newwega/image/catalog/baner-img-1.jpg&quot;&gt;\r\n		 	&lt;/div&gt;\r\n		 	&lt;/a&gt;\r\n		 			 	&lt;a href=&quot;http://silverwega.xaa.pl/newwega/image/catalog/baner-img-1.jpg&quot; class=&quot;pts-popup fancybox&quot; title=&quot;Large Image&quot;&gt;&lt;span class=&quot;icon icon-expand&quot;&gt;&lt;/span&gt;&lt;/a&gt;\r\n		 			  \r\n		 &lt;/div&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n					                   								                						               \r\n						                					               \r\n					            	&lt;/div&gt;\r\n					        	&lt;/div&gt;\r\n					        					            &lt;div class=&quot;col-lg-8 col-md-8 col-sm-7 col-xs-12 &quot;&gt;\r\n					            	&lt;div class=&quot;col-inner &quot;&gt;\r\n\r\n					            		 						                							                     		\r\n&lt;div class=&quot;widget-image banner-2  &quot;&gt;\r\n\r\n	&lt;div class=&quot;custom-v1&quot;&gt;	\r\n				&lt;h3 class=&quot;custom-heading&quot;&gt;Smart Laser - znakowanie i grawerowanie&lt;/h3&gt;\r\n				&lt;div class=&quot;description&quot;&gt;\r\n		 &lt;p align=&quot;center&quot; style=&quot;text-align: justify; margin: 0cm 0cm 0.0001pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; vertical-align: baseline;&quot;&gt;&lt;i&gt;&lt;span style=&quot;font-family:\r\n&amp;quot;Cambria&amp;quot;,serif;mso-ascii-theme-font:major-latin;mso-hansi-theme-font:major-latin;\r\nmso-bidi-font-family:Arial&quot;&gt;Seria FN jest przeznaczony do znakowania i\r\ngłębokiego grawerowania. Innowacyjne nanosekundowe źródło laseru o regulowanej\r\nszerokości i częstotliwości impulsu pozwala nam na znakowanie szerokiej gamy\r\nproduktów w bardzo wysokiej jakości. &lt;/span&gt;&lt;/i&gt;&lt;/p&gt;&lt;p align=&quot;center&quot; style=&quot;text-align: justify; margin: 0cm 0cm 0.0001pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; vertical-align: baseline;&quot;&gt;&lt;i&gt;&lt;span style=&quot;font-family:\r\n&amp;quot;Cambria&amp;quot;,serif;mso-ascii-theme-font:major-latin;mso-hansi-theme-font:major-latin;\r\nmso-bidi-font-family:Arial&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/i&gt;&lt;/p&gt;&lt;p align=&quot;center&quot; style=&quot;text-align: justify; margin: 0cm 0cm 0.0001pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; vertical-align: baseline;&quot;&gt;&lt;i&gt;&lt;span style=&quot;font-family:\r\n&amp;quot;Cambria&amp;quot;,serif;mso-ascii-theme-font:major-latin;mso-hansi-theme-font:major-latin;\r\nmso-bidi-font-family:Arial&quot;&gt;Idealny do wyżarzania tzn. do tworzenia\r\nkontrastowych znaków na materiałach metalicznych. Wyżarzanie umożliwia\r\nuzyskanie kontrastowego znaku bez niszczenia powierzchni metalowej. Bez\r\nwchodzenia w głąb metalu. Znakuje szeroką gamę plastików oraz aluminium na\r\nkolor czarny.&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/i&gt;&lt;/p&gt;		&lt;/div&gt;\r\n	&lt;/div&gt;	 \r\n&lt;/div&gt;\r\n					                   								                						               \r\n						                					               \r\n					            	&lt;/div&gt;\r\n					        	&lt;/div&gt;\r\n					        					            &lt;div class=&quot;col-lg-12 col-md-12 col-sm-12 col-xs-12 &quot;&gt;\r\n					            	&lt;div class=&quot;col-inner &quot;&gt;\r\n\r\n					            		 						                							                     		\r\n&lt;div class=&quot;widget-image banner-4  &quot;&gt;\r\n\r\n	&lt;div class=&quot;custom-v1&quot;&gt;	\r\n				&lt;h3 class=&quot;custom-heading&quot;&gt;Naprawa i spawanie biżuterii - PUK 04&lt;/h3&gt;\r\n				&lt;div class=&quot;description&quot;&gt;\r\n		 &lt;p align=&quot;center&quot; style=&quot;text-align: justify; margin: 0cm 0cm 0.0001pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; vertical-align: baseline;&quot;&gt;&lt;i&gt;&lt;span style=&quot;font-family: Cambria, serif; border: 1pt none windowtext; padding: 0cm;&quot;&gt;PUK 04 ze stereomikroskopem Mezz.&amp;nbsp;\r\nJest zaawansowanym technologicznie urządzeniem do impulsowego spawania\r\nmetodą TIG. Łączy metale szlachetne, stal nierdzewną, tytan, stopy cyny nawet\r\nte pokryte powłoką galwaniczną. Urządzenie zaprojektowano z myślą o łączeniu\r\nmetali wszędzie tam, gdzie lutowanie jest utrudnione lub wprost niemożliwe.&lt;/span&gt;&lt;/i&gt;&lt;i&gt;&lt;span style=&quot;font-size:10.0pt;font-family:\r\n&amp;quot;Cambria&amp;quot;,serif;mso-ascii-theme-font:major-latin;mso-hansi-theme-font:major-latin;\r\nmso-bidi-font-family:Arial&quot;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/i&gt;&lt;/p&gt;		&lt;/div&gt;\r\n	&lt;/div&gt;	 \r\n&lt;/div&gt;\r\n					                   								                						               \r\n						                					               \r\n					            	&lt;/div&gt;\r\n					        	&lt;/div&gt;\r\n					        					            &lt;div class=&quot;col-lg-8 col-md-8 col-sm-7 col-xs-12 &quot;&gt;\r\n					            	&lt;div class=&quot;col-inner &quot;&gt;\r\n\r\n					            		 						                							                     		\r\n&lt;div class=&quot;widget-image banner-4  &quot;&gt;\r\n\r\n	&lt;div class=&quot;custom-v1&quot;&gt;	\r\n				&lt;div class=&quot;description&quot;&gt;\r\n		 &lt;p align=&quot;center&quot; style=&quot;text-align: justify; margin: 0cm 0cm 0.0001pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; vertical-align: baseline;&quot;&gt;&lt;i&gt;&lt;span style=&quot;font-family:\r\n&amp;quot;Cambria&amp;quot;,serif;mso-ascii-theme-font:major-latin;mso-hansi-theme-font:major-latin;\r\nmso-bidi-font-family:Arial&quot;&gt;&lt;span style=&quot;border: 1pt none windowtext; padding: 0cm;&quot;&gt;Zaawansowana technologia\r\nspawarek trzeciej generacji sprawia, że spawy są mniej przyciemnione, spójność\r\nspoin jest znacznie lepsza a elektroda wytrzymuje więcej punktów spoinowych, średnio\r\n2000 strzałów. Dwukrotnemu zwiększeniu uległa także szybkość pracy poprzez\r\nzastosowanie bardziej wydajnych transformatorów. &lt;/span&gt;&lt;/span&gt;&lt;/i&gt;&lt;/p&gt;&lt;p align=&quot;center&quot; style=&quot;text-align: justify; margin: 0cm 0cm 0.0001pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; vertical-align: baseline;&quot;&gt;&lt;i&gt;&lt;span style=&quot;font-family:\r\n&amp;quot;Cambria&amp;quot;,serif;mso-ascii-theme-font:major-latin;mso-hansi-theme-font:major-latin;\r\nmso-bidi-font-family:Arial&quot;&gt;&lt;span style=&quot;border: 1pt none windowtext; padding: 0cm;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/i&gt;&lt;/p&gt;&lt;p align=&quot;center&quot; style=&quot;text-align: justify; margin: 0cm 0cm 0.0001pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; vertical-align: baseline;&quot;&gt;&lt;i&gt;&lt;span style=&quot;font-family:\r\n&amp;quot;Cambria&amp;quot;,serif;mso-ascii-theme-font:major-latin;mso-hansi-theme-font:major-latin;\r\nmso-bidi-font-family:Arial&quot;&gt;&lt;span style=&quot;border: 1pt none windowtext; padding: 0cm;&quot;&gt;Zreorganizowano dotychczasowe\r\ni wprowadzono nowe rodzaje impulsów, pozwala to na łączenie elementów tuż obok\r\nkamieni szlachetnych, bursztynu, pereł lub powierzchni emaliowanych bez\r\nniebezpieczeństwa uszkodzenia wrażliwego na ciepło materiału. &lt;/span&gt;&lt;/span&gt;&lt;/i&gt;&lt;/p&gt;&lt;p align=&quot;center&quot; style=&quot;text-align: justify; margin: 0cm 0cm 0.0001pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; vertical-align: baseline;&quot;&gt;&lt;i&gt;&lt;span style=&quot;font-family:\r\n&amp;quot;Cambria&amp;quot;,serif;mso-ascii-theme-font:major-latin;mso-hansi-theme-font:major-latin;\r\nmso-bidi-font-family:Arial&quot;&gt;&lt;span style=&quot;border: 1pt none windowtext; padding: 0cm;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/i&gt;&lt;/p&gt;&lt;p align=&quot;center&quot; style=&quot;text-align: justify; margin: 0cm 0cm 0.0001pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; vertical-align: baseline;&quot;&gt;&lt;i&gt;&lt;span style=&quot;font-family:\r\n&amp;quot;Cambria&amp;quot;,serif;mso-ascii-theme-font:major-latin;mso-hansi-theme-font:major-latin;\r\nmso-bidi-font-family:Arial&quot;&gt;&lt;span style=&quot;border: 1pt none windowtext; padding: 0cm;&quot;&gt;Urządzenie\r\ndysponuje nowym programem tzw. RESISTANCE, dzięki któremu możliwe jest\r\npołączenie dwóch elementów bez użycia elektrody i gazu stykając je tylko ze\r\nsobą wzajemnie. Lutowanie oprawek do okularów to nie lada wyzwanie z maszyną\r\nPUK pomożemy państwu mu sprostać.&lt;/span&gt;&lt;/span&gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;p align=&quot;center&quot; style=&quot;text-align: left; margin: 0cm 0cm 0.0001pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; vertical-align: baseline;&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;		&lt;/div&gt;\r\n	&lt;/div&gt;	 \r\n&lt;/div&gt;\r\n					                   								                						               \r\n						                					               \r\n					            	&lt;/div&gt;\r\n					        	&lt;/div&gt;\r\n					        					            &lt;div class=&quot;col-lg-4 col-md-4 col-sm-5 col-xs-12 &quot;&gt;\r\n					            	&lt;div class=&quot;col-inner &quot;&gt;\r\n\r\n					            		 						                							                     		&lt;div class=&quot;widget-images panel  &quot;&gt;\r\n		&lt;div class=&quot;widget-inner img-adv box-content clearfix&quot;&gt;\r\n		 &lt;div class=&quot;image-item&quot;&gt;\r\n		 &lt;a href=&quot;&quot;&gt;\r\n		 	&lt;div class=&quot;&quot;&gt;\r\n		 	&lt;img class=&quot;img-responsive&quot; alt=&quot; &quot; src=&quot;http://silverwega.xaa.pl/newwega/image/catalog/puk.jpg&quot;&gt;\r\n		 	&lt;/div&gt;\r\n		 	&lt;/a&gt;\r\n		 			 	&lt;a href=&quot;http://silverwega.xaa.pl/newwega/image/catalog/puk.jpg&quot; class=&quot;pts-popup fancybox&quot; title=&quot;Large Image&quot;&gt;&lt;span class=&quot;icon icon-expand&quot;&gt;&lt;/span&gt;&lt;/a&gt;\r\n		 			  \r\n		 &lt;/div&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n					                   								                						               \r\n						                					               \r\n					            	&lt;/div&gt;\r\n					        	&lt;/div&gt;\r\n					        			    	&lt;/div&gt;\r\n				&lt;/div&gt;\r\n		 \r\n		    &lt;/div&gt;\r\n		&lt;/div&gt;', 'About Us', '', ''),
+(8, 3, 'Kontakt', '&lt;p&gt;Kontakt&lt;br&gt;&lt;/p&gt;', 'contact', '', ''),
+(8, 1, 'Contact', '&lt;p&gt;Contact&lt;br&gt;&lt;/p&gt;', 'contact', '', '');
 
 -- --------------------------------------------------------
 
@@ -1836,7 +1955,8 @@ INSERT INTO `oc_information_to_layout` (`information_id`, `store_id`, `layout_id
 (4, 0, 0),
 (6, 0, 0),
 (3, 0, 0),
-(5, 0, 0);
+(5, 0, 0),
+(8, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1858,7 +1978,8 @@ INSERT INTO `oc_information_to_store` (`information_id`, `store_id`) VALUES
 (3, 0),
 (4, 0),
 (5, 0),
-(6, 0);
+(6, 0),
+(8, 0);
 
 -- --------------------------------------------------------
 
@@ -1884,8 +2005,7 @@ CREATE TABLE IF NOT EXISTS `oc_language` (
 --
 
 INSERT INTO `oc_language` (`language_id`, `name`, `code`, `locale`, `image`, `directory`, `sort_order`, `status`) VALUES
-(1, 'English', 'en-gb', 'en_US.UTF-8,en_US,en-gb,english', 'gb.png', 'english', 1, 1),
-(2, 'Arabic', 'arabi', '', '', '', 1, 1),
+(1, 'English', 'en-gb', 'en_US.UTF-8,en_US,en-gb,english', 'gb.png', 'english', 2, 1),
 (3, 'polski', 'pl-PL', '', '', '', 1, 1);
 
 -- --------------------------------------------------------
@@ -1933,7 +2053,7 @@ CREATE TABLE IF NOT EXISTS `oc_layout_module` (
   `position` varchar(14) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`layout_module_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=355 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=360 ;
 
 --
 -- Zrzut danych tabeli `oc_layout_module`
@@ -1952,7 +2072,7 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (347, 6, 'account', 'column_right', 1),
 (148, 2, 'banner.48', 'content_bottom', 1),
 (69, 10, 'affiliate', 'column_right', 1),
-(345, 1, 'pavhomebuilder.33', 'content_top', 0),
+(359, 1, 'pavhomebuilder.33', 'content_top', 0),
 (354, 14, 'pavblogcomment.45', 'column_right', 2),
 (353, 14, 'pavblogcategory.44', 'column_right', 1);
 
@@ -1968,7 +2088,7 @@ CREATE TABLE IF NOT EXISTS `oc_layout_route` (
   `store_id` int(11) NOT NULL,
   `route` varchar(255) NOT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=76 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=81 ;
 
 --
 -- Zrzut danych tabeli `oc_layout_route`
@@ -1978,7 +2098,7 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (72, 6, 0, 'account/%'),
 (17, 10, 0, 'affiliate/%'),
 (44, 3, 0, 'product/category'),
-(70, 1, 0, 'common/home'),
+(80, 1, 0, 'common/home'),
 (20, 2, 0, 'product/product'),
 (24, 11, 0, 'information/information'),
 (23, 7, 0, 'checkout/%'),
@@ -2163,7 +2283,7 @@ CREATE TABLE IF NOT EXISTS `oc_megamenu` (
   `widget_id` int(11) DEFAULT '0',
   `badges` text,
   PRIMARY KEY (`megamenu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=64 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=121 ;
 
 --
 -- Zrzut danych tabeli `oc_megamenu`
@@ -2171,11 +2291,7 @@ CREATE TABLE IF NOT EXISTS `oc_megamenu` (
 
 INSERT INTO `oc_megamenu` (`megamenu_id`, `image`, `parent_id`, `is_group`, `width`, `submenu_width`, `colum_width`, `submenu_colum_width`, `item`, `colums`, `type`, `is_content`, `show_title`, `type_submenu`, `level_depth`, `published`, `store_id`, `position`, `show_sub`, `url`, `target`, `privacy`, `position_type`, `menu_class`, `description`, `content_text`, `submenu_content`, `level`, `left`, `right`, `widget_id`, `badges`) VALUES
 (1, '', 0, 2, '', '', '', '', '', '1', '', 2, 1, '1', 0, 1, 0, 0, 0, '', '', 0, 'top', '', '', '', '', -5, 34, 47, 0, ''),
-(2, '', 1, 0, '', '', '', 'col1=3, col2=3, col3=6', '20', '3', 'category', 0, 1, 'menu', 0, 1, 0, 2, 0, '', '', 0, 'top', '', '', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 0, 0, 0, 1, 'new'),
-(5, '', 1, 0, '', '', '', '', '20', '1', 'category', 0, 1, 'menu', 0, 1, 0, 3, 0, '', '', 0, 'top', 'pav-parrent', '', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 0, 0, 0, 1, ''),
-(7, '', 1, 0, '', '', '', '', '33', '1', 'url', 0, 1, 'menu', 0, 1, 0, 5, 0, '?route=pavdeals/deals', '', 0, 'top', '', '', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 0, 0, 0, 1, ''),
 (8, '', 12, 1, '', '', '', '', '27', '1', 'category', 0, 1, 'menu', 0, 1, 0, 3, 0, '', '', 0, 'top', 'pav-menu-child', '', '', '&lt;p&gt;test&lt;/p&gt;\r\n', 0, 0, 0, 1, ''),
-(9, '', 2, 0, '', '', '', '', '26', '1', 'category', 0, 1, 'menu', 0, 1, 0, 2, 0, '', '', 0, 'top', 'pav-menu-child', '', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 0, 0, 0, 1, ''),
 (10, '', 23, 0, '', '', '', '', '59', '1', 'category', 0, 1, 'menu', 0, 1, 0, 6, 0, '', '', 0, 'top', 'pav-menu-child', '', '', '', 0, 0, 0, 1, ''),
 (11, '', 23, 0, '', '', '', '', '60', '1', 'category', 0, 1, 'menu', 0, 1, 0, 3, 0, '', '', 0, 'top', 'pav-menu-child', '', '', '', 0, 0, 0, 1, ''),
 (12, '', 11, 0, '', '', '', '', '61', '1', 'category', 0, 1, 'menu', 0, 1, 0, 1, 0, '', '', 0, 'top', 'pav-menu-child', '', '', '', 0, 0, 0, 1, ''),
@@ -2183,24 +2299,57 @@ INSERT INTO `oc_megamenu` (`megamenu_id`, `image`, `parent_id`, `is_group`, `wid
 (14, '', 11, 0, '', '', '', '', '63', '1', 'category', 0, 1, 'menu', 0, 1, 0, 2, 0, '', '', 0, 'top', 'pav-menu-child', '', '', '', 0, 0, 0, 1, ''),
 (15, '', 23, 0, '', '', '', '', '64', '1', 'category', 0, 1, 'menu', 0, 1, 0, 4, 0, '', '', 0, 'top', 'pav-menu-child', '', '', '', 0, 0, 0, 1, ''),
 (16, '', 23, 0, '', '', '', '', '65', '1', 'category', 0, 1, 'menu', 0, 1, 0, 5, 0, '', '', 0, 'top', 'pav-menu-child', '', '', '', 0, 0, 0, 1, ''),
-(17, '', 9, 0, '', '', '', '', '66', '1', 'category', 0, 1, 'menu', 0, 1, 0, 1, 0, '', '', 0, 'top', '', '', '', '', 0, 0, 0, 1, ''),
-(18, '', 9, 0, '', '', '', '', '67', '1', 'category', 0, 1, 'menu', 0, 1, 0, 2, 0, '', '', 0, 'top', 'pav-menu-child', '', '', '', 0, 0, 0, 1, ''),
 (19, '', 23, 0, '', '', '', '', '68', '1', 'category', 0, 1, 'menu', 0, 1, 0, 1, 0, '', '', 0, 'top', 'pav-menu-child', '', '', '', 0, 0, 0, 1, ''),
 (20, '', 23, 0, '', '', '', '', '71', '1', 'category', 0, 1, 'menu', 0, 1, 0, 2, 0, '', '', 0, 'top', 'pav-menu-child', '', '', '', 0, 0, 0, 1, ''),
 (21, '', 12, 0, '', '', '', '', '72', '1', 'category', 0, 1, 'menu', 0, 1, 0, 2, 0, '', '', 0, 'top', 'pav-menu-child', '', '', '', 0, 0, 0, 1, ''),
-(22, '', 9, 0, '', '', '', '', '69', '1', 'category', 0, 1, 'menu', 0, 1, 0, 3, 0, '', '', 0, 'top', 'pav-menu-child', '', '', '', 0, 0, 0, 1, ''),
-(23, '', 1, 0, '', '', '', '', '70', '1', 'category', 0, 1, 'menu', 0, 1, 0, 4, 0, '', '', 0, 'top', 'pav-menu-child', '', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 0, 0, 0, 1, 'hot'),
-(24, '', 2, 0, '', '', '', '', '', '1', 'html', 1, 1, 'menu', 0, 1, 0, 1, 0, '', '', 0, 'top', 'pav-menu-child', '', '&lt;div class=&quot;pav-menu-video&quot;&gt;&lt;iframe allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; height=&quot;157&quot; src=&quot;http://www.youtube.com/embed/NBuLeA7nNFk&quot; width=&quot;279&quot;&gt;&lt;/iframe&gt;\r\n&lt;h3&gt;Lorem ipsum dolor sit&lt;/h3&gt;\r\n\r\n&lt;p&gt;Dorem ipsum dolor sit amet consectetur adipiscing elit congue sit amet erat roin tincidunt vehicula lorem in adipiscing urna iaculis vel.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', 0, 0, 0, 1, ''),
-(36, '', 1, 0, '', '', '', '', '45', '1', 'url', 0, 1, 'menu', 0, 1, 0, 6, 0, '?route=pavblog/blogs', '', 0, 'top', '', '', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 0, 0, 0, 1, ''),
+(23, '', 1, 0, '', '', '', '', '70', '1', 'category', 0, 1, 'menu', 0, 0, 0, 5, 0, '', '', 0, 'top', 'pav-menu-child', '', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 0, 0, 0, 1, 'hot'),
 (40, '', 1, 0, '', '', '', '', '', '1', 'url', 0, 1, 'menu', 0, 1, 0, 1, 0, '?route=common/home', '', 0, 'top', 'home', '', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 0, 0, 0, 1, ''),
-(45, '', 1, 0, '', '', '', '', '18', '1', 'category', 0, 1, 'menu', 0, 1, 0, 99, 0, '', '', 0, 'top', '', '', '', '', 0, 0, 0, 1, ''),
-(46, '', 1, 0, '', '', '', '', '24', '1', 'category', 0, 1, 'menu', 0, 1, 0, 99, 0, '', '', 0, 'top', '', '', '', '', 0, 0, 0, 1, ''),
-(48, '', 45, 0, '', '', '', '', '45', '1', 'category', 0, 1, 'menu', 0, 1, 0, 99, 0, '', '', 0, 'top', '', '', '', '', 0, 0, 0, 1, ''),
-(49, '', 45, 0, '', '', '', '', '30', '1', 'category', 0, 1, 'menu', 0, 1, 0, 99, 0, '', '', 0, 'top', '', '', '', '', 0, 0, 0, 1, ''),
-(50, '', 2, 0, '', '', '', '', '17', '1', 'category', 0, 1, 'menu', 0, 1, 0, 99, 0, '', '', 0, 'top', '', '', '', '', 0, 0, 0, 1, ''),
-(51, '', 2, 0, '', '', '', '', '73', '1', 'category', 0, 1, 'menu', 0, 1, 0, 99, 0, '', '', 0, 'top', '', '', '', '', 0, 0, 0, 1, ''),
-(52, '', 2, 0, '', '', '', '', '57', '1', 'category', 0, 1, 'menu', 0, 1, 0, 99, 0, '', '', 0, 'top', '', '', '', '', 0, 0, 0, 1, ''),
-(63, '', 1, 0, NULL, NULL, NULL, '', '', '1', 'url', 0, 1, 'menu', 0, 1, 0, 99, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1, '');
+(45, '', 1, 0, '', '', '', '', '18', '1', 'category', 0, 1, 'menu', 0, 0, 0, 6, 0, '', '', 0, 'top', '', '', '', '', 0, 0, 0, 1, ''),
+(48, '', 45, 0, '', '', '', '', '45', '1', 'category', 0, 1, 'menu', 0, 1, 0, 1, 0, '', '', 0, 'top', '', '', '', '', 0, 0, 0, 1, ''),
+(49, '', 45, 0, '', '', '', '', '30', '1', 'category', 0, 1, 'menu', 0, 1, 0, 2, 0, '', '', 0, 'top', '', '', '', '', 0, 0, 0, 1, ''),
+(65, '', 1, 0, NULL, NULL, NULL, '', '34', '1', 'category', 0, 1, 'menu', 0, 0, 0, 7, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1, ''),
+(66, '', 1, 0, NULL, NULL, NULL, '', '25', '1', 'category', 0, 1, 'menu', 0, 0, 0, 8, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1, ''),
+(67, '', 45, 0, NULL, NULL, NULL, NULL, '46', '1', 'category', 2, 1, 'menu', 0, 1, 0, 3, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(68, '', 66, 0, NULL, NULL, NULL, NULL, '28', '1', 'category', 2, 1, 'menu', 0, 1, 0, 1, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(69, '', 66, 0, NULL, NULL, NULL, NULL, '32', '1', 'category', 2, 1, 'menu', 0, 1, 0, 2, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(70, '', 66, 0, NULL, NULL, NULL, NULL, '31', '1', 'category', 2, 1, 'menu', 0, 1, 0, 3, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(71, '', 66, 0, NULL, NULL, NULL, NULL, '29', '1', 'category', 2, 1, 'menu', 0, 1, 0, 4, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(72, '', 68, 0, NULL, NULL, NULL, NULL, '35', '1', 'category', 2, 1, 'menu', 0, 1, 0, 1, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(73, '', 68, 0, NULL, NULL, NULL, NULL, '36', '1', 'category', 2, 1, 'menu', 0, 1, 0, 2, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(76, '', 65, 0, NULL, NULL, NULL, NULL, '38', '1', 'category', 2, 1, 'menu', 0, 1, 0, 1, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(77, '', 1, 0, NULL, NULL, NULL, '', '24', '1', 'category', 0, 1, 'menu', 0, 0, 0, 9, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1, ''),
+(78, '', 1, 0, NULL, NULL, NULL, '', '76', '1', 'category', 0, 1, 'menu', 0, 1, 0, 2, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1, ''),
+(80, '', 1, 0, NULL, NULL, NULL, '', '33', '1', 'category', 0, 1, 'menu', 0, 0, 0, 10, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1, ''),
+(81, '', 1, 0, NULL, NULL, NULL, '', '66', '1', 'category', 0, 1, 'menu', 0, 0, 0, 11, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1, ''),
+(82, '', 45, 0, NULL, NULL, NULL, NULL, '26', '1', 'category', 2, 1, 'menu', 0, 1, 0, 4, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(83, '', 80, 0, NULL, NULL, NULL, NULL, '74', '1', 'category', 2, 1, 'menu', 0, 1, 0, 1, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(84, '', 80, 0, NULL, NULL, NULL, NULL, '75', '1', 'category', 2, 1, 'menu', 0, 1, 0, 2, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(85, '', 81, 0, NULL, NULL, NULL, NULL, '69', '1', 'category', 2, 1, 'menu', 0, 1, 0, 1, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(86, '', 81, 0, NULL, NULL, NULL, NULL, '67', '1', 'category', 2, 1, 'menu', 0, 1, 0, 2, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(91, '', 1, 0, NULL, NULL, NULL, NULL, '88', '1', 'category', 2, 1, 'menu', 0, 1, 0, 3, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(92, '', 1, 0, NULL, NULL, NULL, NULL, '91', '1', 'category', 2, 1, 'menu', 0, 1, 0, 4, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(93, '', 78, 0, NULL, NULL, NULL, NULL, '81', '1', 'category', 2, 1, 'menu', 0, 1, 0, 1, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(94, '', 78, 0, NULL, NULL, NULL, NULL, '77', '1', 'category', 2, 1, 'menu', 0, 1, 0, 2, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(95, '', 94, 0, NULL, NULL, NULL, NULL, '82', '1', 'category', 2, 1, 'menu', 0, 1, 0, 1, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(96, '', 94, 0, NULL, NULL, NULL, NULL, '87', '1', 'category', 2, 1, 'menu', 0, 1, 0, 2, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(97, '', 93, 0, NULL, NULL, NULL, NULL, '84', '1', 'category', 2, 1, 'menu', 0, 1, 0, 1, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(98, '', 93, 0, NULL, NULL, NULL, NULL, '85', '1', 'category', 2, 1, 'menu', 0, 1, 0, 2, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(99, '', 93, 0, NULL, NULL, NULL, NULL, '86', '1', 'category', 2, 1, 'menu', 0, 1, 0, 3, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(100, '', 93, 0, NULL, NULL, NULL, NULL, '83', '1', 'category', 2, 1, 'menu', 0, 1, 0, 4, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(101, '', 91, 0, NULL, NULL, NULL, NULL, '89', '1', 'category', 2, 1, 'menu', 0, 1, 0, 1, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(102, '', 91, 0, NULL, NULL, NULL, NULL, '90', '1', 'category', 2, 1, 'menu', 0, 1, 0, 2, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(103, '', 92, 0, NULL, NULL, NULL, NULL, '96', '1', 'category', 2, 1, 'menu', 0, 1, 0, 1, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(104, '', 92, 0, NULL, NULL, NULL, NULL, '92', '1', 'category', 2, 1, 'menu', 0, 1, 0, 2, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(105, '', 92, 0, NULL, NULL, NULL, NULL, '93', '1', 'category', 2, 1, 'menu', 0, 1, 0, 3, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(106, '', 92, 0, NULL, NULL, NULL, NULL, '97', '1', 'category', 2, 1, 'menu', 0, 1, 0, 4, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(107, '', 92, 0, NULL, NULL, NULL, NULL, '94', '1', 'category', 2, 1, 'menu', 0, 1, 0, 5, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(108, '', 92, 0, NULL, NULL, NULL, NULL, '95', '1', 'category', 2, 1, 'menu', 0, 1, 0, 6, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(114, '', 1, 0, NULL, NULL, NULL, '', '98', '1', 'category', 0, 1, 'menu', 0, 0, 0, 99, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1, ''),
+(115, '', 1, 0, NULL, NULL, NULL, '', '99', '1', 'category', 0, 1, 'menu', 0, 0, 0, 99, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1, ''),
+(116, '', 1, 0, NULL, NULL, NULL, '', '100', '1', 'category', 0, 1, 'menu', 0, 0, 0, 99, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1, ''),
+(118, '', 94, 0, NULL, NULL, NULL, NULL, '79', '1', 'category', 2, 1, 'menu', 0, 1, 0, 99, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(119, '', 94, 0, NULL, NULL, NULL, NULL, '80', '1', 'category', 2, 1, 'menu', 0, 1, 0, 99, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1, NULL),
+(120, '', 1, 0, NULL, NULL, NULL, '', '', '1', 'url', 0, 1, 'menu', 0, 1, 0, 99, 0, '?route=information/information&amp;information_id=4', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1, '');
 
 -- --------------------------------------------------------
 
@@ -2222,8 +2371,8 @@ CREATE TABLE IF NOT EXISTS `oc_megamenu_description` (
 --
 
 INSERT INTO `oc_megamenu_description` (`megamenu_id`, `language_id`, `title`, `description`) VALUES
-(2, 2, 'Categories', ''),
-(7, 2, 'Deals', ''),
+(120, 1, 'About', ''),
+(80, 3, 'Jewelry', ''),
 (8, 2, 'Computers', ''),
 (10, 2, 'Duis tempor', ''),
 (11, 2, 'Pellentesque eget ', ''),
@@ -2232,37 +2381,23 @@ INSERT INTO `oc_megamenu_description` (`megamenu_id`, `language_id`, `title`, `d
 (14, 2, 'Lehicula lorem', ''),
 (15, 2, 'Integer semper', ''),
 (16, 2, 'Sollicitudin lacus', ''),
-(9, 2, 'Printer', ''),
-(17, 2, 'Nam ipsum ', ''),
-(18, 2, 'Curabitur turpis ', ''),
 (19, 2, 'Molestie eu mattis ', ''),
 (20, 2, 'Suspendisse eu ', ''),
 (21, 2, 'Nunc imperdiet ', ''),
-(22, 2, 'Mauris mattis', ''),
-(23, 2, 'Sales', ''),
-(24, 2, 'Lorem ipsum dolor sit ', ''),
-(36, 2, 'Blogs', ''),
-(5, 2, 'Details  ', ''),
+(83, 1, 'Necklaces', ''),
+(23, 3, '', ''),
 (40, 2, 'Home', ''),
-(45, 2, 'Watches', ''),
-(46, 2, 'Bags', ''),
-(63, 2, '', ''),
+(45, 3, '', ''),
+(77, 3, 'Bags', ''),
 (48, 2, 'Watchmaking Legacy', ''),
 (49, 2, 'Watch Service', ''),
-(50, 2, 'Fragrance', ''),
-(51, 2, 'Tights &amp; Socks', ''),
-(52, 2, 'Silver Accessories', ''),
 (40, 1, 'Home', ''),
-(2, 1, 'Categories', ''),
-(24, 1, 'Lorem ipsum dolor sit ', ''),
-(9, 1, 'Printer', ''),
-(17, 1, 'Nam ipsum ', ''),
-(18, 1, 'Curabitur turpis ', ''),
-(22, 1, 'Mauris mattis', ''),
-(50, 1, 'Fragrance', ''),
-(51, 1, 'Tights &amp; Socks', ''),
-(52, 1, 'Silver Accessories', ''),
-(5, 1, 'Details  ', ''),
+(86, 1, 'Women''s Wedding', ''),
+(85, 1, 'Data Storage', ''),
+(84, 1, 'Bracelets', ''),
+(82, 1, 'Men''s Watches', ''),
+(86, 3, 'Women''s Wedding', ''),
+(81, 3, 'Engagement', ''),
 (23, 1, 'Sales', ''),
 (19, 1, 'Molestie eu mattis ', ''),
 (20, 1, 'Suspendisse eu ', ''),
@@ -2275,13 +2410,86 @@ INSERT INTO `oc_megamenu_description` (`megamenu_id`, `language_id`, `title`, `d
 (15, 1, 'Integer semper', ''),
 (16, 1, 'Sollicitudin lacus', ''),
 (10, 1, 'Duis tempor', ''),
-(7, 1, 'Deals', ''),
-(36, 1, 'Blogs', ''),
+(93, 1, 'Woman', ''),
 (45, 1, 'Watches', ''),
 (48, 1, 'Watchmaking Legacy', ''),
 (49, 1, 'Watch Service', ''),
-(46, 1, 'Bags', ''),
-(63, 1, '', '');
+(78, 1, 'Bransoletki', ''),
+(40, 3, 'Home', ''),
+(120, 3, 'O Nas', ''),
+(85, 3, 'Data Storage', ''),
+(84, 3, 'Bracelets', ''),
+(83, 3, 'Necklaces', ''),
+(82, 3, 'Men''s Watches', ''),
+(81, 1, 'Engagement', ''),
+(80, 1, 'Jewelry', ''),
+(78, 3, 'Bransoletki', ''),
+(77, 1, 'Bags', ''),
+(65, 1, 'New Arrivals', ''),
+(65, 3, 'New Arrivals', ''),
+(66, 1, 'Collections', ''),
+(66, 3, 'Collections', ''),
+(67, 1, 'Women''s Watches', ''),
+(67, 3, 'Women''s Watches', ''),
+(68, 1, 'Brooches', ''),
+(68, 3, 'Brooches', ''),
+(69, 1, 'Charms', ''),
+(69, 3, 'Charms', ''),
+(70, 1, 'Earrings', ''),
+(70, 3, 'Earrings', ''),
+(71, 1, 'Mice and Trackballs', ''),
+(71, 3, 'Mice and Trackballs', ''),
+(72, 1, 'Bracelets', ''),
+(72, 3, 'Bracelets', ''),
+(73, 1, 'Rings', ''),
+(73, 3, 'Rings', ''),
+(92, 3, 'Łańcuszki', ''),
+(92, 1, 'Chains', ''),
+(91, 3, 'Kolczyki', ''),
+(91, 1, 'Earrings', ''),
+(76, 1, 'Clothing', ''),
+(76, 3, 'Clothing', ''),
+(93, 3, 'Damskie', ''),
+(94, 1, 'Męskie', ''),
+(94, 3, 'Męskie', ''),
+(95, 1, 'Leather', ''),
+(95, 3, 'Skóra', ''),
+(96, 1, 'Silver', ''),
+(96, 3, 'Srebro', ''),
+(97, 1, 'Natural stone', ''),
+(97, 3, 'Kamień naturalny', ''),
+(98, 1, 'Zircons', ''),
+(98, 3, 'Cyrkonie', ''),
+(99, 1, 'Silver', ''),
+(99, 3, 'Srebro', ''),
+(100, 1, 'On a string', ''),
+(100, 3, 'Na sznureczku', ''),
+(101, 1, 'Silver', ''),
+(101, 3, 'Srebro', ''),
+(102, 1, 'Zircons', ''),
+(102, 3, 'Cyrkonie', ''),
+(103, 1, 'Ball', ''),
+(103, 3, 'Kulka', ''),
+(104, 1, 'Gold plating', ''),
+(104, 3, 'Pozłacane', ''),
+(105, 1, 'Silver', ''),
+(105, 3, 'Srebrne', ''),
+(106, 1, 'Snake', ''),
+(106, 3, 'Linka - Snake', ''),
+(107, 1, 'Figaro', ''),
+(107, 3, 'Figaro', ''),
+(108, 1, 'Singapur', ''),
+(108, 3, 'Singapur', ''),
+(114, 1, 'Smoczki', ''),
+(114, 3, 'Smoczki', ''),
+(115, 1, 'Spoons', ''),
+(115, 3, 'Łyżeczki', ''),
+(116, 1, 'Buciki', ''),
+(116, 3, 'Buciki', ''),
+(118, 1, 'Na sznureczku', ''),
+(118, 3, 'Na sznureczku', ''),
+(119, 1, 'Kauczuk', ''),
+(119, 3, 'Kauczuk', '');
 
 -- --------------------------------------------------------
 
@@ -2296,7 +2504,7 @@ CREATE TABLE IF NOT EXISTS `oc_megamenu_widgets` (
   `params` text NOT NULL,
   `store_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 --
 -- Zrzut danych tabeli `oc_megamenu_widgets`
@@ -2318,7 +2526,8 @@ INSERT INTO `oc_megamenu_widgets` (`id`, `name`, `type`, `params`, `store_id`) V
 (18, '', 'product_list', 'a:14:{s:4:"wkey";s:2:"18";s:5:"wtype";s:12:"product_list";s:11:"widget_name";s:15:"Product Special";s:10:"show_title";s:1:"1";s:14:"widget_title_1";s:15:"Product Special";s:14:"widget_title_2";s:15:"Product Special";s:12:"addition_cls";s:7:"sidebar";s:5:"limit";s:1:"2";s:12:"itemsperpage";s:1:"2";s:4:"cols";s:1:"1";s:5:"width";s:2:"62";s:6:"height";s:2:"81";s:9:"list_type";s:7:"special";s:14:"choose_product";s:0:"";}', 0),
 (20, '', 'sub_categories', 'a:9:{s:4:"wkey";s:2:"20";s:5:"wtype";s:14:"sub_categories";s:11:"widget_name";s:11:"Collections";s:10:"show_title";s:1:"1";s:14:"widget_title_1";s:11:"Collections";s:14:"widget_title_2";s:11:"Collections";s:12:"addition_cls";s:6:"column";s:11:"category_id";s:2:"25";s:5:"limit";s:1:"6";}', 0),
 (21, '', 'sub_categories', 'a:9:{s:4:"wkey";s:2:"21";s:5:"wtype";s:14:"sub_categories";s:11:"widget_name";s:12:"New Arrivals";s:10:"show_title";s:1:"1";s:14:"widget_title_1";s:12:"New Arrivals";s:14:"widget_title_2";s:12:"New Arrivals";s:12:"addition_cls";s:6:"column";s:11:"category_id";s:2:"34";s:5:"limit";s:1:"6";}', 0),
-(22, '', 'sub_categories', 'a:9:{s:4:"wkey";s:2:"22";s:5:"wtype";s:14:"sub_categories";s:11:"widget_name";s:7:"Watches";s:10:"show_title";s:1:"1";s:14:"widget_title_1";s:7:"Watches";s:14:"widget_title_2";s:7:"Watches";s:12:"addition_cls";s:11:"column last";s:11:"category_id";s:2:"18";s:5:"limit";s:1:"6";}', 0);
+(22, '', 'sub_categories', 'a:9:{s:4:"wkey";s:2:"22";s:5:"wtype";s:14:"sub_categories";s:11:"widget_name";s:7:"Watches";s:10:"show_title";s:1:"1";s:14:"widget_title_1";s:7:"Watches";s:14:"widget_title_2";s:7:"Watches";s:12:"addition_cls";s:11:"column last";s:11:"category_id";s:2:"18";s:5:"limit";s:1:"6";}', 0),
+(24, '', 'categories_list', 'a:8:{s:4:"wkey";s:1:"0";s:5:"wtype";s:15:"categories_list";s:11:"widget_name";s:3:"cat";s:10:"show_title";s:1:"1";s:14:"widget_title_3";s:5:"cattt";s:14:"widget_title_1";s:0:"";s:12:"addition_cls";s:0:"";s:6:"catids";s:11:"3,4,5,6,7,8";}', 0);
 
 -- --------------------------------------------------------
 
@@ -2365,7 +2574,7 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (44, 'Category Blog', 'pavblogcategory', '{"name":"Category Blog","category_id":"1","status":"1","type":"default"}'),
 (45, 'Latest comment Blog', 'pavblogcomment', '{"name":"Latest comment Blog","limit":"5","status":"1"}'),
 (46, 'Carousel Brand', 'pavcarousel', '{"name":"Carousel Brand","status":"1","banner_id":"8","itemsperpage":"6","limit":"10","columns":"6","auto_play":"1","interval":"3000","width":"140","height":"45"}'),
-(33, 'Home 1', 'pavhomebuilder', 'a:5:{s:6:"status";s:1:"1";s:4:"name";s:6:"Home 1";s:5:"class";s:5:"home1";s:6:"layout";s:4585:"[{"cls":"","bgcolor":"","bgimage":"","fullwidth":"0","parallax":"0","sfxcls":null,"padding":"","margin":"","iposition":null,"iattachment":null,"cols":[{"index":0,"cls":"inside ","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":12,"mdcol":8,"smcol":8,"xscol":12,"widgets":[{"name":"Pav Layers Sliders > Slide 1","module":"pavsliderlayer.54","type":"module"}],"rows":[]},{"index":0,"cls":"","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":12,"mdcol":4,"smcol":6,"xscol":12,"widgets":[{"module":"html.5ke3yP","type":"html"}],"rows":[]}]},{"cls":"hidden-xs","bgcolor":"","bgimage":"","fullwidth":"0","parallax":"0","sfxcls":null,"padding":"","margin":"","iposition":null,"iattachment":null,"cols":[{"index":0,"cls":"","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":4,"mdcol":4,"smcol":4,"xscol":4,"widgets":[{"name":"Banner 5","module":"image.pmWjnF","type":"image"}],"rows":[]},{"index":0,"cls":"","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":4,"mdcol":4,"smcol":6,"xscol":12,"widgets":[{"name":"Banner 5","module":"image.tIamGg","type":"image"}],"rows":[]},{"index":0,"cls":"","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":4,"mdcol":4,"smcol":6,"xscol":12,"widgets":[{"name":"Banner 5","module":"image.wcb497","type":"image"}],"rows":[]}]},{"cls":"","bgcolor":"","bgimage":"","fullwidth":"0","parallax":"0","sfxcls":null,"padding":"20px 0px 0px 0px","margin":"","iposition":null,"iattachment":null,"cols":[{"index":0,"cls":"","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":12,"mdcol":12,"smcol":12,"xscol":12,"widgets":[{"name":"Featured items","module":"product_list.SAHlNn","type":"product_list"}],"rows":[]}]},{"cls":"hidden-sm hidden-xs","bgcolor":"","bgimage":"catalog/demo/manufacturer/bg_logo.jpg","fullwidth":"0","parallax":"0","sfxcls":null,"padding":"60px 0px 145px 0px","margin":"","iposition":null,"iattachment":null,"cols":[{"index":0,"cls":"","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":12,"mdcol":12,"smcol":12,"xscol":12,"widgets":[{"name":"Our clients","module":"manufacture.enivZa","type":"manufacture"}],"rows":[]}]},{"index":0,"cls":"","bgcolor":"","bgimage":"","fullwidth":0,"parallax":0,"sfxcls":"","padding":"","margin":"","iposition":"","iattachment":"","cols":[{"index":0,"cls":"","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":12,"mdcol":12,"smcol":12,"xscol":12,"widgets":[{"name":"Product tab","module":"product_tabs.2htnjA","type":"product_tabs"}],"rows":[]}]},{"cls":"","bgcolor":"","bgimage":"","fullwidth":"0","parallax":"0","sfxcls":null,"padding":"0px 0px 30px 0px","margin":"","iposition":null,"iattachment":null,"cols":[{"index":0,"cls":"","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":12,"mdcol":12,"smcol":12,"xscol":12,"widgets":[{"name":"Our blogs","module":"bloglatest.nVXREv","type":"bloglatest"}],"rows":[]}]},{"cls":"hidden-sm hidden-xs","bgcolor":"","bgimage":"","fullwidth":"0","parallax":"0","sfxcls":null,"padding":"","margin":"","iposition":null,"iattachment":null,"cols":[{"index":0,"cls":"sidebar","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":3,"mdcol":3,"smcol":3,"xscol":12,"widgets":[{"name":"New arrivals","module":"product_list.2qV4fI","type":"product_list"}],"rows":[]},{"index":0,"cls":"sidebar","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":3,"mdcol":3,"smcol":3,"xscol":12,"widgets":[{"name":"Best sellers","module":"product_list.qwHSiH","type":"product_list"}],"rows":[]},{"index":0,"cls":"sidebar","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":3,"mdcol":3,"smcol":3,"xscol":12,"widgets":[{"name":"Most viewed","module":"product_list.9XvqeA","type":"product_list"}],"rows":[]},{"index":0,"cls":"","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":3,"mdcol":3,"smcol":3,"xscol":12,"widgets":[{"name":"Banner7","module":"image.BjhHfe","type":"image"}],"rows":[]}]}]";s:9:"module_id";s:2:"33";}'),
+(33, 'Home 1', 'pavhomebuilder', 'a:5:{s:6:"status";s:1:"1";s:4:"name";s:6:"Home 1";s:5:"class";s:5:"home1";s:6:"layout";s:2042:"[{"cls":"","bgcolor":"","bgimage":"","fullwidth":"0","parallax":"0","sfxcls":null,"padding":"","margin":"","iposition":null,"iattachment":null,"cols":[{"index":0,"cls":"inside ","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":12,"mdcol":12,"smcol":12,"xscol":12,"widgets":[{"name":"space","module":"html.1qiF1l","type":"html"},{"name":"Pav Layers Sliders > Slide 1","module":"pavsliderlayer.54","type":"module"},{"name":"space","module":"html.Biif3o","type":"html"}],"rows":[]}]},{"cls":"","bgcolor":"","bgimage":"","fullwidth":"0","parallax":"0","sfxcls":null,"padding":"","margin":"","iposition":null,"iattachment":null,"cols":[{"index":0,"cls":"","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":4,"mdcol":4,"smcol":4,"xscol":12,"widgets":[{"name":"buciki","module":"image.rw2BDN","type":"image"}],"rows":[]},{"index":0,"cls":"","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":4,"mdcol":4,"smcol":4,"xscol":12,"widgets":[{"name":"smoczki","module":"image.GdT1e4","type":"image"}],"rows":[]},{"index":0,"cls":"","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":4,"mdcol":4,"smcol":4,"xscol":12,"widgets":[{"name":"Łyżeczki","module":"image.rtAV2g","type":"image"}],"rows":[]}]},{"cls":"","bgcolor":"","bgimage":"","fullwidth":"0","parallax":"0","sfxcls":null,"padding":"20px 0px 0px 0px","margin":"","iposition":null,"iattachment":null,"cols":[{"index":0,"cls":"","sfxcls":"","bgcolor":"","bgimage":"","padding":"","margin":"","iposition":"","iattachment":"","inrow":0,"lgcol":12,"mdcol":12,"smcol":12,"xscol":12,"widgets":[{"name":"Promocyjne Ceny","module":"product_list.U6oo6M","type":"product_list"},{"name":"Najnowsze Kolekcje","module":"product_list.QfFAdD","type":"product_list"},{"name":"Featured items","module":"product_list.SAHlNn","type":"product_list"}],"rows":[]}]}]";s:9:"module_id";s:2:"33";}'),
 (54, 'Slide 1', 'pavsliderlayer', '{"name":"Slide 1","status":"1","group_id":"1","pavsliderlayer_module":[]}'),
 (62, 'Latest module Blog', 'pavbloglatest', '{"name":"Latest module Blog","status":"1","description":{"2":"\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t","1":"\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t"},"prefixclass":"prefix class","tabs":"latest","width":"300","height":"300","cols":"4","limit":"4"}'),
 (35, 'Special Category', 'special', '{"name":"Special Category","limit":"5","width":"62","height":"81","status":"1"}'),
@@ -2803,20 +3012,6 @@ INSERT INTO `oc_order_status` (`order_status_id`, `language_id`, `name`) VALUES
 (16, 1, 'Voided'),
 (15, 1, 'Processed'),
 (14, 1, 'Expired'),
-(2, 2, 'Processing'),
-(3, 2, 'Shipped'),
-(7, 2, 'Canceled'),
-(5, 2, 'Complete'),
-(8, 2, 'Denied'),
-(9, 2, 'Canceled Reversal'),
-(10, 2, 'Failed'),
-(11, 2, 'Refunded'),
-(12, 2, 'Reversed'),
-(13, 2, 'Chargeback'),
-(1, 2, 'Pending'),
-(16, 2, 'Voided'),
-(15, 2, 'Processed'),
-(14, 2, 'Expired'),
 (2, 3, 'Processing'),
 (3, 3, 'Shipped'),
 (7, 3, 'Canceled'),
@@ -3069,6 +3264,26 @@ INSERT INTO `oc_pavblog_comment` (`comment_id`, `blog_id`, `comment`, `status`, 
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `oc_pavnewsletter_draft`
+--
+
+CREATE TABLE IF NOT EXISTS `oc_pavnewsletter_draft` (
+  `draft_id` int(11) NOT NULL AUTO_INCREMENT,
+  `store_id` int(11) DEFAULT '0',
+  `to` varchar(200) DEFAULT NULL,
+  `subject` varchar(200) DEFAULT NULL,
+  `message` text,
+  `customer_group_id` int(11) DEFAULT NULL,
+  `customer` varchar(255) DEFAULT NULL,
+  `affiliate` varchar(255) DEFAULT NULL,
+  `product` varchar(255) DEFAULT NULL,
+  `date_added` datetime DEFAULT NULL,
+  PRIMARY KEY (`draft_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `oc_pavnewsletter_email`
 --
 
@@ -3174,15 +3389,14 @@ CREATE TABLE IF NOT EXISTS `oc_pavoslidergroups` (
   `title` varchar(255) NOT NULL,
   `params` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Zrzut danych tabeli `oc_pavoslidergroups`
 --
 
 INSERT INTO `oc_pavoslidergroups` (`id`, `title`, `params`) VALUES
-(1, 'slide1', 'a:28:{s:5:"title";s:6:"slide1";s:5:"delay";s:4:"9000";s:9:"fullwidth";s:0:"";s:5:"width";s:4:"1200";s:6:"height";s:3:"500";s:12:"touch_mobile";s:1:"1";s:13:"stop_on_hover";s:1:"1";s:12:"shuffle_mode";s:1:"0";s:14:"image_cropping";s:1:"0";s:11:"shadow_type";s:1:"0";s:14:"show_time_line";s:1:"1";s:18:"time_line_position";s:6:"bottom";s:16:"background_color";s:0:"";s:6:"margin";s:1:"0";s:7:"padding";s:1:"0";s:16:"background_image";s:1:"0";s:14:"background_url";s:0:"";s:14:"navigator_type";s:4:"none";s:16:"navigator_arrows";s:13:"nexttobullets";s:16:"navigation_style";s:5:"round";s:17:"offset_horizontal";s:1:"0";s:15:"offset_vertical";s:1:"0";s:14:"show_navigator";s:1:"1";s:20:"hide_navigator_after";s:3:"200";s:15:"thumbnail_width";s:3:"100";s:16:"thumbnail_height";s:2:"50";s:16:"thumbnail_amount";s:1:"5";s:17:"hide_screen_width";s:0:"";}'),
-(10, '', 'a:28:{s:5:"title";s:0:"";s:5:"delay";s:4:"9000";s:9:"fullwidth";s:0:"";s:5:"width";s:3:"960";s:6:"height";s:3:"350";s:12:"touch_mobile";s:1:"1";s:13:"stop_on_hover";s:1:"1";s:12:"shuffle_mode";s:1:"0";s:14:"image_cropping";s:1:"0";s:11:"shadow_type";s:1:"2";s:14:"show_time_line";s:1:"1";s:18:"time_line_position";s:3:"top";s:16:"background_color";s:7:"#d9d9d9";s:6:"margin";s:12:"0px 0px 18px";s:7:"padding";s:7:"5px 5px";s:16:"background_image";s:1:"0";s:14:"background_url";s:0:"";s:14:"navigator_type";s:4:"none";s:16:"navigator_arrows";s:16:"verticalcentered";s:16:"navigation_style";s:5:"round";s:17:"offset_horizontal";s:1:"0";s:15:"offset_vertical";s:2:"20";s:14:"show_navigator";s:1:"0";s:20:"hide_navigator_after";s:3:"200";s:15:"thumbnail_width";s:3:"100";s:16:"thumbnail_height";s:2:"50";s:16:"thumbnail_amount";s:1:"5";s:17:"hide_screen_width";s:0:"";}');
+(1, 'slide1', 'a:28:{s:5:"title";s:6:"slide1";s:5:"delay";s:4:"9000";s:9:"fullwidth";s:9:"fullwidth";s:5:"width";s:4:"1920";s:6:"height";s:3:"800";s:12:"touch_mobile";s:1:"1";s:13:"stop_on_hover";s:1:"1";s:12:"shuffle_mode";s:1:"1";s:14:"image_cropping";s:1:"0";s:11:"shadow_type";s:1:"0";s:14:"show_time_line";s:1:"1";s:18:"time_line_position";s:6:"bottom";s:16:"background_color";s:0:"";s:6:"margin";s:1:"0";s:7:"padding";s:1:"0";s:16:"background_image";s:1:"0";s:14:"background_url";s:0:"";s:14:"navigator_type";s:4:"none";s:16:"navigator_arrows";s:13:"nexttobullets";s:16:"navigation_style";s:5:"round";s:17:"offset_horizontal";s:1:"0";s:15:"offset_vertical";s:1:"0";s:14:"show_navigator";s:1:"1";s:20:"hide_navigator_after";s:3:"200";s:15:"thumbnail_width";s:3:"100";s:16:"thumbnail_height";s:2:"50";s:16:"thumbnail_amount";s:1:"5";s:17:"hide_screen_width";s:0:"";}');
 
 -- --------------------------------------------------------
 
@@ -3203,19 +3417,18 @@ CREATE TABLE IF NOT EXISTS `oc_pavosliderlayers` (
   `language_id` int(11) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=61 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=67 ;
 
 --
 -- Zrzut danych tabeli `oc_pavosliderlayers`
 --
 
 INSERT INTO `oc_pavosliderlayers` (`id`, `title`, `parent_id`, `group_id`, `params`, `layersparams`, `image`, `status`, `position`, `language_id`) VALUES
-(47, 'slide 1', 0, 1, 'a:18:{s:2:"id";s:2:"47";s:15:"slider_group_id";s:1:"1";s:12:"slider_title";s:7:"slide 1";s:18:"slider_language_id";s:1:"1";s:13:"slider_status";s:1:"0";s:17:"slider_transition";s:6:"random";s:11:"slider_slot";s:1:"7";s:15:"slider_rotation";s:1:"0";s:15:"slider_duration";s:3:"300";s:12:"slider_delay";s:1:"0";s:18:"slider_enable_link";s:1:"0";s:11:"slider_link";s:0:"";s:16:"slider_thumbnail";s:0:"";s:15:"slider_usevideo";s:1:"0";s:14:"slider_videoid";s:0:"";s:16:"slider_videoplay";s:1:"0";s:9:"slider_id";s:2:"47";s:12:"slider_image";s:18:"catalog/SLIDE2.jpg";}', 'O:8:"stdClass":1:{s:6:"layers";a:5:{i:0;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:1;s:13:"layer_content";s:12:"no_image.png";s:10:"layer_type";s:4:"text";s:11:"layer_class";s:5:"text1";s:13:"layer_caption";s:39:"&lt;span&gt;Autumn&lt;/span&gt;LOOKBOOK";s:15:"layer_animation";s:12:"randomrotate";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:3:"193";s:10:"layer_left";s:3:"233";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:4:"1192";}i:1;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:2;s:13:"layer_content";s:12:"no_image.png";s:10:"layer_type";s:4:"text";s:11:"layer_class";s:5:"text2";s:13:"layer_caption";s:119:"This is Photoshop&quot;s version  of Lorem Ipsum. Proin gravida nibh velit &lt;br&gt; aucto aliquet aenean sollicitudin";s:15:"layer_animation";s:12:"randomrotate";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:3:"233";s:10:"layer_left";s:3:"185";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:4:"1192";}i:2;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:3;s:13:"layer_content";s:12:"no_image.png";s:10:"layer_type";s:4:"text";s:11:"layer_class";s:2:"hr";s:13:"layer_caption";s:0:"";s:15:"layer_animation";s:12:"randomrotate";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:3:"290";s:10:"layer_left";s:3:"337";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:4:"1192";}i:3;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:4;s:13:"layer_content";s:12:"no_image.png";s:10:"layer_type";s:4:"text";s:11:"layer_class";s:9:"text3 btn";s:13:"layer_caption";s:47:"&lt;a href=&quot;#&quot;&gt;view more&lt;/a&gt;";s:15:"layer_animation";s:3:"lfl";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:3:"324";s:10:"layer_left";s:3:"262";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:4:"1811";}i:4;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:5;s:13:"layer_content";s:12:"no_image.png";s:10:"layer_type";s:4:"text";s:11:"layer_class";s:9:"text4 btn";s:13:"layer_caption";s:46:"&lt;a href=&quot;#&quot;&gt;shop now&lt;/a&gt;";s:15:"layer_animation";s:3:"lfr";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:3:"324";s:10:"layer_left";s:3:"393";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:4:"2443";}}}', 'catalog/SLIDE2.jpg', 0, 1, 1),
-(53, 'slide 2', 0, 1, 'a:18:{s:2:"id";s:2:"53";s:15:"slider_group_id";s:1:"1";s:12:"slider_title";s:7:"slide 2";s:18:"slider_language_id";s:1:"1";s:13:"slider_status";s:1:"0";s:17:"slider_transition";s:6:"random";s:11:"slider_slot";s:1:"7";s:15:"slider_rotation";s:1:"0";s:15:"slider_duration";s:3:"300";s:12:"slider_delay";s:1:"0";s:18:"slider_enable_link";s:1:"0";s:11:"slider_link";s:0:"";s:16:"slider_thumbnail";s:0:"";s:15:"slider_usevideo";s:1:"0";s:14:"slider_videoid";s:0:"";s:16:"slider_videoplay";s:1:"0";s:9:"slider_id";s:2:"53";s:12:"slider_image";s:34:"catalog/demo/slider/slideshow3.jpg";}', 'O:8:"stdClass":1:{s:6:"layers";a:5:{i:0;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:1;s:13:"layer_content";s:12:"no_image.png";s:10:"layer_type";s:4:"text";s:11:"layer_class";s:5:"text1";s:13:"layer_caption";s:39:"&lt;span&gt;Autumn&lt;/span&gt;LOOKBOOK";s:15:"layer_animation";s:12:"randomrotate";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:3:"193";s:10:"layer_left";s:3:"233";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:4:"1192";}i:1;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:2;s:13:"layer_content";s:12:"no_image.png";s:10:"layer_type";s:4:"text";s:11:"layer_class";s:5:"text2";s:13:"layer_caption";s:119:"This is Photoshop&quot;s version  of Lorem Ipsum. Proin gravida nibh velit &lt;br&gt; aucto aliquet aenean sollicitudin";s:15:"layer_animation";s:12:"randomrotate";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:3:"233";s:10:"layer_left";s:3:"185";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:4:"1192";}i:2;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:3;s:13:"layer_content";s:12:"no_image.png";s:10:"layer_type";s:4:"text";s:11:"layer_class";s:2:"hr";s:13:"layer_caption";s:0:"";s:15:"layer_animation";s:12:"randomrotate";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:3:"290";s:10:"layer_left";s:3:"337";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:4:"1192";}i:3;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:4;s:13:"layer_content";s:12:"no_image.png";s:10:"layer_type";s:4:"text";s:11:"layer_class";s:9:"text3 btn";s:13:"layer_caption";s:47:"&lt;a href=&quot;#&quot;&gt;view more&lt;/a&gt;";s:15:"layer_animation";s:3:"lfl";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:3:"324";s:10:"layer_left";s:3:"262";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:4:"1811";}i:4;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:5;s:13:"layer_content";s:12:"no_image.png";s:10:"layer_type";s:4:"text";s:11:"layer_class";s:9:"text4 btn";s:13:"layer_caption";s:46:"&lt;a href=&quot;#&quot;&gt;shop now&lt;/a&gt;";s:15:"layer_animation";s:3:"lfr";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:3:"324";s:10:"layer_left";s:3:"393";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:4:"2443";}}}', 'catalog/demo/slider/slideshow3.jpg', 0, 1, 1),
-(54, 'slide 3', 0, 1, 'a:18:{s:2:"id";s:2:"54";s:15:"slider_group_id";s:1:"1";s:12:"slider_title";s:7:"slide 3";s:18:"slider_language_id";s:1:"1";s:13:"slider_status";s:1:"0";s:17:"slider_transition";s:6:"random";s:11:"slider_slot";s:1:"7";s:15:"slider_rotation";s:1:"0";s:15:"slider_duration";s:3:"300";s:12:"slider_delay";s:1:"0";s:18:"slider_enable_link";s:1:"0";s:11:"slider_link";s:0:"";s:16:"slider_thumbnail";s:0:"";s:15:"slider_usevideo";s:1:"0";s:14:"slider_videoid";s:0:"";s:16:"slider_videoplay";s:1:"0";s:9:"slider_id";s:2:"54";s:12:"slider_image";s:34:"catalog/demo/slider/slideshow2.jpg";}', 'O:8:"stdClass":1:{s:6:"layers";a:5:{i:0;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:1;s:13:"layer_content";s:12:"no_image.png";s:10:"layer_type";s:4:"text";s:11:"layer_class";s:5:"text1";s:13:"layer_caption";s:39:"&lt;span&gt;Autumn&lt;/span&gt;LOOKBOOK";s:15:"layer_animation";s:12:"randomrotate";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:3:"193";s:10:"layer_left";s:3:"233";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:4:"1192";}i:1;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:2;s:13:"layer_content";s:12:"no_image.png";s:10:"layer_type";s:4:"text";s:11:"layer_class";s:5:"text2";s:13:"layer_caption";s:119:"This is Photoshop&quot;s version  of Lorem Ipsum. Proin gravida nibh velit &lt;br&gt; aucto aliquet aenean sollicitudin";s:15:"layer_animation";s:12:"randomrotate";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:3:"233";s:10:"layer_left";s:3:"185";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:4:"1192";}i:2;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:3;s:13:"layer_content";s:12:"no_image.png";s:10:"layer_type";s:4:"text";s:11:"layer_class";s:2:"hr";s:13:"layer_caption";s:0:"";s:15:"layer_animation";s:12:"randomrotate";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:3:"290";s:10:"layer_left";s:3:"337";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:4:"1192";}i:3;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:4;s:13:"layer_content";s:12:"no_image.png";s:10:"layer_type";s:4:"text";s:11:"layer_class";s:9:"text3 btn";s:13:"layer_caption";s:47:"&lt;a href=&quot;#&quot;&gt;view more&lt;/a&gt;";s:15:"layer_animation";s:3:"lfl";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:3:"324";s:10:"layer_left";s:3:"262";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:4:"1811";}i:4;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:5;s:13:"layer_content";s:12:"no_image.png";s:10:"layer_type";s:4:"text";s:11:"layer_class";s:9:"text4 btn";s:13:"layer_caption";s:46:"&lt;a href=&quot;#&quot;&gt;shop now&lt;/a&gt;";s:15:"layer_animation";s:3:"lfr";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:3:"324";s:10:"layer_left";s:3:"393";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:4:"2443";}}}', 'catalog/demo/slider/slideshow2.jpg', 0, 1, 1),
-(58, 'slide4', 0, 1, 'a:18:{s:2:"id";s:1:"0";s:15:"slider_group_id";s:1:"1";s:12:"slider_title";s:6:"slide4";s:18:"slider_language_id";s:1:"1";s:13:"slider_status";s:1:"1";s:17:"slider_transition";s:6:"random";s:11:"slider_slot";s:1:"7";s:15:"slider_rotation";s:1:"0";s:15:"slider_duration";s:3:"300";s:12:"slider_delay";s:1:"0";s:18:"slider_enable_link";s:1:"0";s:11:"slider_link";s:0:"";s:16:"slider_thumbnail";s:0:"";s:15:"slider_usevideo";s:1:"0";s:14:"slider_videoid";s:0:"";s:16:"slider_videoplay";s:1:"0";s:9:"slider_id";s:1:"0";s:12:"slider_image";s:50:"catalog/17820105_1369520529775546_2102840183_o.jpg";}', 'O:8:"stdClass":1:{s:6:"layers";a:0:{}}', 'catalog/17820105_1369520529775546_2102840183_o.jpg', 1, 0, 1),
-(59, 'slide 5', 0, 1, 'a:18:{s:2:"id";s:2:"59";s:15:"slider_group_id";s:1:"1";s:12:"slider_title";s:7:"slide 5";s:18:"slider_language_id";s:1:"1";s:13:"slider_status";s:1:"1";s:17:"slider_transition";s:6:"random";s:11:"slider_slot";s:1:"7";s:15:"slider_rotation";s:1:"0";s:15:"slider_duration";s:3:"300";s:12:"slider_delay";s:1:"0";s:18:"slider_enable_link";s:1:"0";s:11:"slider_link";s:0:"";s:16:"slider_thumbnail";s:0:"";s:15:"slider_usevideo";s:1:"0";s:14:"slider_videoid";s:0:"";s:16:"slider_videoplay";s:1:"0";s:9:"slider_id";s:2:"59";s:12:"slider_image";s:18:"catalog/SLIDE3.jpg";}', 'O:8:"stdClass":1:{s:6:"layers";a:1:{i:0;a:20:{s:16:"layer_video_type";s:7:"youtube";s:14:"layer_video_id";s:0:"";s:18:"layer_video_height";s:3:"200";s:17:"layer_video_width";s:3:"300";s:17:"layer_video_thumb";s:0:"";s:8:"layer_id";i:1;s:13:"layer_content";s:18:"catalog/SLIDE2.jpg";s:10:"layer_type";s:5:"image";s:11:"layer_class";s:0:"";s:13:"layer_caption";s:17:"Your Image Here 1";s:15:"layer_animation";s:4:"fade";s:12:"layer_easing";s:11:"easeOutExpo";s:11:"layer_speed";s:3:"350";s:9:"layer_top";s:1:"0";s:10:"layer_left";s:1:"0";s:13:"layer_endtime";s:1:"0";s:14:"layer_endspeed";s:3:"300";s:18:"layer_endanimation";s:4:"auto";s:15:"layer_endeasing";s:7:"nothing";s:10:"time_start";s:3:"400";}}}', 'catalog/SLIDE3.jpg', 1, 0, 1),
-(60, 'slide 6', 0, 1, 'a:18:{s:2:"id";s:1:"0";s:15:"slider_group_id";s:1:"1";s:12:"slider_title";s:7:"slide 6";s:18:"slider_language_id";s:1:"1";s:13:"slider_status";s:1:"1";s:17:"slider_transition";s:6:"random";s:11:"slider_slot";s:1:"7";s:15:"slider_rotation";s:1:"0";s:15:"slider_duration";s:3:"300";s:12:"slider_delay";s:1:"0";s:18:"slider_enable_link";s:1:"0";s:11:"slider_link";s:0:"";s:16:"slider_thumbnail";s:0:"";s:15:"slider_usevideo";s:1:"0";s:14:"slider_videoid";s:0:"";s:16:"slider_videoplay";s:1:"0";s:9:"slider_id";s:1:"0";s:12:"slider_image";s:18:"catalog/SLIDE2.jpg";}', 'O:8:"stdClass":1:{s:6:"layers";a:0:{}}', 'catalog/SLIDE2.jpg', 1, 0, 1);
+(66, 'slide11', 0, 1, 'a:18:{s:2:"id";s:2:"66";s:15:"slider_group_id";s:1:"1";s:12:"slider_title";s:7:"slide11";s:18:"slider_language_id";s:1:"1";s:13:"slider_status";s:1:"0";s:17:"slider_transition";s:6:"random";s:11:"slider_slot";s:1:"7";s:15:"slider_rotation";s:1:"0";s:15:"slider_duration";s:3:"300";s:12:"slider_delay";s:1:"0";s:18:"slider_enable_link";s:1:"0";s:11:"slider_link";s:0:"";s:16:"slider_thumbnail";s:0:"";s:15:"slider_usevideo";s:1:"0";s:14:"slider_videoid";s:0:"";s:16:"slider_videoplay";s:1:"0";s:9:"slider_id";s:2:"66";s:12:"slider_image";s:21:"catalog/intro-bg8.jpg";}', 'O:8:"stdClass":1:{s:6:"layers";a:0:{}}', 'catalog/intro-bg8.jpg', 0, 2, 1),
+(65, 'slide10', 0, 1, 'a:18:{s:2:"id";s:2:"65";s:15:"slider_group_id";s:1:"1";s:12:"slider_title";s:7:"slide10";s:18:"slider_language_id";s:1:"1";s:13:"slider_status";s:1:"1";s:17:"slider_transition";s:9:"curtain-1";s:11:"slider_slot";s:1:"7";s:15:"slider_rotation";s:1:"0";s:15:"slider_duration";s:3:"300";s:12:"slider_delay";s:1:"0";s:18:"slider_enable_link";s:1:"0";s:11:"slider_link";s:0:"";s:16:"slider_thumbnail";s:0:"";s:15:"slider_usevideo";s:1:"0";s:14:"slider_videoid";s:0:"";s:16:"slider_videoplay";s:1:"0";s:9:"slider_id";s:2:"65";s:12:"slider_image";s:21:"catalog/intro-bg4.jpg";}', 'O:8:"stdClass":1:{s:6:"layers";a:0:{}}', 'catalog/intro-bg4.jpg', 1, 1, 1),
+(63, 'slide9', 0, 1, 'a:18:{s:2:"id";s:2:"63";s:15:"slider_group_id";s:1:"1";s:12:"slider_title";s:6:"slide9";s:18:"slider_language_id";s:1:"1";s:13:"slider_status";s:1:"0";s:17:"slider_transition";s:6:"random";s:11:"slider_slot";s:1:"7";s:15:"slider_rotation";s:1:"0";s:15:"slider_duration";s:3:"300";s:12:"slider_delay";s:1:"0";s:18:"slider_enable_link";s:1:"0";s:11:"slider_link";s:0:"";s:16:"slider_thumbnail";s:0:"";s:15:"slider_usevideo";s:1:"0";s:14:"slider_videoid";s:0:"";s:16:"slider_videoplay";s:1:"0";s:9:"slider_id";s:2:"63";s:12:"slider_image";s:22:"catalog/slide-img3.jpg";}', 'O:8:"stdClass":1:{s:6:"layers";a:0:{}}', 'catalog/slide-img3.jpg', 0, 3, 1),
+(61, 'silde7', 0, 1, 'a:18:{s:2:"id";s:2:"61";s:15:"slider_group_id";s:1:"1";s:12:"slider_title";s:6:"silde7";s:18:"slider_language_id";s:1:"1";s:13:"slider_status";s:1:"0";s:17:"slider_transition";s:6:"random";s:11:"slider_slot";s:1:"7";s:15:"slider_rotation";s:1:"0";s:15:"slider_duration";s:3:"300";s:12:"slider_delay";s:1:"0";s:18:"slider_enable_link";s:1:"0";s:11:"slider_link";s:0:"";s:16:"slider_thumbnail";s:0:"";s:15:"slider_usevideo";s:1:"0";s:14:"slider_videoid";s:0:"";s:16:"slider_videoplay";s:1:"0";s:9:"slider_id";s:2:"61";s:12:"slider_image";s:23:"catalog/slider-img1.jpg";}', 'O:8:"stdClass":1:{s:6:"layers";a:0:{}}', 'catalog/slider-img1.jpg', 0, 4, 1),
+(62, 'slide8', 0, 1, 'a:18:{s:2:"id";s:2:"62";s:15:"slider_group_id";s:1:"1";s:12:"slider_title";s:6:"slide8";s:18:"slider_language_id";s:1:"1";s:13:"slider_status";s:1:"0";s:17:"slider_transition";s:6:"random";s:11:"slider_slot";s:1:"7";s:15:"slider_rotation";s:1:"0";s:15:"slider_duration";s:3:"300";s:12:"slider_delay";s:1:"0";s:18:"slider_enable_link";s:1:"0";s:11:"slider_link";s:0:"";s:16:"slider_thumbnail";s:0:"";s:15:"slider_usevideo";s:1:"0";s:14:"slider_videoid";s:0:"";s:16:"slider_videoplay";s:1:"0";s:9:"slider_id";s:2:"62";s:12:"slider_image";s:22:"catalog/slide-img2.jpg";}', 'O:8:"stdClass":1:{s:6:"layers";a:0:{}}', 'catalog/slide-img2.jpg', 0, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -3231,7 +3444,7 @@ CREATE TABLE IF NOT EXISTS `oc_pavwidget` (
   `module_id` int(11) NOT NULL,
   `key` int(11) NOT NULL,
   PRIMARY KEY (`pavwidget_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5770 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6603 ;
 
 --
 -- Zrzut danych tabeli `oc_pavwidget`
@@ -3242,8 +3455,6 @@ INSERT INTO `oc_pavwidget` (`pavwidget_id`, `name`, `code`, `setting`, `module_i
 (4663, 'content', 'product_list.AN82bq', 'YToxNzp7czo0OiJyYW5kIjtzOjE4OiIwLjg4NjYzMzUxMzE5NTE2NjgiO3M6NjoibW9kdWxlIjtzOjE5OiJwcm9kdWN0X2xpc3QuQU44MmJxIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxOToicHJvZHVjdF9saXN0LkFOODJicSI7czo1OiJ3dHlwZSI7czoxMjoicHJvZHVjdF9saXN0IjtzOjExOiJ3aWRnZXRfbmFtZSI7czoxMDoiVG9wIFJhdGluZyI7czoxMDoic2hvd190aXRsZSI7czoxOiIxIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czoxMDoiVG9wIFJhdGluZyI7czoxNDoid2lkZ2V0X3RpdGxlXzIiO3M6MTA6IlRvcCBSYXRpbmciO3M6MTI6ImFkZGl0aW9uX2NscyI7czo3OiJzaWRlYmFyIjtzOjU6ImxpbWl0IjtzOjE6IjgiO3M6MTI6Iml0ZW1zcGVycGFnZSI7czoxOiI0IjtzOjQ6ImNvbHMiO3M6MToiMSI7czo1OiJ3aWR0aCI7czoyOiI4MCI7czo2OiJoZWlnaHQiO3M6MjoiNzEiO3M6OToibGlzdF90eXBlIjtzOjk6InRvcHJhdGluZyI7czoxNDoiY2hvb3NlX3Byb2R1Y3QiO3M6MDoiIjt9', 36, 0),
 (4664, 'content', 'product_list.CDZzjh', 'YToxODp7czo0OiJyYW5kIjtzOjE4OiIwLjUwODM1NjM1NDkxMzc5MDQiO3M6NjoibW9kdWxlIjtzOjE5OiJwcm9kdWN0X2xpc3QuQ0RaempoIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxOToicHJvZHVjdF9saXN0LkNEWnpqaCI7czo1OiJ3dHlwZSI7czoxMjoicHJvZHVjdF9saXN0IjtzOjExOiJ3aWRnZXRfbmFtZSI7czoxMjoiTmV3IEFycml2YWxzIjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjEiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjEyOiJOZXcgQXJyaXZhbHMiO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjEyOiJOZXcgQXJyaXZhbHMiO3M6MTI6ImFkZGl0aW9uX2NscyI7czo3OiJzaWRlYmFyIjtzOjU6ImxpbWl0IjtzOjE6IjgiO3M6MTI6Iml0ZW1zcGVycGFnZSI7czoxOiI0IjtzOjQ6ImNvbHMiO3M6MToiMSI7czo1OiJ3aWR0aCI7czoyOiI4MCI7czo2OiJoZWlnaHQiO3M6MjoiNzEiO3M6OToibGlzdF90eXBlIjtzOjY6ImxhdGVzdCI7czoxNDoiY2hvb3NlX3Byb2R1Y3QiO3M6MDoiIjtzOjc6InByb2R1Y3QiO2E6MTp7aTowO3M6MjoiNDIiO319', 36, 0),
 (4665, 'content', 'product_list.ET5ZRU', 'YToxNzp7czo0OiJyYW5kIjtzOjE5OiIwLjI2NTE1MDg5NjI5MjI2MjYzIjtzOjY6Im1vZHVsZSI7czoxOToicHJvZHVjdF9saXN0LkVUNVpSVSI7czo4OiJzYXZlZGF0YSI7czoxOiIxIjtzOjQ6IndrZXkiO3M6MTk6InByb2R1Y3RfbGlzdC5FVDVaUlUiO3M6NToid3R5cGUiO3M6MTI6InByb2R1Y3RfbGlzdCI7czoxMToid2lkZ2V0X25hbWUiO3M6MTI6IkJlc3QgU2VsbGVycyI7czoxMDoic2hvd190aXRsZSI7czoxOiIxIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czoxMjoiQmVzdCBTZWxsZXJzIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMiI7czoxMjoiQmVzdCBTZWxsZXJzIjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6MTI6InBhbmVsLWNlbnRlciI7czo1OiJsaW1pdCI7czoxOiI4IjtzOjEyOiJpdGVtc3BlcnBhZ2UiO3M6MToiOCI7czo0OiJjb2xzIjtzOjE6IjQiO3M6NToid2lkdGgiO3M6MzoiNjAwIjtzOjY6ImhlaWdodCI7czozOiI1MzMiO3M6OToibGlzdF90eXBlIjtzOjEwOiJiZXN0c2VsbGVyIjtzOjE0OiJjaG9vc2VfcHJvZHVjdCI7czowOiIiO30=', 36, 0),
-(5769, 'content', 'product_tabs.2htnjA', 'YToyODp7czo0OiJyYW5kIjtzOjE5OiIwLjEyOTYyOTk1OTM2MTU5MzM4IjtzOjY6Im1vZHVsZSI7czoxOToicHJvZHVjdF90YWJzLjJodG5qQSI7czo4OiJzYXZlZGF0YSI7czoxOiIxIjtzOjQ6IndrZXkiO3M6MTk6InByb2R1Y3RfdGFicy4yaHRuakEiO3M6NToid3R5cGUiO3M6MTI6InByb2R1Y3RfdGFicyI7czoxMToid2lkZ2V0X25hbWUiO3M6MTE6IlByb2R1Y3QgdGFiIjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjAiO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjExOiJQcm9kdWN0IHRhYiI7czoxNDoid2lkZ2V0X3RpdGxlXzEiO3M6MTE6IlByb2R1Y3QgdGFiIjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6MDoiIjtzOjU6ImxpbWl0IjtzOjI6IjEwIjtzOjY6ImNvbHVtbiI7czoxOiI1IjtzOjEyOiJpdGVtc3BlcnBhZ2UiO3M6MjoiMTAiO3M6MTE6Imljb25fbmV3ZXN0IjtzOjA6IiI7czoxMzoiZW5hYmxlX25ld2VzdCI7czoxOiIwIjtzOjEzOiJpY29uX2ZlYXR1cmVkIjtzOjA6IiI7czoxMDoicHJvZHVjdF9pZCI7czoyOToiNDIsNDQsNDcsNDgsNDEsMzAsMzMsMjgsMzYsNTAiO3M6MTU6ImVuYWJsZV9mZWF0dXJlZCI7czoxOiIxIjtzOjE1OiJpY29uX2Jlc3RzZWxsZXIiO3M6MDoiIjtzOjE3OiJlbmFibGVfYmVzdHNlbGxlciI7czoxOiIxIjtzOjEyOiJpY29uX3NwZWNpYWwiO3M6MDoiIjtzOjE0OiJlbmFibGVfc3BlY2lhbCI7czoxOiIxIjtzOjE0OiJpY29uX21vc3R2aWV3cyI7czowOiIiO3M6MTY6ImVuYWJsZV9tb3N0dmlld3MiO3M6MToiMCI7czo5OiJ0YWJzc3R5bGUiO3M6NjoidGFiLXYxIjtzOjExOiJpbWFnZV93aWR0aCI7czozOiI0MjAiO3M6MTI6ImltYWdlX2hlaWdodCI7czozOiI1NDYiO3M6OToiYXV0b19wbGF5IjtzOjQ6IjMwMDAiO30=', 33, 0),
-(5768, 'content', 'product_list.SAHlNn', 'YToxODp7czo0OiJyYW5kIjtzOjE4OiIwLjgyOTYyMDkxOTg3ODE0MzIiO3M6NjoibW9kdWxlIjtzOjE5OiJwcm9kdWN0X2xpc3QuU0FIbE5uIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxOToicHJvZHVjdF9saXN0LlNBSGxObiI7czo1OiJ3dHlwZSI7czoxMjoicHJvZHVjdF9saXN0IjtzOjExOiJ3aWRnZXRfbmFtZSI7czoxNDoiRmVhdHVyZWQgaXRlbXMiO3M6MTA6InNob3dfdGl0bGUiO3M6MToiMSI7czoxNDoid2lkZ2V0X3RpdGxlXzIiO3M6MTQ6IkZlYXR1cmVkIGl0ZW1zIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czoxNDoiRmVhdHVyZWQgaXRlbXMiO3M6MTI6ImFkZGl0aW9uX2NscyI7czoxMjoicGFuZWwtY2VudGVyIjtzOjU6ImxpbWl0IjtzOjE6IjgiO3M6MTI6Iml0ZW1zcGVycGFnZSI7czoxOiI0IjtzOjQ6ImNvbHMiO3M6MToiNCI7czo1OiJ3aWR0aCI7czozOiI0MjAiO3M6NjoiaGVpZ2h0IjtzOjM6IjU0NiI7czo5OiJsaXN0X3R5cGUiO3M6ODoiZmVhdHVyZWQiO3M6MTQ6ImNob29zZV9wcm9kdWN0IjtzOjA6IiI7czo3OiJwcm9kdWN0IjthOjQ6e2k6MDtzOjI6IjQxIjtpOjE7czoyOiIzMCI7aToyO3M6MjoiNDUiO2k6MztzOjI6IjQzIjt9fQ==', 33, 0),
 (4652, 'content', 'product_list.35Qlno', 'YToxODp7czo0OiJyYW5kIjtzOjE4OiIwLjg3MDY0NzY5NzE4NzY1MDIiO3M6NjoibW9kdWxlIjtzOjE5OiJwcm9kdWN0X2xpc3QuMzVRbG5vIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxOToicHJvZHVjdF9saXN0LjM1UWxubyI7czo1OiJ3dHlwZSI7czoxMjoicHJvZHVjdF9saXN0IjtzOjExOiJ3aWRnZXRfbmFtZSI7czoxNjoiRmVhdHVyZSBQcm9kdWN0cyI7czoxMDoic2hvd190aXRsZSI7czoxOiIxIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czoxNjoiRmVhdHVyZSBQcm9kdWN0cyI7czoxNDoid2lkZ2V0X3RpdGxlXzIiO3M6MTY6IkZlYXR1cmUgUHJvZHVjdHMiO3M6MTI6ImFkZGl0aW9uX2NscyI7czowOiIiO3M6NToibGltaXQiO3M6MToiOCI7czoxMjoiaXRlbXNwZXJwYWdlIjtzOjE6IjgiO3M6NDoiY29scyI7czoxOiI0IjtzOjU6IndpZHRoIjtzOjM6IjYwMCI7czo2OiJoZWlnaHQiO3M6MzoiNTMzIjtzOjk6Imxpc3RfdHlwZSI7czo4OiJmZWF0dXJlZCI7czoxNDoiY2hvb3NlX3Byb2R1Y3QiO3M6MDoiIjtzOjc6InByb2R1Y3QiO2E6ODp7aTowO3M6MjoiMzYiO2k6MTtzOjI6IjI4IjtpOjI7czoyOiIyOSI7aTozO3M6MjoiNTAiO2k6NDtzOjI6IjM1IjtpOjU7czoyOiI1MSI7aTo2O3M6MjoiNDQiO2k6NztzOjI6IjQ1Ijt9fQ==', 37, 0),
 (4662, 'content', 'interactive_banner.OOYEDE', 'YToyMzp7czo0OiJyYW5kIjtzOjE5OiIwLjE3NTM3NTY0NDQ1OTUzMTU4IjtzOjY6Im1vZHVsZSI7czoyNToiaW50ZXJhY3RpdmVfYmFubmVyLk9PWUVERSI7czo4OiJzYXZlZGF0YSI7czoxOiIxIjtzOjQ6IndrZXkiO3M6MjU6ImludGVyYWN0aXZlX2Jhbm5lci5PT1lFREUiO3M6NToid3R5cGUiO3M6MTg6ImludGVyYWN0aXZlX2Jhbm5lciI7czoxMToid2lkZ2V0X25hbWUiO3M6MTc6Ikdvb2QgRGVzaWduIEF3YXJkIjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjEiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjE3OiJHb29kIERlc2lnbiBBd2FyZCI7czoxNDoid2lkZ2V0X3RpdGxlXzIiO3M6MDoiIjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6MDoiIjtzOjExOiJzdWJfdGl0bGVfMSI7czo0OiJodWh1IjtzOjExOiJzdWJfdGl0bGVfMiI7czowOiIiO3M6OToiaW1hZ2VmaWxlIjtzOjMzOiJjYXRhbG9nL2RlbW8vYmFubmVycy9iYW5uZXIxMC5qcGciO3M6NToid2lkdGgiO3M6MzoiMzcwIjtzOjY6ImhlaWdodCI7czozOiIzMjAiO3M6MTM6Imh0bWxjb250ZW50XzEiO3M6MTc0OiImbHQ7ZGl2Jmd0O0NvbnN0cnVjdGVkIGZyb20gd29vZGVuIHBvbGVzIG9mIHRoZSBzYW1lIGRpYW1ldGVyLCB0aGUgY29hdCBzdGFuZCBoYXMgYSBuZWF0IGxvb2sgaW4gYWRkaXRpb24gdG8gYW4gZXhwYW5zaXZlIGltcHJlc3Npb24gcmVtaW5pc2NlbnQgb2YgZm9yZXN0IHRyZWVzLiAmbHQ7L2RpdiZndDsiO3M6MTM6Imh0bWxjb250ZW50XzIiO3M6MTc0OiImbHQ7ZGl2Jmd0O0NvbnN0cnVjdGVkIGZyb20gd29vZGVuIHBvbGVzIG9mIHRoZSBzYW1lIGRpYW1ldGVyLCB0aGUgY29hdCBzdGFuZCBoYXMgYSBuZWF0IGxvb2sgaW4gYWRkaXRpb24gdG8gYW4gZXhwYW5zaXZlIGltcHJlc3Npb24gcmVtaW5pc2NlbnQgb2YgZm9yZXN0IHRyZWVzLiAmbHQ7L2RpdiZndDsiO3M6MTE6InRpdGxlbGlua18xIjtzOjExOiJNb3JlIGRldGFpbCI7czoxMToidGl0bGVsaW5rXzIiO3M6MTE6Ik1vcmUgZGV0YWlsIjtzOjk6Im1hc2tfbGluayI7czoxOiIjIjtzOjExOiJiYW5uZXJfdHlwZSI7czoyOiJ2MSI7czoxMToiZWZmZWN0X3R5cGUiO3M6OToiZWZmZWN0LXYxIjtzOjg6InBvc2l0aW9uIjtzOjY6ImNlbnRlciI7fQ==', 36, 0),
 (4666, 'content', 'product_list.yCyASo', 'YToxNzp7czo0OiJyYW5kIjtzOjE4OiIwLjUzNDQyMTYyMjIyNzAxNzYiO3M6NjoibW9kdWxlIjtzOjE5OiJwcm9kdWN0X2xpc3QueUN5QVNvIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxOToicHJvZHVjdF9saXN0LnlDeUFTbyI7czo1OiJ3dHlwZSI7czoxMjoicHJvZHVjdF9saXN0IjtzOjExOiJ3aWRnZXRfbmFtZSI7czo3OiJTcGVjaWFsIjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjEiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjc6IlNwZWNpYWwiO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjc6IlNwZWNpYWwiO3M6MTI6ImFkZGl0aW9uX2NscyI7czoyMToic2lkZWJhciBib3JkZXIteWVsbG93IjtzOjU6ImxpbWl0IjtzOjE6IjgiO3M6MTI6Iml0ZW1zcGVycGFnZSI7czoxOiI0IjtzOjQ6ImNvbHMiO3M6MToiMSI7czo1OiJ3aWR0aCI7czoyOiI4MCI7czo2OiJoZWlnaHQiO3M6MjoiNzEiO3M6OToibGlzdF90eXBlIjtzOjc6InNwZWNpYWwiO3M6MTQ6ImNob29zZV9wcm9kdWN0IjtzOjA6IiI7fQ==', 36, 0),
@@ -3254,13 +3465,6 @@ INSERT INTO `oc_pavwidget` (`pavwidget_id`, `name`, `code`, `setting`, `module_i
 (4658, 'content', 'icon_box.XUdjal', 'YToxNzp7czo0OiJyYW5kIjtzOjIwOiIwLjAxMTg2MzE1MDM3NDA4NjU4NCI7czo2OiJtb2R1bGUiO3M6MTU6Imljb25fYm94LlhVZGphbCI7czo4OiJzYXZlZGF0YSI7czoxOiIxIjtzOjQ6IndrZXkiO3M6MTU6Imljb25fYm94LlhVZGphbCI7czo1OiJ3dHlwZSI7czo4OiJpY29uX2JveCI7czoxMToid2lkZ2V0X25hbWUiO3M6MTM6IkN1c3RvbWVyIENhcmUiO3M6MTA6InNob3dfdGl0bGUiO3M6MToiMSI7czoxNDoid2lkZ2V0X3RpdGxlXzEiO3M6MTM6IkN1c3RvbWVyIENhcmUiO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjEzOiJDdXN0b21lciBDYXJlIjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6MDoiIjtzOjg6Imljb25maWxlIjtzOjMyOiJjYXRhbG9nL2RlbW8vbW9kdWxlL21pY29uLXYzLnBuZyI7czo5OiJpY29uY2xhc3MiO3M6MDoiIjtzOjEzOiJodG1sY29udGVudF8xIjtzOjkwOiImbHQ7ZGl2Jmd0O0EgY2xlYXJhbmNlIHByaWNlIGlzIGNvbnNpZGVyZWQgNDAlIG9yIG1vcmUgb2ZmIHRoZSBvcmlnaW5hbCBwcmljZS4mbHQ7L2RpdiZndDsiO3M6MTM6Imh0bWxjb250ZW50XzIiO3M6OTA6IiZsdDtkaXYmZ3Q7QSBjbGVhcmFuY2UgcHJpY2UgaXMgY29uc2lkZXJlZCA0MCUgb3IgbW9yZSBvZmYgdGhlIG9yaWdpbmFsIHByaWNlLiZsdDsvZGl2Jmd0OyI7czoxNDoiaWNvbl9ib3hfc3R5bGUiO3M6MTQ6ImZlYXR1cmUtYm94LXYyIjtzOjEwOiJ0ZXh0X2FsaWduIjtzOjE2OiJmZWF0dXJlLWJveC1sZWZ0IjtzOjEwOiJiYWNrZ3JvdW5kIjtzOjA6IiI7fQ==', 36, 0),
 (4659, 'content', 'icon_box.XxROnG', 'YToxNzp7czo0OiJyYW5kIjtzOjE4OiIwLjU3MzI0MjY4MjE5MDc5MzMiO3M6NjoibW9kdWxlIjtzOjE1OiJpY29uX2JveC5YeFJPbkciO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjE1OiJpY29uX2JveC5YeFJPbkciO3M6NToid3R5cGUiO3M6ODoiaWNvbl9ib3giO3M6MTE6IndpZGdldF9uYW1lIjtzOjk6Ikd1YXJhbnRlZSI7czoxMDoic2hvd190aXRsZSI7czoxOiIxIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czo5OiJHdWFyYW50ZWUiO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjk6Ikd1YXJhbnRlZSI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjA6IiI7czo4OiJpY29uZmlsZSI7czozMjoiY2F0YWxvZy9kZW1vL21vZHVsZS9taWNvbi12MS5wbmciO3M6OToiaWNvbmNsYXNzIjtzOjA6IiI7czoxMzoiaHRtbGNvbnRlbnRfMSI7czo4NjoiJmx0O2RpdiZndDtBbGwgaXRlbXMgZ3VhcmFudGVlZCBpbiBzdG9jayBpbiBzaXplcyBzaG93biwgb3IgeW91IHJlY2VpdmUgYSAmbHQ7L2RpdiZndDsiO3M6MTM6Imh0bWxjb250ZW50XzIiO3M6ODY6IiZsdDtkaXYmZ3Q7QWxsIGl0ZW1zIGd1YXJhbnRlZWQgaW4gc3RvY2sgaW4gc2l6ZXMgc2hvd24sIG9yIHlvdSByZWNlaXZlIGEgJmx0Oy9kaXYmZ3Q7IjtzOjE0OiJpY29uX2JveF9zdHlsZSI7czoxNDoiZmVhdHVyZS1ib3gtdjIiO3M6MTA6InRleHRfYWxpZ24iO3M6MTY6ImZlYXR1cmUtYm94LWxlZnQiO3M6MTA6ImJhY2tncm91bmQiO3M6MDoiIjt9', 36, 0),
 (4656, 'content', 'product_list.uXnDpb', 'YToxNzp7czo0OiJyYW5kIjtzOjIwOiIwLjAyNTkyNDQzMjczMDA4MTYwNCI7czo2OiJtb2R1bGUiO3M6MTk6InByb2R1Y3RfbGlzdC51WG5EcGIiO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjE5OiJwcm9kdWN0X2xpc3QudVhuRHBiIjtzOjU6Ind0eXBlIjtzOjEyOiJwcm9kdWN0X2xpc3QiO3M6MTE6IndpZGdldF9uYW1lIjtzOjg6IlNhbGUgb2ZmIjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjEiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjg6IlNhbGUgb2ZmIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMiI7czo4OiJTYWxlIG9mZiI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjIxOiJzaWRlYmFyIGJvcmRlci15ZWxsb3ciO3M6NToibGltaXQiO3M6MToiNiI7czoxMjoiaXRlbXNwZXJwYWdlIjtzOjE6IjQiO3M6NDoiY29scyI7czoxOiIxIjtzOjU6IndpZHRoIjtzOjI6IjgwIjtzOjY6ImhlaWdodCI7czoyOiI3MSI7czo5OiJsaXN0X3R5cGUiO3M6Nzoic3BlY2lhbCI7czoxNDoiY2hvb3NlX3Byb2R1Y3QiO3M6MDoiIjt9', 37, 0),
-(5767, 'content', 'product_list.qwHSiH', 'YToxNzp7czo0OiJyYW5kIjtzOjE4OiIwLjg3NjEzNTY2NjczOTE5MDkiO3M6NjoibW9kdWxlIjtzOjE5OiJwcm9kdWN0X2xpc3QucXdIU2lIIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxOToicHJvZHVjdF9saXN0LnF3SFNpSCI7czo1OiJ3dHlwZSI7czoxMjoicHJvZHVjdF9saXN0IjtzOjExOiJ3aWRnZXRfbmFtZSI7czoxMjoiQmVzdCBzZWxsZXJzIjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjEiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjEyOiJCZXN0IHNlbGxlcnMiO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjEyOiJCZXN0IHNlbGxlcnMiO3M6MTI6ImFkZGl0aW9uX2NscyI7czowOiIiO3M6NToibGltaXQiO3M6MToiOCI7czoxMjoiaXRlbXNwZXJwYWdlIjtzOjE6IjIiO3M6NDoiY29scyI7czoxOiI0IjtzOjU6IndpZHRoIjtzOjI6IjgwIjtzOjY6ImhlaWdodCI7czozOiIxMDQiO3M6OToibGlzdF90eXBlIjtzOjEwOiJiZXN0c2VsbGVyIjtzOjE0OiJjaG9vc2VfcHJvZHVjdCI7czowOiIiO30=', 33, 0),
-(5766, 'content', 'product_list.9XvqeA', 'YToxODp7czo0OiJyYW5kIjtzOjE4OiIwLjg2MzgxOTA3MzM2NjcwMTIiO3M6NjoibW9kdWxlIjtzOjE5OiJwcm9kdWN0X2xpc3QuOVh2cWVBIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxOToicHJvZHVjdF9saXN0LjlYdnFlQSI7czo1OiJ3dHlwZSI7czoxMjoicHJvZHVjdF9saXN0IjtzOjExOiJ3aWRnZXRfbmFtZSI7czoxMToiTW9zdCB2aWV3ZWQiO3M6MTA6InNob3dfdGl0bGUiO3M6MToiMSI7czoxNDoid2lkZ2V0X3RpdGxlXzEiO3M6MTE6Ik1vc3Qgdmlld2VkIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMiI7czoxMToiTW9zdCB2aWV3ZWQiO3M6MTI6ImFkZGl0aW9uX2NscyI7czowOiIiO3M6NToibGltaXQiO3M6MToiOCI7czoxMjoiaXRlbXNwZXJwYWdlIjtzOjE6IjIiO3M6NDoiY29scyI7czoxOiI0IjtzOjU6IndpZHRoIjtzOjI6IjgwIjtzOjY6ImhlaWdodCI7czozOiIxMDQiO3M6OToibGlzdF90eXBlIjtzOjg6ImZlYXR1cmVkIjtzOjE0OiJjaG9vc2VfcHJvZHVjdCI7czowOiIiO3M6NzoicHJvZHVjdCI7YToyOntpOjA7czoyOiIzMSI7aToxO3M6MjoiMzIiO319', 33, 0),
-(5765, 'content', 'product_list.2qV4fI', 'YToxODp7czo0OiJyYW5kIjtzOjE4OiIwLjcxNjQ5ODM5ODU2OTkwOTUiO3M6NjoibW9kdWxlIjtzOjE5OiJwcm9kdWN0X2xpc3QuMnFWNGZJIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxOToicHJvZHVjdF9saXN0LjJxVjRmSSI7czo1OiJ3dHlwZSI7czoxMjoicHJvZHVjdF9saXN0IjtzOjExOiJ3aWRnZXRfbmFtZSI7czoxMjoiTmV3IGFycml2YWxzIjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjEiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjEyOiJOZXcgYXJyaXZhbHMiO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjEyOiJOZXcgYXJyaXZhbHMiO3M6MTI6ImFkZGl0aW9uX2NscyI7czowOiIiO3M6NToibGltaXQiO3M6MToiOCI7czoxMjoiaXRlbXNwZXJwYWdlIjtzOjE6IjIiO3M6NDoiY29scyI7czoxOiI0IjtzOjU6IndpZHRoIjtzOjI6IjgwIjtzOjY6ImhlaWdodCI7czozOiIxMDQiO3M6OToibGlzdF90eXBlIjtzOjg6ImZlYXR1cmVkIjtzOjE0OiJjaG9vc2VfcHJvZHVjdCI7czowOiIiO3M6NzoicHJvZHVjdCI7YToyOntpOjA7czoyOiI0NiI7aToxO3M6MjoiNDgiO319', 33, 0),
-(5764, 'content', 'manufacture.enivZa', 'YToxNjp7czo0OiJyYW5kIjtzOjE5OiIwLjA5OTE1OTI0MjcxMjcxMjQ4IjtzOjY6Im1vZHVsZSI7czoxODoibWFudWZhY3R1cmUuZW5pdlphIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxODoibWFudWZhY3R1cmUuZW5pdlphIjtzOjU6Ind0eXBlIjtzOjExOiJtYW51ZmFjdHVyZSI7czoxMToid2lkZ2V0X25hbWUiO3M6MTE6Ik91ciBjbGllbnRzIjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjEiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjExOiJPdXIgY2xpZW50cyI7czoxNDoid2lkZ2V0X3RpdGxlXzIiO3M6MTE6Ik91ciBjbGllbnRzIjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6MDoiIjtzOjY6InRhcmdldCI7czoxOiI4IjtzOjU6ImxpbWl0IjtzOjI6IjEyIjtzOjc6ImNvbHVtbnMiO3M6MToiNSI7czoxMjoiaXRlbXNwZXJwYWdlIjtzOjE6IjUiO3M6NToid2lkdGgiO3M6MzoiMjEwIjtzOjY6ImhlaWdodCI7czoyOiI4MCI7fQ==', 33, 0),
-(5763, 'content', 'image.wcb497', 'YToxNjp7czo0OiJyYW5kIjtzOjE4OiIwLjY1NzMxNDM2ODI4NDA3NjEiO3M6NjoibW9kdWxlIjtzOjEyOiJpbWFnZS5wbVdqbkYiO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjEyOiJpbWFnZS5wbVdqbkYiO3M6NToid3R5cGUiO3M6NToiaW1hZ2UiO3M6MTE6IndpZGdldF9uYW1lIjtzOjg6IkJhbm5lciA1IjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjAiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjg6IkJhbm5lciA1IjtzOjE0OiJ3aWRnZXRfdGl0bGVfMiI7czo4OiJCYW5uZXIgNSI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjk6ImVmZmVjdC12NCI7czo5OiJpbWFnZWZpbGUiO3M6MzI6ImNhdGFsb2cvZGVtby9iYW5uZXJzL2Jhbm5lcjUuanBnIjtzOjQ6InNpemUiO3M6MDoiIjtzOjk6ImFuaW1hdGlvbiI7czoxOiI0IjtzOjk6ImFsaWdubWVudCI7czo0OiJsZWZ0IjtzOjc6ImlzcG9wdXAiO3M6MToiMSI7czo0OiJsaW5rIjtzOjE6IiMiO30=', 33, 0),
-(5758, 'content', 'bloglatest.nVXREv', 'YToxNDp7czo0OiJyYW5kIjtzOjE5OiIwLjQ3ODcwOTgyNzU5ODY2OTY1IjtzOjY6Im1vZHVsZSI7czoxNzoiYmxvZ2xhdGVzdC5uVlhSRXYiO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjE3OiJibG9nbGF0ZXN0Lm5WWFJFdiI7czo1OiJ3dHlwZSI7czoxMDoiYmxvZ2xhdGVzdCI7czoxMToid2lkZ2V0X25hbWUiO3M6OToiT3VyIGJsb2dzIjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjEiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjk6Ik91ciBibG9ncyI7czoxNDoid2lkZ2V0X3RpdGxlXzIiO3M6OToiT3VyIGJsb2dzIjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6MDoiIjtzOjEyOiJpdGVtc3BlcnBhZ2UiO3M6MToiMiI7czo1OiJ3aWR0aCI7czozOiIxNjAiO3M6NjoiaGVpZ2h0IjtzOjM6IjE2MCI7czo0OiJjb2xzIjtzOjE6IjIiO30=', 33, 0),
-(5759, 'content', 'html.5ke3yP', 'YToxNDp7czo0OiJyYW5kIjtzOjE4OiIwLjY1NTE5MTQ3MTY0NjIwMzUiO3M6NjoibW9kdWxlIjtzOjExOiJodG1sLjVrZTN5UCI7czo4OiJzYXZlZGF0YSI7czoxOiIxIjtzOjQ6IndrZXkiO3M6MTE6Imh0bWwuNWtlM3lQIjtzOjU6Ind0eXBlIjtzOjQ6Imh0bWwiO3M6MTE6IndpZGdldF9uYW1lIjtzOjA6IiI7czoxMDoic2hvd190aXRsZSI7czoxOiIxIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMiI7czowOiIiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjA6IiI7czoxNDoid2lkZ2V0X3RpdGxlXzMiO3M6MDoiIjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6MDoiIjtzOjEzOiJodG1sY29udGVudF8yIjtzOjA6IiI7czoxMzoiaHRtbGNvbnRlbnRfMSI7czowOiIiO3M6MTM6Imh0bWxjb250ZW50XzMiO3M6MDoiIjt9', 33, 0),
 (4661, 'content', 'interactive_banner.lRB2a4', 'YToyMzp7czo0OiJyYW5kIjtzOjE5OiIwLjI0MzEyMjU5MDY5NTU4MTE4IjtzOjY6Im1vZHVsZSI7czoyNToiaW50ZXJhY3RpdmVfYmFubmVyLmxSQjJhNCI7czo4OiJzYXZlZGF0YSI7czoxOiIxIjtzOjQ6IndrZXkiO3M6MjU6ImludGVyYWN0aXZlX2Jhbm5lci5sUkIyYTQiO3M6NToid3R5cGUiO3M6MTg6ImludGVyYWN0aXZlX2Jhbm5lciI7czoxMToid2lkZ2V0X25hbWUiO3M6MzQ6IlRoZSBTa2lsbCBvZiBUaGlzIFdvb2RlbiBTdHJ1Y3R1cmUiO3M6MTA6InNob3dfdGl0bGUiO3M6MToiMSI7czoxNDoid2lkZ2V0X3RpdGxlXzEiO3M6MzQ6IlRoZSBTa2lsbCBvZiBUaGlzIFdvb2RlbiBTdHJ1Y3R1cmUiO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjM0OiJUaGUgU2tpbGwgb2YgVGhpcyBXb29kZW4gU3RydWN0dXJlIjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6MDoiIjtzOjExOiJzdWJfdGl0bGVfMSI7czo0OiJodWh1IjtzOjExOiJzdWJfdGl0bGVfMiI7czo0OiJodWh1IjtzOjk6ImltYWdlZmlsZSI7czozMzoiY2F0YWxvZy9kZW1vL2Jhbm5lcnMvYmFubmVyMTEuanBnIjtzOjU6IndpZHRoIjtzOjM6IjM3MCI7czo2OiJoZWlnaHQiO3M6MzoiMzIwIjtzOjEzOiJodG1sY29udGVudF8xIjtzOjE3NDoiJmx0O2RpdiZndDtDb25zdHJ1Y3RlZCBmcm9tIHdvb2RlbiBwb2xlcyBvZiB0aGUgc2FtZSBkaWFtZXRlciwgdGhlIGNvYXQgc3RhbmQgaGFzIGEgbmVhdCBsb29rIGluIGFkZGl0aW9uIHRvIGFuIGV4cGFuc2l2ZSBpbXByZXNzaW9uIHJlbWluaXNjZW50IG9mIGZvcmVzdCB0cmVlcy4gJmx0Oy9kaXYmZ3Q7IjtzOjEzOiJodG1sY29udGVudF8yIjtzOjE3NDoiJmx0O2RpdiZndDtDb25zdHJ1Y3RlZCBmcm9tIHdvb2RlbiBwb2xlcyBvZiB0aGUgc2FtZSBkaWFtZXRlciwgdGhlIGNvYXQgc3RhbmQgaGFzIGEgbmVhdCBsb29rIGluIGFkZGl0aW9uIHRvIGFuIGV4cGFuc2l2ZSBpbXByZXNzaW9uIHJlbWluaXNjZW50IG9mIGZvcmVzdCB0cmVlcy4gJmx0Oy9kaXYmZ3Q7IjtzOjExOiJ0aXRsZWxpbmtfMSI7czoxMToiTW9yZSBkZXRhaWwiO3M6MTE6InRpdGxlbGlua18yIjtzOjExOiJNb3JlIGRldGFpbCI7czo5OiJtYXNrX2xpbmsiO3M6MToiIyI7czoxMToiYmFubmVyX3R5cGUiO3M6MjoidjEiO3M6MTE6ImVmZmVjdF90eXBlIjtzOjk6ImVmZmVjdC12MSI7czo4OiJwb3NpdGlvbiI7czo2OiJjZW50ZXIiO30=', 36, 0),
 (4660, 'content', 'interactive_banner.7sywgK', 'YToyMzp7czo0OiJyYW5kIjtzOjE5OiIwLjE0MTU0OTAwOTk0MzQwMTkyIjtzOjY6Im1vZHVsZSI7czoyNToiaW50ZXJhY3RpdmVfYmFubmVyLjdzeXdnSyI7czo4OiJzYXZlZGF0YSI7czoxOiIxIjtzOjQ6IndrZXkiO3M6MjU6ImludGVyYWN0aXZlX2Jhbm5lci43c3l3Z0siO3M6NToid3R5cGUiO3M6MTg6ImludGVyYWN0aXZlX2Jhbm5lciI7czoxMToid2lkZ2V0X25hbWUiO3M6MTQ6IkludGVyaW9ycyBTaG93IjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjEiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjE0OiJJbnRlcmlvcnMgU2hvdyI7czoxNDoid2lkZ2V0X3RpdGxlXzIiO3M6MTQ6IkludGVyaW9ycyBTaG93IjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6MDoiIjtzOjExOiJzdWJfdGl0bGVfMSI7czowOiIiO3M6MTE6InN1Yl90aXRsZV8yIjtzOjA6IiI7czo5OiJpbWFnZWZpbGUiO3M6MzI6ImNhdGFsb2cvZGVtby9iYW5uZXJzL2Jhbm5lcjkuanBnIjtzOjU6IndpZHRoIjtzOjM6IjM3MCI7czo2OiJoZWlnaHQiO3M6MzoiMzIwIjtzOjEzOiJodG1sY29udGVudF8xIjtzOjE3NDoiJmx0O2RpdiZndDtDb25zdHJ1Y3RlZCBmcm9tIHdvb2RlbiBwb2xlcyBvZiB0aGUgc2FtZSBkaWFtZXRlciwgdGhlIGNvYXQgc3RhbmQgaGFzIGEgbmVhdCBsb29rIGluIGFkZGl0aW9uIHRvIGFuIGV4cGFuc2l2ZSBpbXByZXNzaW9uIHJlbWluaXNjZW50IG9mIGZvcmVzdCB0cmVlcy4gJmx0Oy9kaXYmZ3Q7IjtzOjEzOiJodG1sY29udGVudF8yIjtzOjE3NDoiJmx0O2RpdiZndDtDb25zdHJ1Y3RlZCBmcm9tIHdvb2RlbiBwb2xlcyBvZiB0aGUgc2FtZSBkaWFtZXRlciwgdGhlIGNvYXQgc3RhbmQgaGFzIGEgbmVhdCBsb29rIGluIGFkZGl0aW9uIHRvIGFuIGV4cGFuc2l2ZSBpbXByZXNzaW9uIHJlbWluaXNjZW50IG9mIGZvcmVzdCB0cmVlcy4gJmx0Oy9kaXYmZ3Q7IjtzOjExOiJ0aXRsZWxpbmtfMSI7czoxMToiTW9yZSBkZXRhaWwiO3M6MTE6InRpdGxlbGlua18yIjtzOjA6IiI7czo5OiJtYXNrX2xpbmsiO3M6MToiIyI7czoxMToiYmFubmVyX3R5cGUiO3M6MjoidjEiO3M6MTE6ImVmZmVjdF90eXBlIjtzOjk6ImVmZmVjdC12MSI7czo4OiJwb3NpdGlvbiI7czo2OiJjZW50ZXIiO30=', 36, 0),
 (4651, 'content', 'interactive_banner.XojwT6', 'YToyMzp7czo0OiJyYW5kIjtzOjE4OiIwLjUzNDUwNjY2MzkzMzA0NjIiO3M6NjoibW9kdWxlIjtzOjI1OiJpbnRlcmFjdGl2ZV9iYW5uZXIuWG9qd1Q2IjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoyNToiaW50ZXJhY3RpdmVfYmFubmVyLlhvandUNiI7czo1OiJ3dHlwZSI7czoxODoiaW50ZXJhY3RpdmVfYmFubmVyIjtzOjExOiJ3aWRnZXRfbmFtZSI7czoxNToiQ2VyYW1pY3MgQ29sbGFiIjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjEiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjE1OiJDZXJhbWljcyBDb2xsYWIiO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjE1OiJDZXJhbWljcyBDb2xsYWIiO3M6MTI6ImFkZGl0aW9uX2NscyI7czowOiIiO3M6MTE6InN1Yl90aXRsZV8xIjtzOjA6IiI7czoxMToic3ViX3RpdGxlXzIiO3M6MDoiIjtzOjk6ImltYWdlZmlsZSI7czozMzoiY2F0YWxvZy9kZW1vL2Jhbm5lcnMvYmFubmVyMTUuanBnIjtzOjU6IndpZHRoIjtzOjM6IjM3MCI7czo2OiJoZWlnaHQiO3M6MzoiMzIwIjtzOjEzOiJodG1sY29udGVudF8xIjtzOjEwNDoiJmx0O2RpdiZndDtXZSBzb3VyY2UgdW5pcXVlLCBsaW1pdGVkIGVkaXRpb24gYW5kIGRlc2lnbmVyIG1hZGUgcHJvZHVjdCBmcm9tIGFyb3VuZCB0aGUgZ2xvYmUmbHQ7L2RpdiZndDsiO3M6MTM6Imh0bWxjb250ZW50XzIiO3M6MTA0OiImbHQ7ZGl2Jmd0O1dlIHNvdXJjZSB1bmlxdWUsIGxpbWl0ZWQgZWRpdGlvbiBhbmQgZGVzaWduZXIgbWFkZSBwcm9kdWN0IGZyb20gYXJvdW5kIHRoZSBnbG9iZSZsdDsvZGl2Jmd0OyI7czoxMToidGl0bGVsaW5rXzEiO3M6MTE6Ik1vcmUgZGV0YWlsIjtzOjExOiJ0aXRsZWxpbmtfMiI7czoxMToiTW9yZSBkZXRhaWwiO3M6OToibWFza19saW5rIjtzOjE6IiMiO3M6MTE6ImJhbm5lcl90eXBlIjtzOjI6InYyIjtzOjExOiJlZmZlY3RfdHlwZSI7czo5OiJlZmZlY3QtdjEiO3M6ODoicG9zaXRpb24iO3M6NjoiY2VudGVyIjt9', 37, 0),
@@ -3289,8 +3493,7 @@ INSERT INTO `oc_pavwidget` (`pavwidget_id`, `name`, `code`, `setting`, `module_i
 (4632, 'content', 'icon_box.8vako2', 'YToxNzp7czo0OiJyYW5kIjtzOjE4OiIwLjgzNDU0MTc5NzQ3MDc2NzYiO3M6NjoibW9kdWxlIjtzOjE1OiJpY29uX2JveC44dmFrbzIiO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjE1OiJpY29uX2JveC44dmFrbzIiO3M6NToid3R5cGUiO3M6ODoiaWNvbl9ib3giO3M6MTE6IndpZGdldF9uYW1lIjtzOjEyOiJTYWZlIFBheW1lbnQiO3M6MTA6InNob3dfdGl0bGUiO3M6MToiMSI7czoxNDoid2lkZ2V0X3RpdGxlXzEiO3M6MTI6IlNhZmUgUGF5bWVudCI7czoxNDoid2lkZ2V0X3RpdGxlXzIiO3M6MTI6IlNhZmUgUGF5bWVudCI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjA6IiI7czo4OiJpY29uZmlsZSI7czozMjoiY2F0YWxvZy9kZW1vL21vZHVsZS9taWNvbi12MS5wbmciO3M6OToiaWNvbmNsYXNzIjtzOjA6IiI7czoxMzoiaHRtbGNvbnRlbnRfMSI7czo3OToiJmx0O3AmZ3Q7UGF5IHdpdGggdGhlIHdvcmxkcyBtb3N0IHBvcHVsYXIgYW5kIHNlY3VyZSBwYXltZW50IG1ldGhvZHMuJmx0Oy9wJmd0OyI7czoxMzoiaHRtbGNvbnRlbnRfMiI7czo3OToiJmx0O3AmZ3Q7UGF5IHdpdGggdGhlIHdvcmxkcyBtb3N0IHBvcHVsYXIgYW5kIHNlY3VyZSBwYXltZW50IG1ldGhvZHMuJmx0Oy9wJmd0OyI7czoxNDoiaWNvbl9ib3hfc3R5bGUiO3M6MTQ6ImZlYXR1cmUtYm94LXYyIjtzOjEwOiJ0ZXh0X2FsaWduIjtzOjE2OiJmZWF0dXJlLWJveC1sZWZ0IjtzOjEwOiJiYWNrZ3JvdW5kIjtzOjA6IiI7fQ==', 39, 0),
 (4633, 'content', 'icon_box.8wJ50j', 'YToxNzp7czo0OiJyYW5kIjtzOjE3OiIwLjY3MTMzNjc5MjYzMDU1NCI7czo2OiJtb2R1bGUiO3M6MTU6Imljb25fYm94Ljh3SjUwaiI7czo4OiJzYXZlZGF0YSI7czoxOiIxIjtzOjQ6IndrZXkiO3M6MTU6Imljb25fYm94Ljh3SjUwaiI7czo1OiJ3dHlwZSI7czo4OiJpY29uX2JveCI7czoxMToid2lkZ2V0X25hbWUiO3M6MTg6Ildvcmxkd2lkZSBEZWxpdmVyeSI7czoxMDoic2hvd190aXRsZSI7czoxOiIxIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czoxODoiV29ybGR3aWRlIERlbGl2ZXJ5IjtzOjE0OiJ3aWRnZXRfdGl0bGVfMiI7czoxODoiV29ybGR3aWRlIERlbGl2ZXJ5IjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6MDoiIjtzOjg6Imljb25maWxlIjtzOjMyOiJjYXRhbG9nL2RlbW8vbW9kdWxlL21pY29uLXYyLnBuZyI7czo5OiJpY29uY2xhc3MiO3M6MDoiIjtzOjEzOiJodG1sY29udGVudF8xIjtzOjkwOiImbHQ7cCZndDtXaXRoIHNpdGVzIGluIDUgbGFuZ3VhZ2VzLCB3ZSBzaGlwIHRvIG92ZXIgMjAwIGNvdW50cmllcyAmYW1wOyByZWdpb25zLiZsdDsvcCZndDsiO3M6MTM6Imh0bWxjb250ZW50XzIiO3M6OTA6IiZsdDtwJmd0O1dpdGggc2l0ZXMgaW4gNSBsYW5ndWFnZXMsIHdlIHNoaXAgdG8gb3ZlciAyMDAgY291bnRyaWVzICZhbXA7IHJlZ2lvbnMuJmx0Oy9wJmd0OyI7czoxNDoiaWNvbl9ib3hfc3R5bGUiO3M6MTQ6ImZlYXR1cmUtYm94LXYyIjtzOjEwOiJ0ZXh0X2FsaWduIjtzOjE2OiJmZWF0dXJlLWJveC1sZWZ0IjtzOjEwOiJiYWNrZ3JvdW5kIjtzOjA6IiI7fQ==', 39, 0),
 (4556, 'content', 'image.Rzntb0', 'YToxNjp7czo0OiJyYW5kIjtzOjE4OiIwLjYwOTcyOTc5MDEwNzU5NDkiO3M6NjoibW9kdWxlIjtzOjEyOiJpbWFnZS5Sem50YjAiO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjEyOiJpbWFnZS5Sem50YjAiO3M6NToid3R5cGUiO3M6NToiaW1hZ2UiO3M6MTE6IndpZGdldF9uYW1lIjtzOjM6ImltZyI7czoxMDoic2hvd190aXRsZSI7czoxOiIwIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czozOiJpbWciO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjM6ImltZyI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjEwOiJlZmZlY3QtdjEwIjtzOjk6ImltYWdlZmlsZSI7czozMzoiY2F0YWxvZy9kZW1vL2Jhbm5lcnMvYmFubmVyMzQuanBnIjtzOjQ6InNpemUiO3M6MDoiIjtzOjk6ImFuaW1hdGlvbiI7czoxOiIxIjtzOjk6ImFsaWdubWVudCI7czo2OiJjZW50ZXIiO3M6NzoiaXNwb3B1cCI7czoxOiIxIjtzOjQ6ImxpbmsiO3M6MToiIyI7fQ==', 42, 0),
-(4554, 'content', 'image.lLZE1u', 'YToxNjp7czo0OiJyYW5kIjtzOjE4OiIwLjQyNzY5ODY5Mzc4NjYwMjEiO3M6NjoibW9kdWxlIjtzOjEyOiJpbWFnZS5sTFpFMXUiO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjEyOiJpbWFnZS5sTFpFMXUiO3M6NToid3R5cGUiO3M6NToiaW1hZ2UiO3M6MTE6IndpZGdldF9uYW1lIjtzOjM6ImltZyI7czoxMDoic2hvd190aXRsZSI7czoxOiIwIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czozOiJpbWciO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjM6ImltZyI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjk6ImVmZmVjdC12NCI7czo5OiJpbWFnZWZpbGUiO3M6MzM6ImNhdGFsb2cvZGVtby9iYW5uZXJzL2Jhbm5lcjI4LmpwZyI7czo0OiJzaXplIjtzOjA6IiI7czo5OiJhbmltYXRpb24iO3M6MToiMSI7czo5OiJhbGlnbm1lbnQiO3M6NjoiY2VudGVyIjtzOjc6ImlzcG9wdXAiO3M6MToiMSI7czo0OiJsaW5rIjtzOjE6IiMiO30=', 42, 0);
-INSERT INTO `oc_pavwidget` (`pavwidget_id`, `name`, `code`, `setting`, `module_id`, `key`) VALUES
+(4554, 'content', 'image.lLZE1u', 'YToxNjp7czo0OiJyYW5kIjtzOjE4OiIwLjQyNzY5ODY5Mzc4NjYwMjEiO3M6NjoibW9kdWxlIjtzOjEyOiJpbWFnZS5sTFpFMXUiO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjEyOiJpbWFnZS5sTFpFMXUiO3M6NToid3R5cGUiO3M6NToiaW1hZ2UiO3M6MTE6IndpZGdldF9uYW1lIjtzOjM6ImltZyI7czoxMDoic2hvd190aXRsZSI7czoxOiIwIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czozOiJpbWciO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjM6ImltZyI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjk6ImVmZmVjdC12NCI7czo5OiJpbWFnZWZpbGUiO3M6MzM6ImNhdGFsb2cvZGVtby9iYW5uZXJzL2Jhbm5lcjI4LmpwZyI7czo0OiJzaXplIjtzOjA6IiI7czo5OiJhbmltYXRpb24iO3M6MToiMSI7czo5OiJhbGlnbm1lbnQiO3M6NjoiY2VudGVyIjtzOjc6ImlzcG9wdXAiO3M6MToiMSI7czo0OiJsaW5rIjtzOjE6IiMiO30=', 42, 0),
 (4555, 'content', 'image.mGFxD7', 'YToxNjp7czo0OiJyYW5kIjtzOjE5OiIwLjA1MjYzODAxNjc2ODIwNDc5IjtzOjY6Im1vZHVsZSI7czoxMjoiaW1hZ2UubUdGeEQ3IjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxMjoiaW1hZ2UubUdGeEQ3IjtzOjU6Ind0eXBlIjtzOjU6ImltYWdlIjtzOjExOiJ3aWRnZXRfbmFtZSI7czozOiJpbWciO3M6MTA6InNob3dfdGl0bGUiO3M6MToiMCI7czoxNDoid2lkZ2V0X3RpdGxlXzEiO3M6MzoiaW1nIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMiI7czozOiJpbWciO3M6MTI6ImFkZGl0aW9uX2NscyI7czo5OiJlZmZlY3QtdjQiO3M6OToiaW1hZ2VmaWxlIjtzOjMzOiJjYXRhbG9nL2RlbW8vYmFubmVycy9iYW5uZXIyOS5qcGciO3M6NDoic2l6ZSI7czowOiIiO3M6OToiYW5pbWF0aW9uIjtzOjE6IjEiO3M6OToiYWxpZ25tZW50IjtzOjY6ImNlbnRlciI7czo3OiJpc3BvcHVwIjtzOjE6IjEiO3M6NDoibGluayI7czoxOiIjIjt9', 42, 0),
 (4537, 'content', 'product_list.q0Co3B', 'YToxNzp7czo0OiJyYW5kIjtzOjE2OiIwLjI2NjA2MTYzNzM4MjUxIjtzOjY6Im1vZHVsZSI7czoxOToicHJvZHVjdF9saXN0LnEwQ28zQiI7czo4OiJzYXZlZGF0YSI7czoxOiIxIjtzOjQ6IndrZXkiO3M6MTk6InByb2R1Y3RfbGlzdC5xMENvM0IiO3M6NToid3R5cGUiO3M6MTI6InByb2R1Y3RfbGlzdCI7czoxMToid2lkZ2V0X25hbWUiO3M6MTI6IkJlc3QgU2VsbGVycyI7czoxMDoic2hvd190aXRsZSI7czoxOiIxIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czoxMjoiQmVzdCBTZWxsZXJzIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMiI7czoxMjoiQmVzdCBTZWxsZXJzIjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6MDoiIjtzOjU6ImxpbWl0IjtzOjE6IjgiO3M6MTI6Iml0ZW1zcGVycGFnZSI7czoxOiI4IjtzOjQ6ImNvbHMiO3M6MToiNCI7czo1OiJ3aWR0aCI7czozOiI2MDAiO3M6NjoiaGVpZ2h0IjtzOjM6IjUzMyI7czo5OiJsaXN0X3R5cGUiO3M6MTA6ImJlc3RzZWxsZXIiO3M6MTQ6ImNob29zZV9wcm9kdWN0IjtzOjA6IiI7fQ==', 41, 0),
 (4538, 'content', 'product_list.SlnCxg', 'YToxNzp7czo0OiJyYW5kIjtzOjE4OiIwLjU5MzYzMTc5NDg3NDEwOTQiO3M6NjoibW9kdWxlIjtzOjE5OiJwcm9kdWN0X2xpc3QuU2xuQ3hnIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxOToicHJvZHVjdF9saXN0LlNsbkN4ZyI7czo1OiJ3dHlwZSI7czoxMjoicHJvZHVjdF9saXN0IjtzOjExOiJ3aWRnZXRfbmFtZSI7czoxNjoiUG9wdWxhciBQcm9kdWN0cyI7czoxMDoic2hvd190aXRsZSI7czoxOiIxIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czoxNjoiUG9wdWxhciBQcm9kdWN0cyI7czoxNDoid2lkZ2V0X3RpdGxlXzIiO3M6MTY6IlBvcHVsYXIgUHJvZHVjdHMiO3M6MTI6ImFkZGl0aW9uX2NscyI7czowOiIiO3M6NToibGltaXQiO3M6MToiOCI7czoxMjoiaXRlbXNwZXJwYWdlIjtzOjE6IjQiO3M6NDoiY29scyI7czoxOiI0IjtzOjU6IndpZHRoIjtzOjM6IjYwMCI7czo2OiJoZWlnaHQiO3M6MzoiNTMzIjtzOjk6Imxpc3RfdHlwZSI7czo3OiJwb3B1bGFyIjtzOjE0OiJjaG9vc2VfcHJvZHVjdCI7czowOiIiO30=', 41, 0),
@@ -3299,7 +3502,8 @@ INSERT INTO `oc_pavwidget` (`pavwidget_id`, `name`, `code`, `setting`, `module_i
 (4557, 'content', 'image.ZssEUM', 'YToxNjp7czo0OiJyYW5kIjtzOjE4OiIwLjc4MTI0OTg4NDA0OTkyNDMiO3M6NjoibW9kdWxlIjtzOjEyOiJpbWFnZS5ac3NFVU0iO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjEyOiJpbWFnZS5ac3NFVU0iO3M6NToid3R5cGUiO3M6NToiaW1hZ2UiO3M6MTE6IndpZGdldF9uYW1lIjtzOjM6ImltZyI7czoxMDoic2hvd190aXRsZSI7czoxOiIwIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czozOiJpbWciO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjM6ImltZyI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjk6ImVmZmVjdC12NCI7czo5OiJpbWFnZWZpbGUiO3M6MzM6ImNhdGFsb2cvZGVtby9iYW5uZXJzL2Jhbm5lcjMwLmpwZyI7czo0OiJzaXplIjtzOjA6IiI7czo5OiJhbmltYXRpb24iO3M6MToiMSI7czo5OiJhbGlnbm1lbnQiO3M6NjoiY2VudGVyIjtzOjc6ImlzcG9wdXAiO3M6MToiMSI7czo0OiJsaW5rIjtzOjE6IiMiO30=', 42, 0),
 (4533, 'content', 'image.i6xgcC', 'YToxNjp7czo0OiJyYW5kIjtzOjE4OiIwLjYwNTM2NDQ1NzY1NjIxNzkiO3M6NjoibW9kdWxlIjtzOjEyOiJpbWFnZS5pNnhnY0MiO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjEyOiJpbWFnZS5pNnhnY0MiO3M6NToid3R5cGUiO3M6NToiaW1hZ2UiO3M6MTE6IndpZGdldF9uYW1lIjtzOjM6ImltZyI7czoxMDoic2hvd190aXRsZSI7czoxOiIwIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czozOiJpbWciO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjM6ImltZyI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjk6ImVmZmVjdC12NCI7czo5OiJpbWFnZWZpbGUiO3M6MzM6ImNhdGFsb2cvZGVtby9iYW5uZXJzL2Jhbm5lcjI2LmpwZyI7czo0OiJzaXplIjtzOjA6IiI7czo5OiJhbmltYXRpb24iO3M6MToiMSI7czo5OiJhbGlnbm1lbnQiO3M6NjoiY2VudGVyIjtzOjc6ImlzcG9wdXAiO3M6MToiMSI7czo0OiJsaW5rIjtzOjE6IiMiO30=', 41, 0),
 (4534, 'content', 'image.laA8AJ', 'YToxNjp7czo0OiJyYW5kIjtzOjE4OiIwLjA3MTUzMzYzMTY1OTQ0MDYiO3M6NjoibW9kdWxlIjtzOjEyOiJpbWFnZS5sYUE4QUoiO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjEyOiJpbWFnZS5sYUE4QUoiO3M6NToid3R5cGUiO3M6NToiaW1hZ2UiO3M6MTE6IndpZGdldF9uYW1lIjtzOjM6ImltZyI7czoxMDoic2hvd190aXRsZSI7czoxOiIwIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czozOiJpbWciO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjM6ImltZyI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjk6ImVmZmVjdC12NCI7czo5OiJpbWFnZWZpbGUiO3M6MzM6ImNhdGFsb2cvZGVtby9iYW5uZXJzL2Jhbm5lcjIzLmpwZyI7czo0OiJzaXplIjtzOjA6IiI7czo5OiJhbmltYXRpb24iO3M6MToiMSI7czo5OiJhbGlnbm1lbnQiO3M6NjoiY2VudGVyIjtzOjc6ImlzcG9wdXAiO3M6MToiMSI7czo0OiJsaW5rIjtzOjE6IiMiO30=', 41, 0),
-(4535, 'content', 'image.PD9WQh', 'YToxNjp7czo0OiJyYW5kIjtzOjE4OiIwLjg2NjEyNDUwMzgzOTUwOTIiO3M6NjoibW9kdWxlIjtzOjEyOiJpbWFnZS5QRDlXUWgiO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjEyOiJpbWFnZS5QRDlXUWgiO3M6NToid3R5cGUiO3M6NToiaW1hZ2UiO3M6MTE6IndpZGdldF9uYW1lIjtzOjM6ImltZyI7czoxMDoic2hvd190aXRsZSI7czoxOiIwIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czozOiJpbWciO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjM6ImltZyI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjEwOiJlZmZlY3QtdjEwIjtzOjk6ImltYWdlZmlsZSI7czozMzoiY2F0YWxvZy9kZW1vL2Jhbm5lcnMvYmFubmVyMjcuanBnIjtzOjQ6InNpemUiO3M6MDoiIjtzOjk6ImFuaW1hdGlvbiI7czoxOiIxIjtzOjk6ImFsaWdubWVudCI7czo2OiJjZW50ZXIiO3M6NzoiaXNwb3B1cCI7czoxOiIxIjtzOjQ6ImxpbmsiO3M6MToiIyI7fQ==', 41, 0),
+(4535, 'content', 'image.PD9WQh', 'YToxNjp7czo0OiJyYW5kIjtzOjE4OiIwLjg2NjEyNDUwMzgzOTUwOTIiO3M6NjoibW9kdWxlIjtzOjEyOiJpbWFnZS5QRDlXUWgiO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjEyOiJpbWFnZS5QRDlXUWgiO3M6NToid3R5cGUiO3M6NToiaW1hZ2UiO3M6MTE6IndpZGdldF9uYW1lIjtzOjM6ImltZyI7czoxMDoic2hvd190aXRsZSI7czoxOiIwIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czozOiJpbWciO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjM6ImltZyI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjEwOiJlZmZlY3QtdjEwIjtzOjk6ImltYWdlZmlsZSI7czozMzoiY2F0YWxvZy9kZW1vL2Jhbm5lcnMvYmFubmVyMjcuanBnIjtzOjQ6InNpemUiO3M6MDoiIjtzOjk6ImFuaW1hdGlvbiI7czoxOiIxIjtzOjk6ImFsaWdubWVudCI7czo2OiJjZW50ZXIiO3M6NzoiaXNwb3B1cCI7czoxOiIxIjtzOjQ6ImxpbmsiO3M6MToiIyI7fQ==', 41, 0);
+INSERT INTO `oc_pavwidget` (`pavwidget_id`, `name`, `code`, `setting`, `module_id`, `key`) VALUES
 (4536, 'content', 'image.W90h2u', 'YToxNjp7czo0OiJyYW5kIjtzOjIwOiIwLjAxMzQzNTE3OTc1OTY1NjI0NiI7czo2OiJtb2R1bGUiO3M6MTI6ImltYWdlLlc5MGgydSI7czo4OiJzYXZlZGF0YSI7czoxOiIxIjtzOjQ6IndrZXkiO3M6MTI6ImltYWdlLlc5MGgydSI7czo1OiJ3dHlwZSI7czo1OiJpbWFnZSI7czoxMToid2lkZ2V0X25hbWUiO3M6MzoiaW1nIjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjAiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjM6ImltZyI7czoxNDoid2lkZ2V0X3RpdGxlXzIiO3M6MzoiaW1nIjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6OToiZWZmZWN0LXY0IjtzOjk6ImltYWdlZmlsZSI7czozMzoiY2F0YWxvZy9kZW1vL2Jhbm5lcnMvYmFubmVyMjAuanBnIjtzOjQ6InNpemUiO3M6MDoiIjtzOjk6ImFuaW1hdGlvbiI7czoxOiIxIjtzOjk6ImFsaWdubWVudCI7czo2OiJjZW50ZXIiO3M6NzoiaXNwb3B1cCI7czoxOiIxIjtzOjQ6ImxpbmsiO3M6MToiIyI7fQ==', 41, 0),
 (4530, 'content', 'image.2zKx2a', 'YToxNjp7czo0OiJyYW5kIjtzOjE3OiIwLjgyODc3OTY4ODYwODk3NSI7czo2OiJtb2R1bGUiO3M6MTI6ImltYWdlLjJ6S3gyYSI7czo4OiJzYXZlZGF0YSI7czoxOiIxIjtzOjQ6IndrZXkiO3M6MTI6ImltYWdlLjJ6S3gyYSI7czo1OiJ3dHlwZSI7czo1OiJpbWFnZSI7czoxMToid2lkZ2V0X25hbWUiO3M6MzoiaW1nIjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjAiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjM6ImltZyI7czoxNDoid2lkZ2V0X3RpdGxlXzIiO3M6MzoiaW1nIjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6OToiZWZmZWN0LXY0IjtzOjk6ImltYWdlZmlsZSI7czozMzoiY2F0YWxvZy9kZW1vL2Jhbm5lcnMvYmFubmVyMjIuanBnIjtzOjQ6InNpemUiO3M6MDoiIjtzOjk6ImFuaW1hdGlvbiI7czoxOiIxIjtzOjk6ImFsaWdubWVudCI7czo2OiJjZW50ZXIiO3M6NzoiaXNwb3B1cCI7czoxOiIxIjtzOjQ6ImxpbmsiO3M6MToiIyI7fQ==', 41, 0),
 (4531, 'content', 'image.E1M8lP', 'YToxNjp7czo0OiJyYW5kIjtzOjE4OiIwLjUxNDMwMjM3NTA3Mzg1OTEiO3M6NjoibW9kdWxlIjtzOjEyOiJpbWFnZS5FMU04bFAiO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjEyOiJpbWFnZS5FMU04bFAiO3M6NToid3R5cGUiO3M6NToiaW1hZ2UiO3M6MTE6IndpZGdldF9uYW1lIjtzOjM6ImltZyI7czoxMDoic2hvd190aXRsZSI7czoxOiIwIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czozOiJpbWciO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjM6ImltZyI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjk6ImVmZmVjdC12NCI7czo5OiJpbWFnZWZpbGUiO3M6MzM6ImNhdGFsb2cvZGVtby9iYW5uZXJzL2Jhbm5lcjI0LmpwZyI7czo0OiJzaXplIjtzOjA6IiI7czo5OiJhbmltYXRpb24iO3M6MToiMSI7czo5OiJhbGlnbm1lbnQiO3M6NjoiY2VudGVyIjtzOjc6ImlzcG9wdXAiO3M6MToiMSI7czo0OiJsaW5rIjtzOjE6IiMiO30=', 41, 0),
@@ -3320,9 +3524,14 @@ INSERT INTO `oc_pavwidget` (`pavwidget_id`, `name`, `code`, `setting`, `module_i
 (4540, 'content', 'featured_category.OSYS7K', 'YToxNDp7czo0OiJyYW5kIjtzOjE4OiIwLjg0ODgwNjgxMDgxMjE3NzEiO3M6NjoibW9kdWxlIjtzOjI0OiJmZWF0dXJlZF9jYXRlZ29yeS5PU1lTN0siO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjI0OiJmZWF0dXJlZF9jYXRlZ29yeS5PU1lTN0siO3M6NToid3R5cGUiO3M6MTc6ImZlYXR1cmVkX2NhdGVnb3J5IjtzOjExOiJ3aWRnZXRfbmFtZSI7czoxMzoiY29sbGVjdGlvbiAwMSI7czoxMDoic2hvd190aXRsZSI7czoxOiIwIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czoxMzoiY29sbGVjdGlvbiAwMSI7czoxNDoid2lkZ2V0X3RpdGxlXzIiO3M6MTM6ImNvbGxlY3Rpb24gMDEiO3M6MTI6ImFkZGl0aW9uX2NscyI7czowOiIiO3M6MTk6ImNhdGVnb3JpZXNfZmVhdHVyZWQiO2E6Mzp7aTowO2E6Mjp7czo1OiJpbWFnZSI7czozMjoiY2F0YWxvZy9kZW1vL2Jhbm5lcnMvYmFubmVyNC5qcGciO3M6MjoiaWQiO3M6MjoiMjUiO31pOjE7YToyOntzOjU6ImltYWdlIjtzOjMyOiJjYXRhbG9nL2RlbW8vYmFubmVycy9iYW5uZXIzLmpwZyI7czoyOiJpZCI7czoyOiIzNCI7fWk6MjthOjI6e3M6NToiaW1hZ2UiO3M6MzI6ImNhdGFsb2cvZGVtby9iYW5uZXJzL2Jhbm5lcjYuanBnIjtzOjI6ImlkIjtzOjI6IjM0Ijt9fXM6MTE6ImltYWdlX3dpZHRoIjtzOjM6IjMyMCI7czoxMjoiaW1hZ2VfaGVpZ2h0IjtzOjM6IjE2MCI7czo0OiJjb2xzIjtzOjE6IjMiO30=', 42, 0),
 (4653, 'content', 'product_list.HGlsc2', 'YToxNzp7czo0OiJyYW5kIjtzOjE5OiIwLjMxMzMzNTM5OTA4MDQ2MzE1IjtzOjY6Im1vZHVsZSI7czoxOToicHJvZHVjdF9saXN0LkhHbHNjMiI7czo4OiJzYXZlZGF0YSI7czoxOiIxIjtzOjQ6IndrZXkiO3M6MTk6InByb2R1Y3RfbGlzdC5IR2xzYzIiO3M6NToid3R5cGUiO3M6MTI6InByb2R1Y3RfbGlzdCI7czoxMToid2lkZ2V0X25hbWUiO3M6MTE6IkJlc3QgU2VsbGVyIjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjEiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjExOiJCZXN0IFNlbGxlciI7czoxNDoid2lkZ2V0X3RpdGxlXzIiO3M6MTE6IkJlc3QgU2VsbGVyIjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6MTI6InBhbmVsLWNlbnRlciI7czo1OiJsaW1pdCI7czoxOiI4IjtzOjEyOiJpdGVtc3BlcnBhZ2UiO3M6MToiNCI7czo0OiJjb2xzIjtzOjE6IjQiO3M6NToid2lkdGgiO3M6MzoiNjAwIjtzOjY6ImhlaWdodCI7czozOiI1MzMiO3M6OToibGlzdF90eXBlIjtzOjEwOiJiZXN0c2VsbGVyIjtzOjE0OiJjaG9vc2VfcHJvZHVjdCI7czowOiIiO30=', 37, 0),
 (4642, 'content', 'icon_box.BehSiR', 'YToxNzp7czo0OiJyYW5kIjtzOjE5OiIwLjM1NDc0MzA2NzM3MTI4MzI1IjtzOjY6Im1vZHVsZSI7czoxNToiaWNvbl9ib3guQmVoU2lSIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxNToiaWNvbl9ib3guQmVoU2lSIjtzOjU6Ind0eXBlIjtzOjg6Imljb25fYm94IjtzOjExOiJ3aWRnZXRfbmFtZSI7czoyMzoiU2hpcHBpbmcgJmFtcDsgUmV0dXJucyAiO3M6MTA6InNob3dfdGl0bGUiO3M6MToiMSI7czoxNDoid2lkZ2V0X3RpdGxlXzEiO3M6MjM6IlNoaXBwaW5nICZhbXA7IFJldHVybnMgIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMiI7czoyMzoiU2hpcHBpbmcgJmFtcDsgUmV0dXJucyAiO3M6MTI6ImFkZGl0aW9uX2NscyI7czowOiIiO3M6ODoiaWNvbmZpbGUiO3M6MzI6ImNhdGFsb2cvZGVtby9tb2R1bGUvbWljb24tdjIucG5nIjtzOjk6Imljb25jbGFzcyI7czowOiIiO3M6MTM6Imh0bWxjb250ZW50XzEiO3M6ODg6IiZsdDtkaXYmZ3Q7RnJlZSByZXR1cm4gc2hpcHBpbmcgd2l0aCBwcmVwYWlkIG1haWxlciBmb3IgYWxsIGRvbWVzdGljIG9yZGVycy4mbHQ7L2RpdiZndDsiO3M6MTM6Imh0bWxjb250ZW50XzIiO3M6ODg6IiZsdDtkaXYmZ3Q7RnJlZSByZXR1cm4gc2hpcHBpbmcgd2l0aCBwcmVwYWlkIG1haWxlciBmb3IgYWxsIGRvbWVzdGljIG9yZGVycy4mbHQ7L2RpdiZndDsiO3M6MTQ6Imljb25fYm94X3N0eWxlIjtzOjE0OiJmZWF0dXJlLWJveC12MSI7czoxMDoidGV4dF9hbGlnbiI7czoxNjoiZmVhdHVyZS1ib3gtbGVmdCI7czoxMDoiYmFja2dyb3VuZCI7czowOiIiO30=', 37, 0),
-(5762, 'content', 'image.tIamGg', 'YToxNjp7czo0OiJyYW5kIjtzOjE4OiIwLjY1NzMxNDM2ODI4NDA3NjEiO3M6NjoibW9kdWxlIjtzOjEyOiJpbWFnZS5wbVdqbkYiO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjEyOiJpbWFnZS5wbVdqbkYiO3M6NToid3R5cGUiO3M6NToiaW1hZ2UiO3M6MTE6IndpZGdldF9uYW1lIjtzOjg6IkJhbm5lciA1IjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjAiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjg6IkJhbm5lciA1IjtzOjE0OiJ3aWRnZXRfdGl0bGVfMiI7czo4OiJCYW5uZXIgNSI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjk6ImVmZmVjdC12NCI7czo5OiJpbWFnZWZpbGUiO3M6MzI6ImNhdGFsb2cvZGVtby9iYW5uZXJzL2Jhbm5lcjUuanBnIjtzOjQ6InNpemUiO3M6MDoiIjtzOjk6ImFuaW1hdGlvbiI7czoxOiI0IjtzOjk6ImFsaWdubWVudCI7czo0OiJsZWZ0IjtzOjc6ImlzcG9wdXAiO3M6MToiMSI7czo0OiJsaW5rIjtzOjE6IiMiO30=', 33, 0),
-(5761, 'content', 'image.pmWjnF', 'YToxNjp7czo0OiJyYW5kIjtzOjE4OiIwLjY1NzMxNDM2ODI4NDA3NjEiO3M6NjoibW9kdWxlIjtzOjEyOiJpbWFnZS5wbVdqbkYiO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjEyOiJpbWFnZS5wbVdqbkYiO3M6NToid3R5cGUiO3M6NToiaW1hZ2UiO3M6MTE6IndpZGdldF9uYW1lIjtzOjg6IkJhbm5lciA1IjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjAiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjg6IkJhbm5lciA1IjtzOjE0OiJ3aWRnZXRfdGl0bGVfMiI7czo4OiJCYW5uZXIgNSI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjk6ImVmZmVjdC12NCI7czo5OiJpbWFnZWZpbGUiO3M6MzI6ImNhdGFsb2cvZGVtby9iYW5uZXJzL2Jhbm5lcjUuanBnIjtzOjQ6InNpemUiO3M6MDoiIjtzOjk6ImFuaW1hdGlvbiI7czoxOiI0IjtzOjk6ImFsaWdubWVudCI7czo0OiJsZWZ0IjtzOjc6ImlzcG9wdXAiO3M6MToiMSI7czo0OiJsaW5rIjtzOjE6IiMiO30=', 33, 0),
-(5760, 'content', 'image.BjhHfe', 'YToxNjp7czo0OiJyYW5kIjtzOjE5OiIwLjI3OTM2MTU1MDQ3NjU2Mzg2IjtzOjY6Im1vZHVsZSI7czoxMjoiaW1hZ2UuQmpoSGZlIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxMjoiaW1hZ2UuQmpoSGZlIjtzOjU6Ind0eXBlIjtzOjU6ImltYWdlIjtzOjExOiJ3aWRnZXRfbmFtZSI7czo3OiJCYW5uZXI3IjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjAiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjc6IkJhbm5lcjciO3M6MTQ6IndpZGdldF90aXRsZV8yIjtzOjc6IkJhbm5lcjciO3M6MTI6ImFkZGl0aW9uX2NscyI7czo5OiJlZmZlY3QtdjQiO3M6OToiaW1hZ2VmaWxlIjtzOjMyOiJjYXRhbG9nL2RlbW8vYmFubmVycy9iYW5uZXI3LmpwZyI7czo0OiJzaXplIjtzOjA6IiI7czo5OiJhbmltYXRpb24iO3M6MToiNCI7czo5OiJhbGlnbm1lbnQiO3M6NDoibGVmdCI7czo3OiJpc3BvcHVwIjtzOjE6IjEiO3M6NDoibGluayI7czoxOiIjIjt9', 33, 0);
+(6598, 'content', 'product_list.QfFAdD', 'YToxNzp7czo0OiJyYW5kIjtzOjE4OiIwLjU2OTQzMzM4MzU1Njg0MjQiO3M6NjoibW9kdWxlIjtzOjE5OiJwcm9kdWN0X2xpc3QuUWZGQWREIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxOToicHJvZHVjdF9saXN0LlFmRkFkRCI7czo1OiJ3dHlwZSI7czoxMjoicHJvZHVjdF9saXN0IjtzOjExOiJ3aWRnZXRfbmFtZSI7czoxODoiTmFqbm93c3plIEtvbGVrY2plIjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjEiO3M6MTQ6IndpZGdldF90aXRsZV8zIjtzOjE4OiJOYWpub3dzemUgS29sZWtjamUiO3M6MTQ6IndpZGdldF90aXRsZV8xIjtzOjA6IiI7czoxMjoiYWRkaXRpb25fY2xzIjtzOjEyOiJwYW5lbC1jZW50ZXIiO3M6NToibGltaXQiO3M6MToiOCI7czoxMjoiaXRlbXNwZXJwYWdlIjtzOjE6IjYiO3M6NDoiY29scyI7czoxOiI2IjtzOjU6IndpZHRoIjtzOjM6IjQyMCI7czo2OiJoZWlnaHQiO3M6MzoiNTQ2IjtzOjk6Imxpc3RfdHlwZSI7czo2OiJsYXRlc3QiO3M6MTQ6ImNob29zZV9wcm9kdWN0IjtzOjA6IiI7fQ==', 33, 0),
+(6599, 'content', 'product_list.SAHlNn', 'YToxODp7czo0OiJyYW5kIjtzOjE4OiIwLjY5MzUzNzI4ODU1NDIzOTUiO3M6NjoibW9kdWxlIjtzOjE5OiJwcm9kdWN0X2xpc3QuU0FIbE5uIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxOToicHJvZHVjdF9saXN0LlNBSGxObiI7czo1OiJ3dHlwZSI7czoxMjoicHJvZHVjdF9saXN0IjtzOjExOiJ3aWRnZXRfbmFtZSI7czoxNDoiRmVhdHVyZWQgaXRlbXMiO3M6MTA6InNob3dfdGl0bGUiO3M6MToiMSI7czoxNDoid2lkZ2V0X3RpdGxlXzMiO3M6MjM6Ild5csOzxbxuaW9uYSBCacW8dXRlcmlhIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czoxNDoiRmVhdHVyZWQgaXRlbXMiO3M6MTI6ImFkZGl0aW9uX2NscyI7czoxMjoicGFuZWwtY2VudGVyIjtzOjU6ImxpbWl0IjtzOjE6IjgiO3M6MTI6Iml0ZW1zcGVycGFnZSI7czoxOiI2IjtzOjQ6ImNvbHMiO3M6MToiNiI7czo1OiJ3aWR0aCI7czozOiI0MjAiO3M6NjoiaGVpZ2h0IjtzOjM6IjU0NiI7czo5OiJsaXN0X3R5cGUiO3M6ODoiZmVhdHVyZWQiO3M6MTQ6ImNob29zZV9wcm9kdWN0IjtzOjA6IiI7czo3OiJwcm9kdWN0IjthOjQ6e2k6MDtzOjI6IjQxIjtpOjE7czoyOiIzMCI7aToyO3M6MjoiNDUiO2k6MztzOjI6IjQzIjt9fQ==', 33, 0),
+(6600, 'content', 'product_list.U6oo6M', 'YToxNzp7czo0OiJyYW5kIjtzOjE3OiIwLjgxOTczNjU2NzQ2MDE3NCI7czo2OiJtb2R1bGUiO3M6MTk6InByb2R1Y3RfbGlzdC5VNm9vNk0iO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjE5OiJwcm9kdWN0X2xpc3QuVTZvbzZNIjtzOjU6Ind0eXBlIjtzOjEyOiJwcm9kdWN0X2xpc3QiO3M6MTE6IndpZGdldF9uYW1lIjtzOjE1OiJQcm9tb2N5am5lIENlbnkiO3M6MTA6InNob3dfdGl0bGUiO3M6MToiMSI7czoxNDoid2lkZ2V0X3RpdGxlXzMiO3M6MTU6IlByb21vY3lqbmUgQ2VueSI7czoxNDoid2lkZ2V0X3RpdGxlXzEiO3M6MDoiIjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6MTI6InBhbmVsLWNlbnRlciI7czo1OiJsaW1pdCI7czoxOiI4IjtzOjEyOiJpdGVtc3BlcnBhZ2UiO3M6MToiNiI7czo0OiJjb2xzIjtzOjE6IjYiO3M6NToid2lkdGgiO3M6MzoiNDIwIjtzOjY6ImhlaWdodCI7czozOiI1NDYiO3M6OToibGlzdF90eXBlIjtzOjc6InNwZWNpYWwiO3M6MTQ6ImNob29zZV9wcm9kdWN0IjtzOjA6IiI7fQ==', 33, 0),
+(6601, 'content', 'image.GdT1e4', 'YToxNjp7czo0OiJyYW5kIjtzOjE4OiIwLjczODA4NjI1NzE5Mjk4NDMiO3M6NjoibW9kdWxlIjtzOjEyOiJpbWFnZS5HZFQxZTQiO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjEyOiJpbWFnZS5HZFQxZTQiO3M6NToid3R5cGUiO3M6NToiaW1hZ2UiO3M6MTE6IndpZGdldF9uYW1lIjtzOjc6InNtb2N6a2kiO3M6MTA6InNob3dfdGl0bGUiO3M6MToiMCI7czoxNDoid2lkZ2V0X3RpdGxlXzMiO3M6MDoiIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czowOiIiO3M6MTI6ImFkZGl0aW9uX2NscyI7czowOiIiO3M6OToiaW1hZ2VmaWxlIjtzOjIyOiJjYXRhbG9nL2Jhbm5zZXJzLTEuanBnIjtzOjQ6InNpemUiO3M6MDoiIjtzOjk6ImFuaW1hdGlvbiI7czoxOiI0IjtzOjk6ImFsaWdubWVudCI7czo0OiJsZWZ0IjtzOjc6ImlzcG9wdXAiO3M6MToiMSI7czo0OiJsaW5rIjtzOjM2OiI/cm91dGU9cHJvZHVjdC9jYXRlZ29yeSZhbXA7cGF0aD0xMDAiO30=', 33, 0),
+(6602, 'content', 'image.rtAV2g', 'YToxNjp7czo0OiJyYW5kIjtzOjE4OiIwLjU2MTE0OTIwOTE2NjQ3NDUiO3M6NjoibW9kdWxlIjtzOjEyOiJpbWFnZS5ydEFWMmciO3M6ODoic2F2ZWRhdGEiO3M6MToiMSI7czo0OiJ3a2V5IjtzOjEyOiJpbWFnZS5ydEFWMmciO3M6NToid3R5cGUiO3M6NToiaW1hZ2UiO3M6MTE6IndpZGdldF9uYW1lIjtzOjEwOiLFgXnFvGVjemtpIjtzOjEwOiJzaG93X3RpdGxlIjtzOjE6IjAiO3M6MTQ6IndpZGdldF90aXRsZV8zIjtzOjA6IiI7czoxNDoid2lkZ2V0X3RpdGxlXzEiO3M6MDoiIjtzOjEyOiJhZGRpdGlvbl9jbHMiO3M6MDoiIjtzOjk6ImltYWdlZmlsZSI7czoyMjoiY2F0YWxvZy9iYW5uc2Vycy0xLmpwZyI7czo0OiJzaXplIjtzOjA6IiI7czo5OiJhbmltYXRpb24iO3M6MToiNCI7czo5OiJhbGlnbm1lbnQiO3M6NDoibGVmdCI7czo3OiJpc3BvcHVwIjtzOjE6IjEiO3M6NDoibGluayI7czowOiIiO30=', 33, 0),
+(6597, 'content', 'image.rw2BDN', 'YToxNjp7czo0OiJyYW5kIjtzOjE5OiIwLjA0MTY2OTk3ODAwMDY3Mjg1IjtzOjY6Im1vZHVsZSI7czoxMjoiaW1hZ2UucncyQkROIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxMjoiaW1hZ2UucncyQkROIjtzOjU6Ind0eXBlIjtzOjU6ImltYWdlIjtzOjExOiJ3aWRnZXRfbmFtZSI7czo2OiJidWNpa2kiO3M6MTA6InNob3dfdGl0bGUiO3M6MToiMCI7czoxNDoid2lkZ2V0X3RpdGxlXzMiO3M6MDoiIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czowOiIiO3M6MTI6ImFkZGl0aW9uX2NscyI7czowOiIiO3M6OToiaW1hZ2VmaWxlIjtzOjIyOiJjYXRhbG9nL2Jhbm5zZXJzLTEuanBnIjtzOjQ6InNpemUiO3M6MDoiIjtzOjk6ImFuaW1hdGlvbiI7czoxOiI0IjtzOjk6ImFsaWdubWVudCI7czo0OiJsZWZ0IjtzOjc6ImlzcG9wdXAiO3M6MToiMSI7czo0OiJsaW5rIjtzOjM1OiI/cm91dGU9cHJvZHVjdC9jYXRlZ29yeSZhbXA7cGF0aD05OCI7fQ==', 33, 0),
+(6595, 'content', 'html.1qiF1l', 'YToxMjp7czo0OiJyYW5kIjtzOjE3OiIwLjgxODc4NDE3NzIxODg1NiI7czo2OiJtb2R1bGUiO3M6MTE6Imh0bWwuMXFpRjFsIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxMToiaHRtbC4xcWlGMWwiO3M6NToid3R5cGUiO3M6NDoiaHRtbCI7czoxMToid2lkZ2V0X25hbWUiO3M6NToic3BhY2UiO3M6MTA6InNob3dfdGl0bGUiO3M6MToiMCI7czoxNDoid2lkZ2V0X3RpdGxlXzMiO3M6MDoiIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czowOiIiO3M6MTI6ImFkZGl0aW9uX2NscyI7czo1OiJzcGFjZSI7czoxMzoiaHRtbGNvbnRlbnRfMyI7czowOiIiO3M6MTM6Imh0bWxjb250ZW50XzEiO3M6MDoiIjt9', 33, 0),
+(6596, 'content', 'html.Biif3o', 'YToxMjp7czo0OiJyYW5kIjtzOjE3OiIwLjgxODc4NDE3NzIxODg1NiI7czo2OiJtb2R1bGUiO3M6MTE6Imh0bWwuMXFpRjFsIjtzOjg6InNhdmVkYXRhIjtzOjE6IjEiO3M6NDoid2tleSI7czoxMToiaHRtbC4xcWlGMWwiO3M6NToid3R5cGUiO3M6NDoiaHRtbCI7czoxMToid2lkZ2V0X25hbWUiO3M6NToic3BhY2UiO3M6MTA6InNob3dfdGl0bGUiO3M6MToiMCI7czoxNDoid2lkZ2V0X3RpdGxlXzMiO3M6MDoiIjtzOjE0OiJ3aWRnZXRfdGl0bGVfMSI7czowOiIiO3M6MTI6ImFkZGl0aW9uX2NscyI7czo1OiJzcGFjZSI7czoxMzoiaHRtbGNvbnRlbnRfMyI7czowOiIiO3M6MTM6Imh0bWxjb250ZW50XzEiO3M6MDoiIjt9', 33, 0);
 
 -- --------------------------------------------------------
 
@@ -3370,26 +3579,26 @@ CREATE TABLE IF NOT EXISTS `oc_product` (
 --
 
 INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, `date_added`, `date_modified`) VALUES
-(28, 'Product 1', '', '', '', '', '', '', '', 938, 7, 'catalog/demo/product1.jpg', 5, 1, '100.0000', 200, 9, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 16:06:50', '2016-03-15 15:06:38'),
-(29, 'Product 2', '', '', '', '', '', '', '', 999, 6, 'catalog/demo/product2.jpg', 6, 1, '279.9900', 0, 9, '2009-02-03', '133.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, 0, '2009-02-03 16:42:17', '2016-03-10 23:15:20'),
-(30, 'Product 3', '', '', '', '', '', '', '', 5, 6, 'catalog/demo/product3.jpg', 9, 1, '150.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 1, '2009-02-03 16:59:00', '2016-03-15 15:06:24'),
-(31, 'Product 4', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/product4.jpg', 0, 1, '80.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, 0, '2009-02-03 17:00:10', '2016-03-14 10:55:57'),
-(32, 'Product 5', '', '', '', '', '', '', '', 999, 6, 'catalog/demo/product5.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 17:07:26', '2016-03-15 09:01:13'),
-(33, 'Product 6', '', '', '', '', '', '', '', 998, 6, 'catalog/demo/product6.jpg', 8, 1, '200.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 17:08:31', '2016-03-15 09:01:21'),
-(34, 'Product 7', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/product7.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 18:07:54', '2016-03-10 23:11:07'),
-(35, 'Product 8', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/product8.jpg', 0, 0, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 18:08:31', '2016-03-14 10:57:55'),
-(36, 'Product 9', '', '', '', '', '', '', '', 993, 6, 'catalog/demo/product9.jpg', 8, 0, '100.0000', 100, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 18:09:19', '2016-03-10 23:07:40'),
-(40, 'product 11', '', '', '', '', '', '', '', 969, 5, 'catalog/demo/product11.jpg', 8, 1, '101.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:12', '2016-03-15 15:11:43'),
-(41, 'Product 14', '', '', '', '', '', '', '', 975, 5, 'catalog/demo/product2.jpg', 8, 1, '150.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:26', '2016-03-15 09:00:01'),
-(42, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/demo/product2_4.jpg', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, 0, '2009-02-03 21:07:37', '2016-03-14 14:12:34'),
-(43, 'Product 16', '', '', '', '', '', '', '', 929, 5, 'catalog/demo/product5.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:07:49', '2016-03-15 15:12:20'),
-(44, 'Product 17', '', '', '', '', '', '', '', 999, 5, 'catalog/demo/product6_1.jpg', 8, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 1, '2009-02-03 21:08:00', '2016-03-15 09:01:58'),
-(45, 'Product 18', '', '', '', '', '', '', '', 997, 5, 'catalog/demo/product7_1.jpg', 8, 1, '150.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:17', '2016-03-15 14:57:05'),
-(46, 'Product 13', '', '', '', '', '', '', '', 999, 5, 'catalog/demo/product13.jpg', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:29', '2016-03-14 10:57:37'),
-(47, 'Product 10', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/product10.jpg', 7, 1, '100.0000', 400, 9, '2009-02-03', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, 0, '2009-02-03 21:08:40', '2016-03-10 23:14:52'),
-(48, 'product 12', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'catalog/demo/product12.jpg', 8, 1, '100.0000', 0, 9, '2009-02-08', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-08 17:21:51', '2016-03-15 09:02:33'),
-(50, 'product 19', '', '', '', '', '', '', '', 99, 6, 'catalog/demo/product8_1.jpg', 0, 1, '500.0000', 0, 0, '2015-11-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2015-11-26 11:09:46', '2016-03-10 23:10:46'),
-(51, 'Product 20', '', '', '', '', '', '', '', 50, 6, 'catalog/demo/product2_1.jpg', 0, 1, '250.0000', 0, 0, '2015-11-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2015-11-26 11:11:15', '2016-03-10 23:09:20');
+(28, 'Product 1', '', '', '', '', '', '', '', 938, 7, 'catalog/productTest.jpg', 5, 1, '100.0000', 200, 9, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 16:06:50', '2016-03-15 15:06:38'),
+(29, 'Product 2', '', '', '', '', '', '', '', 999, 6, 'catalog/productTest.jpg', 6, 1, '279.9900', 0, 9, '2009-02-03', '133.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, 0, '2009-02-03 16:42:17', '2016-03-10 23:15:20'),
+(30, 'Product 3', '', '', '', '', '', '', '', 5, 6, 'catalog/productTest.jpg', 9, 1, '150.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 2, '2009-02-03 16:59:00', '2016-03-15 15:06:24'),
+(31, 'Product 4', '', '', '', '', '', '', '', 1000, 6, 'catalog/productTest.jpg', 0, 1, '80.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, 0, '2009-02-03 17:00:10', '2016-03-14 10:55:57'),
+(32, 'Product 5', '', '', '', '', '', '', '', 999, 6, 'catalog/productTest.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 17:07:26', '2016-03-15 09:01:13'),
+(33, 'Product 6', '', '', '', '', '', '', '', 998, 6, 'catalog/productTest.jpg', 8, 1, '200.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 17:08:31', '2016-03-15 09:01:21'),
+(34, 'Product 7', '', '', '', '', '', '', '', 1000, 6, 'catalog/productTest.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 18:07:54', '2016-03-10 23:11:07'),
+(35, 'Product 8', '', '', '', '', '', '', '', 1000, 5, 'catalog/productTest.jpg', 0, 0, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 18:08:31', '2016-03-14 10:57:55'),
+(36, 'Product 9', '', '', '', '', '', '', '', 993, 6, 'catalog/productTest.jpg', 8, 0, '100.0000', 100, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 18:09:19', '2016-03-10 23:07:40'),
+(40, 'product 11', '', '', '', '', '', '', '', 969, 5, 'catalog/productTest.jpg', 8, 1, '101.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:12', '2017-04-25 18:51:30'),
+(41, 'Product 14', '', '', '', '', '', '', '', 975, 5, 'catalog/productTest.jpg', 8, 1, '150.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:26', '2016-03-15 09:00:01'),
+(42, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/productTest.jpg', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, 0, '2009-02-03 21:07:37', '2016-03-14 14:12:34'),
+(43, 'Product 16', '', '', '', '', '', '', '', 929, 5, 'catalog/productTest.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:07:49', '2016-03-15 15:12:20'),
+(44, 'Product 17', '', '', '', '', '', '', '', 999, 5, 'catalog/productTest.jpg', 8, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 3, '2009-02-03 21:08:00', '2016-03-15 09:01:58'),
+(45, 'Product 18', '', '', '', '', '', '', '', 997, 5, 'catalog/productTest.jpg', 8, 1, '150.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:17', '2017-04-25 18:53:47'),
+(46, 'Product 13', '', '', '', '', '', '', '', 999, 5, 'catalog/productTest.jpg', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:29', '2016-03-14 10:57:37'),
+(47, 'Product 10', '', '', '', '', '', '', '', 1000, 5, 'catalog/productTest.jpg', 7, 1, '100.0000', 400, 9, '2009-02-03', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, 0, '2009-02-03 21:08:40', '2016-03-10 23:14:52'),
+(48, 'product 12', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'catalog/productTest.jpg', 8, 1, '100.0000', 0, 9, '2009-02-08', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-08 17:21:51', '2016-03-15 09:02:33'),
+(50, 'product 19', '', '', '', '', '', '', '', 99, 6, 'catalog/productTest.jpg', 0, 1, '500.0000', 0, 0, '2015-11-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2015-11-26 11:09:46', '2016-03-10 23:10:46'),
+(51, 'Product 20', '', '', '', '', '', '', '', 50, 6, 'catalog/productTest.jpg', 0, 1, '250.0000', 0, 0, '2015-11-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 1, '2015-11-26 11:11:15', '2016-03-10 23:09:20');
 
 -- --------------------------------------------------------
 
@@ -3410,15 +3619,10 @@ CREATE TABLE IF NOT EXISTS `oc_product_attribute` (
 --
 
 INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`, `text`) VALUES
-(43, 2, 2, '1'),
 (42, 3, 1, '100mhz'),
-(47, 2, 2, '4'),
 (43, 4, 1, '8gb'),
-(42, 3, 2, '100mhz'),
 (47, 4, 1, '16GB'),
 (47, 2, 1, '4'),
-(43, 4, 2, '8gb'),
-(47, 4, 2, '16GB'),
 (43, 2, 1, '1'),
 (42, 3, 3, '100mhz'),
 (43, 4, 3, '8gb'),
@@ -3452,30 +3656,10 @@ CREATE TABLE IF NOT EXISTS `oc_product_description` (
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
 (48, 1, 'Witches Perfume Wildfox', '&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Stapler has 20 sheet stapling capacity; opens for tacking&lt;/li&gt;&lt;li&gt; Specialized inner rail provides long term stapling integrity; metal construction ensures durability&lt;/li&gt;&lt;li&gt; Locking latch secures staple position; Limited lifetime warranty&lt;/li&gt;&lt;/ul&gt; ', '', 'Witches Perfume Wildfox', '', ''),
 (40, 1, 'Wrap ring in sterling silver', '&lt;p&gt;  &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', '', 'Wrap ring in sterling silver', '', ''),
-(40, 2, 'Wrap ring in sterling silver', '&lt;p&gt;  &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', '', 'Wrap ring in sterling silver', '', ''),
-(46, 2, 'Witches Perfume Wildfox', '&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', 'men-apparel', 'Witches Perfume Wildfox', '', ''),
-(41, 2, 'Tux Style Lensa Waistcoat', '&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', 'accessories', 'Tux Style Lensa Waistcoat', '', ''),
-(51, 2, 'Witches Perfume Wildfox', '&lt;p&gt;Luscious colors, designed to be stacked or worn alone. In 18k gold with a lavender amethyst. Carat weight 1.00. Original designs copyrighted by Paloma Picasso. &lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', 'sneakers', 'Witches Perfume Wildfox', '', ''),
 (29, 1, 'Witches Perfume Wildfox', '&lt;p&gt; Streamlined and modern, the Atlas collection shines with graphic sophistication and bold simplicity. A Roman numeral motif with a single diamond adds a modern touch to this classic style. &lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', '', 'Witches Perfume Wildfox', '', ''),
-(29, 2, 'Witches Perfume Wildfox', '&lt;p&gt; Streamlined and modern, the Atlas collection shines with graphic sophistication and bold simplicity. A Roman numeral motif with a single diamond adds a modern touch to this classic style. &lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', '', 'Witches Perfume Wildfox', '', ''),
-(36, 2, 'Witches Perfume Wildfox', '&lt;p&gt;Tiffany Infinity is a powerful symbol of continuous connection, energy and vitality. Here, a classic link bracelet is given a modern twist.&lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', 'hoodies', 'Witches Perfume Wildfox', '', ''),
-(32, 2, 'Witches Perfume Wildfox', '&lt;p&gt;Graphic angles and clean lines blend to create the beautiful clarity of the Tiffany T collection. The elegant curve of this pendant exudes timeless sophistication.&lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', '', 'Witches Perfume Wildfox', '', ''),
-(48, 2, 'Witches Perfume Wildfox', '&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Stapler has 20 sheet stapling capacity; opens for tacking&lt;/li&gt;&lt;li&gt; Specialized inner rail provides long term stapling integrity; metal construction ensures durability&lt;/li&gt;&lt;li&gt; Locking latch secures staple position; Limited lifetime warranty&lt;/li&gt;&lt;/ul&gt; ', '', 'Witches Perfume Wildfox', '', ''),
-(35, 2, 'Witches Perfume Wildfox', '&lt;p&gt;In sterling silver. On an 18&quot; chain. Original designs copyrighted by Paloma Picasso. &lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', 'long-sleeve-shirts', 'Witches Perfume Wildfox', '', ''),
-(42, 2, 'Witches Perfume Wildfox', '&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;\r\n\r\n&lt;li&gt; Stapler has 20 sheet stapling capacity; opens for tacking&lt;/li&gt;\r\n\r\n&lt;li&gt; Specialized inner rail provides long term stapling integrity; metal construction ensures durability&lt;/li&gt;\r\n\r\n&lt;li&gt; Locking latch secures staple position; Limited lifetime warranty&lt;/li&gt;\r\n\r\n&lt;/ul&gt;\r\n ', '', 'Witches Perfume Wildfox', '', ''),
-(28, 2, 'Witches Perfume Wildfox', '&lt;p&gt;An ornate pendant based on 19th-century garden gates. Pendant in 18k rose gold with round brilliant diamonds. 1.5&quot; long. &lt;/p&gt;&lt;p&gt;  &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', 'hats', 'Witches Perfume Wildfox', '', ''),
-(45, 2, 'Skinny Suit Jacket Blue', '&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', 'jeans', 'Skinny Suit Jacket Blue', '', ''),
 (50, 1, 'Witches Perfume Wildfox', '&lt;p&gt;Faceted pendant in 18k rose gold. On a 16&quot; chain. Original designs copyrighted by Elsa Peretti.  &lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', '', 'Witches Perfume Wildfox', '', ''),
-(50, 2, 'Witches Perfume Wildfox', '&lt;p&gt;Faceted pendant in 18k rose gold. On a 16&quot; chain. Original designs copyrighted by Elsa Peretti.  &lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', '', 'Witches Perfume Wildfox', '', ''),
 (47, 1, 'Witches Perfume Wildfox', '&lt;p&gt;Streamlined and modern, the Atlas collection shines with graphic sophistication and bold simplicity. A Roman numeral motif with a single diamond adds a modern touch to this classic style.&lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', '', 'Witches Perfume Wildfox', '', ''),
-(47, 2, 'Witches Perfume Wildfox', '&lt;p&gt;Streamlined and modern, the Atlas collection shines with graphic sophistication and bold simplicity. A Roman numeral motif with a single diamond adds a modern touch to this classic style.&lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', '', 'Witches Perfume Wildfox', '', ''),
-(33, 2, 'Witches Perfume Wildfox', '&lt;p&gt;Des angles graphiques s’allient à des lignes épurées pour créer l’intense clarté de la collection Tiffany T. Simple et élégant, ce pendentif incurvé incarne une esthétique intemporelle.&lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', '', 'Witches Perfume Wildfox', '', ''),
-(34, 2, 'Witches Perfume Wildfox', '&lt;p&gt;Tiffany Infinity is a powerful symbol of continuous connection, energy and vitality. Enduringly modern, this cuff makes a bold statement worn alone or stacked for maximum impact.&lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', 'collection', 'Witches Perfume Wildfox', '', ''),
 (43, 1, 'Ted Baker Leather Satchel', '&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', 'dresses', 'Ted Baker Leather Satchel', '', ''),
-(43, 2, 'Ted Baker Leather Satchel', '&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', 'dresses', 'Ted Baker Leather Satchel', '', ''),
-(44, 2, 'Witches Perfume Wildfox', '&lt;p&gt;Necklace in sterling silver with 12 round pink sapphires. 36&quot; long. Carat total weight 1.30. Original designs copyrighted by Elsa Peretti. &lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', '', 'Witches Perfume Wildfox', '', ''),
-(31, 2, 'Witches Perfume Wildfox', '&lt;p&gt;Tiffany Infinity is a powerful symbol of continuous connection, energy and vitality. The sleek lines of these 18k rose gold earrings catch the light to create added dimension&lt;/p&gt;\r\n&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;\r\n&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;\r\n&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;\r\n&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;\r\n&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;\r\n&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;\r\n&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;\r\n&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;\r\n&lt;li&gt; Sold by the EA&lt;/li&gt;\r\n&lt;/ul&gt;', 'leather-handbag', 'Witches Perfume Wildfox', '', ''),
-(30, 2, 'Triwa Leather Watch', '&lt;p&gt;Des angles graphiques s’allient à des lignes épurées pour créer l’intense clarté de la collection Tiffany T. Les courbes élégantes de cette bague Wrap expriment une sophistication des plus modernes.&lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', 'fashion', 'Triwa Leather Watch', '', ''),
 (30, 1, 'Triwa Leather Watch', '&lt;p&gt;Des angles graphiques s’allient à des lignes épurées pour créer l’intense clarté de la collection Tiffany T. Les courbes élégantes de cette bague Wrap expriment une sophistication des plus modernes.&lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', 'fashion', 'Triwa Leather Watch', '', ''),
 (36, 1, 'Witches Perfume Wildfox', '&lt;p&gt;Tiffany Infinity is a powerful symbol of continuous connection, energy and vitality. Here, a classic link bracelet is given a modern twist.&lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', 'hoodies', 'Witches Perfume Wildfox', '', ''),
 (34, 1, 'Witches Perfume Wildfox', '&lt;p&gt;Tiffany Infinity is a powerful symbol of continuous connection, energy and vitality. Enduringly modern, this cuff makes a bold statement worn alone or stacked for maximum impact.&lt;/p&gt;&lt;p&gt; &lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;a-vertical a-spacing-none&quot;&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Designed to hold tapes up to 1,500 Inches long.&lt;/li&gt;&lt;li&gt; For Tape Width: 1/2 and 3/4 Inches&lt;/li&gt;&lt;li&gt; 1&quot; Core Desk Tape Dispenser.&lt;/li&gt;&lt;li&gt; For tapes 1/2&quot; and 3/4&quot; wide up to 1500&quot; long.&lt;/li&gt;&lt;li&gt; Weighted, nonskid base for one-hand dispensing.&lt;/li&gt;&lt;li&gt; Extra Core (MMMC15CORE), sold separately.&lt;/li&gt;&lt;li&gt; Sold by the EA&lt;/li&gt;&lt;/ul&gt;', 'collection', 'Witches Perfume Wildfox', '', ''),
@@ -3564,80 +3748,80 @@ CREATE TABLE IF NOT EXISTS `oc_product_image` (
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_image_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2894 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2904 ;
 
 --
 -- Zrzut danych tabeli `oc_product_image`
 --
 
 INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort_order`) VALUES
-(2882, 30, 'catalog/demo/product14.jpg', 0),
-(2884, 28, 'catalog/demo/product10.jpg', 0),
-(2889, 40, 'catalog/demo/product13.jpg', 0),
-(2738, 36, 'catalog/demo/product12.jpg', 0),
-(2737, 36, 'catalog/demo/product10.jpg', 0),
-(2755, 34, 'catalog/demo/product6.jpg', 0),
-(2754, 34, 'catalog/demo/product4.jpg', 0),
-(2860, 32, 'catalog/demo/product2_1.jpg', 0),
-(2859, 32, 'catalog/demo/product13.jpg', 0),
-(2893, 43, 'catalog/demo/product3.jpg', 0),
-(2892, 43, 'catalog/demo/product5.jpg', 0),
-(2866, 44, 'catalog/demo/product2_1.jpg', 0),
-(2865, 44, 'catalog/demo/product14.jpg', 0),
-(2874, 45, 'catalog/demo/product7.jpg', 0),
-(2873, 45, 'catalog/demo/product14.jpg', 0),
-(2863, 33, 'catalog/demo/product12.jpg', 0),
-(2888, 40, 'catalog/demo/product3.jpg', 0),
-(2887, 40, 'catalog/demo/product4.jpg', 0),
-(2853, 41, 'catalog/demo/product2_4.jpg', 0),
-(2771, 47, 'catalog/demo/product2.jpg', 0),
-(2883, 28, 'catalog/demo/product12.jpg', 0),
-(2852, 41, 'catalog/demo/product2_3.jpg', 0),
-(2886, 40, 'catalog/demo/product11.jpg', 0),
-(2885, 40, 'catalog/demo/product10.jpg', 0),
-(2867, 48, 'catalog/demo/product11.jpg', 0),
-(2736, 36, 'catalog/demo/product13.jpg', 0),
-(2735, 36, 'catalog/demo/product9.jpg', 0),
-(2753, 34, 'catalog/demo/product3.jpg', 0),
-(2752, 34, 'catalog/demo/product13.jpg', 0),
-(2858, 32, 'catalog/demo/product10.jpg', 0),
-(2857, 32, 'catalog/demo/product1.jpg', 0),
-(2856, 32, 'catalog/demo/product12.jpg', 0),
-(2891, 43, 'catalog/demo/product4.jpg', 0),
-(2890, 43, 'catalog/demo/product9.jpg', 0),
-(2864, 44, 'catalog/demo/product1.jpg', 0),
-(2872, 45, 'catalog/demo/product2.jpg', 0),
-(2813, 31, 'catalog/demo/product3.jpg', 0),
-(2812, 31, 'catalog/demo/product5.jpg', 0),
-(2773, 29, 'catalog/demo/product1.jpg', 0),
-(2862, 33, 'catalog/demo/product11.jpg', 0),
-(2751, 50, 'catalog/demo/product11.jpg', 0),
-(2750, 50, 'catalog/demo/product9.jpg', 0),
-(2817, 46, 'catalog/demo/product13.jpg', 0),
-(2816, 46, 'catalog/demo/product11.jpg', 0),
-(2749, 50, 'catalog/demo/product10.jpg', 0),
-(2824, 42, 'catalog/demo/product5.jpg', 0),
-(2823, 42, 'catalog/demo/product14.jpg', 0),
-(2822, 42, 'catalog/demo/product10.jpg', 0),
-(2821, 42, 'catalog/demo/product13.jpg', 0),
-(2820, 42, 'catalog/demo/product1.jpg', 0),
-(2861, 33, 'catalog/demo/product8.jpg', 0),
-(2819, 35, 'catalog/demo/product7.jpg', 0),
-(2818, 35, 'catalog/demo/product6.jpg', 0),
-(2770, 47, 'catalog/demo/product1.jpg', 0),
-(2743, 51, 'catalog/demo/product11.jpg', 0),
-(2815, 46, 'catalog/demo/product9.jpg', 0),
-(2814, 46, 'catalog/demo/product3.jpg', 0),
-(2772, 29, 'catalog/demo/product2.jpg', 0),
-(2851, 41, 'catalog/demo/product2_1.jpg', 0),
-(2850, 41, 'catalog/demo/product2.jpg', 0),
-(2881, 30, 'catalog/demo/product10.jpg', 0),
-(2880, 30, 'catalog/demo/product9.jpg', 0),
-(2879, 30, 'catalog/demo/product1.jpg', 0),
-(2871, 45, 'catalog/demo/product12.jpg', 0),
-(2870, 45, 'catalog/demo/product2_1.jpg', 0),
-(2868, 48, 'catalog/demo/product14.jpg', 0),
-(2869, 48, 'catalog/demo/product12.jpg', 0);
+(2882, 30, 'catalog/demo/productTest.jpg', 0),
+(2884, 28, 'catalog/demo/productTest.jpg', 0),
+(2738, 36, 'catalog/demo/productTest.jpg', 0),
+(2737, 36, 'catalog/demo/productTest.jpg', 0),
+(2755, 34, 'catalog/demo/productTest.jpg', 0),
+(2754, 34, 'catalog/demo/productTest.jpg', 0),
+(2860, 32, 'catalog/demo/productTest.jpg', 0),
+(2859, 32, 'catalog/demo/productTest.jpg', 0),
+(2893, 43, 'catalog/demo/productTest.jpg', 0),
+(2892, 43, 'catalog/demo/productTest.jpg', 0),
+(2866, 44, 'catalog/demo/productTest.jpg', 0),
+(2865, 44, 'catalog/demo/productTest.jpg', 0),
+(2863, 33, 'catalog/demo/productTest.jpg', 0),
+(2853, 41, 'catalog/demo/productTest.jpg', 0),
+(2771, 47, 'catalog/demo/productTest.jpg', 0),
+(2883, 28, 'catalog/demo/productTest.jpg', 0),
+(2852, 41, 'catalog/demo/productTest.jpg', 0),
+(2897, 40, '', 0),
+(2895, 40, '', 0),
+(2867, 48, 'catalog/demo/productTest.jpg', 0),
+(2736, 36, 'catalog/demo/productTest.jpg', 0),
+(2735, 36, 'catalog/demo/productTest.jpg', 0),
+(2753, 34, 'catalog/demo/productTest.jpg', 0),
+(2752, 34, 'catalog/demo/productTest.jpg', 0),
+(2858, 32, 'catalog/demo/productTest.jpg', 0),
+(2857, 32, 'catalog/demo/productTest.jpg', 0),
+(2856, 32, 'catalog/demo/productTest.jpg', 0),
+(2891, 43, 'catalog/demo/productTest.jpg', 0),
+(2890, 43, 'catalog/demo/productTest.jpg', 0),
+(2864, 44, 'catalog/demo/productTest.jpg', 0),
+(2903, 45, '', 0),
+(2813, 31, 'catalog/demo/productTest.jpg', 0),
+(2812, 31, 'catalog/demo/productTest.jpg', 0),
+(2773, 29, 'catalog/demo/productTest.jpg', 0),
+(2862, 33, 'catalog/demo/productTest.jpg', 0),
+(2751, 50, 'catalog/demo/productTest.jpg', 0),
+(2750, 50, 'catalog/demo/productTest.jpg', 0),
+(2817, 46, 'catalog/demo/productTest.jpg', 0),
+(2816, 46, 'catalog/demo/productTest.jpg', 0),
+(2749, 50, 'catalog/demo/productTest.jpg', 0),
+(2824, 42, 'catalog/demo/productTest.jpg', 0),
+(2823, 42, 'catalog/demo/productTest.jpg', 0),
+(2822, 42, 'catalog/demo/productTest.jpg', 0),
+(2821, 42, 'catalog/demo/productTest.jpg', 0),
+(2820, 42, 'catalog/demo/productTest.jpg', 0),
+(2861, 33, 'catalog/demo/productTest.jpg', 0),
+(2819, 35, 'catalog/demo/productTest.jpg', 0),
+(2818, 35, 'catalog/demo/productTest.jpg', 0),
+(2770, 47, 'catalog/demo/productTest.jpg', 0),
+(2743, 51, 'catalog/demo/productTest.jpg', 0),
+(2815, 46, 'catalog/demo/productTest.jpg', 0),
+(2814, 46, 'catalog/demo/productTest.jpg', 0),
+(2772, 29, 'catalog/demo/productTest.jpg', 0),
+(2851, 41, 'catalog/demo/productTest.jpg', 0),
+(2850, 41, 'catalog/demo/productTest.jpg', 0),
+(2881, 30, 'catalog/demo/productTest.jpg', 0),
+(2880, 30, 'catalog/demo/productTest.jpg', 0),
+(2879, 30, 'catalog/demo/productTest.jpg', 0),
+(2901, 45, '', 0),
+(2899, 45, '', 0),
+(2868, 48, 'catalog/demo/productTest.jpg', 0),
+(2869, 48, 'catalog/demo/productTest.jpg', 0),
+(2898, 40, '', 0),
+(2896, 40, '', 0),
+(2894, 40, '', 0),
+(2902, 45, '', 0),
+(2900, 45, '', 0);
 
 -- --------------------------------------------------------
 
@@ -3775,7 +3959,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_reward` (
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_reward_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=615 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=616 ;
 
 --
 -- Zrzut danych tabeli `oc_product_reward`
@@ -3788,7 +3972,7 @@ INSERT INTO `oc_product_reward` (`product_reward_id`, `product_id`, `customer_gr
 (614, 43, 1, 600),
 (612, 30, 1, 200),
 (609, 44, 1, 700),
-(610, 45, 1, 800);
+(615, 45, 1, 800);
 
 -- --------------------------------------------------------
 
@@ -3806,7 +3990,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_special` (
   `date_end` date NOT NULL DEFAULT '0000-00-00',
   PRIMARY KEY (`product_special_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=530 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=531 ;
 
 --
 -- Zrzut danych tabeli `oc_product_special`
@@ -3820,7 +4004,7 @@ INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_
 (524, 41, 1, 0, '12.0000', '2010-02-10', '2019-07-19'),
 (529, 28, 1, 0, '20.0000', '2010-02-03', '2018-10-24'),
 (509, 36, 1, 0, '10.0000', '2010-02-02', '2018-10-23'),
-(526, 45, 1, 0, '150.0000', '2010-02-02', '2019-07-13');
+(530, 45, 1, 0, '150.0000', '2010-02-02', '2019-07-13');
 
 -- --------------------------------------------------------
 
@@ -3840,24 +4024,18 @@ CREATE TABLE IF NOT EXISTS `oc_product_to_category` (
 --
 
 INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
-(28, 20),
 (28, 24),
 (28, 75),
-(29, 20),
 (29, 24),
-(30, 20),
 (30, 33),
 (30, 75),
 (31, 33),
 (32, 34),
-(33, 17),
-(33, 20),
 (33, 25),
 (33, 26),
 (33, 28),
 (33, 33),
 (33, 34),
-(33, 57),
 (33, 62),
 (33, 63),
 (33, 65),
@@ -3876,7 +4054,6 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (34, 65),
 (34, 69),
 (34, 70),
-(35, 20),
 (35, 28),
 (35, 29),
 (35, 30),
@@ -3890,7 +4067,6 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (35, 61),
 (35, 66),
 (36, 34),
-(40, 20),
 (40, 24),
 (40, 26),
 (40, 28),
@@ -3898,7 +4074,6 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (40, 34),
 (40, 36),
 (40, 45),
-(40, 57),
 (40, 59),
 (40, 60),
 (40, 62),
@@ -3906,29 +4081,18 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (40, 64),
 (40, 65),
 (40, 68),
-(40, 71),
-(40, 72),
-(40, 73),
-(41, 27),
-(42, 20),
 (42, 28),
-(43, 17),
 (43, 18),
-(43, 20),
 (43, 25),
 (43, 30),
-(43, 57),
 (43, 62),
 (43, 63),
 (43, 64),
 (43, 65),
 (43, 66),
 (43, 68),
-(43, 72),
-(43, 73),
 (43, 74),
 (44, 18),
-(44, 20),
 (44, 24),
 (44, 25),
 (44, 28),
@@ -3939,31 +4103,23 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (44, 38),
 (45, 18),
 (45, 33),
-(46, 17),
 (46, 18),
-(46, 20),
 (46, 26),
-(46, 27),
 (46, 28),
 (46, 29),
 (46, 31),
 (46, 33),
 (46, 34),
 (46, 46),
-(46, 57),
 (46, 59),
 (46, 61),
 (46, 64),
 (47, 18),
-(47, 20),
-(48, 17),
-(48, 20),
 (48, 28),
 (48, 34),
 (48, 62),
 (48, 63),
 (48, 65),
-(48, 71),
 (50, 29),
 (50, 32),
 (50, 33),
@@ -4279,7 +4435,7 @@ CREATE TABLE IF NOT EXISTS `oc_setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4338 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7300 ;
 
 --
 -- Zrzut danych tabeli `oc_setting`
@@ -4320,48 +4476,24 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (95, 0, 'voucher', 'voucher_status', '1', 0),
 (103, 0, 'free_checkout', 'free_checkout_status', '1', 0),
 (104, 0, 'free_checkout', 'free_checkout_order_status_id', '1', 0),
-(4331, 0, 'config', 'config_encryption', 'iQJn1aGILfXCrOaL62at61BC4NkzJIrZoX3bQXy82sgG4WL2WP79y1q6yS9a12dQk4swoieMmT0TaGOA8IYfEJwMnFrnMAEXA3vvIKtpXspmHIhcpPVUtRlZk4WiiUYd3klEa73QyUwDkqbpvP806giyx4DLvSTXwyGbQxYKw4SYkV65RgOsbKXaRhxzlLEzWtGnP7AfidrQ2unTd4eheuBBqA307inCaCEeyT3i3v3XIDX7xo3q1EHi90Om642NafOlb5393NghwsvpNVW0SIlBb13TUIPjmmmUDVUZ53doUECJFnBMqaYsgXvrduHOphx5Oeg6OzsgDbeFGgH0c59JhNstnNLC3nTkv84ec3vPt5JlP5eEfu0tfBOTorAr9ldyIcQCZ8wRo67S9ELLfyoTBVrT5aivBTYuA1fNPSvMxUP2axaT4cGYBa9PaEC0ht0ISM8G0GQKin0haPQ8gaEjp95mf4Kpzu041I1pzlxz70146BV40RAOXcKTSJLhvBPV10CEMrUbm2uVpxGn7hNTwUiiWc2kIOR5V3I46wJy3e51KgOMPyhziiVrWjF2surp7kGYu4m3HxxDXYqumb2RpdpqcDS49J5BYhBt83pyHlrpPx4xYmXnH47QO5EMd8mJyimI9YGHs1OKRLuLfYq8WYbZVK4UTOJVfZC9LrxVEtRAMguS5e3BAqd2nGi45xxOdLb4f0K4ZheSjPRZNpQKkv4kRgmUzsmlYrfqpT4i9jZbhQQnmzJ7SL07OeCDWxPE74v1P9mDpOqKMvNn3OhbPWWCm8mp9T9DKHK5zcET1cBkYP9xDap9tOZpH36J8Ig5nxX6LvfAxoZttXuMr4mHKe57pKnKZCzGkAYkqINxLbijpkIQZJJwTArdQhnHvfSxqe4KngdOFCMbAl7oUyvHzSIGsiXco5NUZQeDCLiHqLD6zjq7rhFik3Rq75JKaYgzyq295wYltMVpzDwGmefRUMVJgag4UpmNsTwORS6l4lXsQfgunHwlIfyv36zd', 0),
-(4330, 0, 'config', 'config_shared', '0', 0),
-(4329, 0, 'config', 'config_password', '1', 0),
-(4328, 0, 'config', 'config_secure', '0', 0),
-(4327, 0, 'config', 'config_compression', '0', 0),
-(4323, 0, 'config', 'config_mail_alert', '', 0),
-(4324, 0, 'config', 'config_maintenance', '0', 0),
-(4325, 0, 'config', 'config_seo_url', '0', 0),
-(4326, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai''hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
-(4320, 0, 'config', 'config_mail_smtp_password', '', 0),
-(4321, 0, 'config', 'config_mail_smtp_port', '25', 0),
-(4322, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
-(4319, 0, 'config', 'config_mail_smtp_username', '', 0),
-(4318, 0, 'config', 'config_mail_smtp_hostname', '', 0),
-(4317, 0, 'config', 'config_mail_parameter', '', 0),
-(4299, 0, 'config', 'config_affiliate_approval', '0', 0),
-(4300, 0, 'config', 'config_affiliate_auto', '0', 0),
-(4301, 0, 'config', 'config_affiliate_commission', '5', 0),
-(4302, 0, 'config', 'config_affiliate_id', '4', 0),
-(4303, 0, 'config', 'config_affiliate_mail', '0', 0),
-(4304, 0, 'config', 'config_return_id', '0', 0),
-(4305, 0, 'config', 'config_return_status_id', '2', 0),
-(4306, 0, 'config', 'config_captcha', 'basic_captcha', 0),
-(4307, 0, 'config', 'config_captcha_page', '["register","guest","review","return","contact"]', 1),
-(4308, 0, 'config', 'config_logo', 'catalog/logo.png', 0),
-(4309, 0, 'config', 'config_icon', 'catalog/cart.png', 0),
-(4310, 0, 'config', 'config_ftp_hostname', 'localhost', 0),
-(4311, 0, 'config', 'config_ftp_port', '21', 0),
-(4312, 0, 'config', 'config_ftp_username', '', 0),
-(4313, 0, 'config', 'config_ftp_password', '', 0),
-(4314, 0, 'config', 'config_ftp_root', '', 0),
-(4315, 0, 'config', 'config_ftp_status', '0', 0),
-(4316, 0, 'config', 'config_mail_protocol', 'mail', 0),
+(7299, 0, 'config', 'config_error_filename', 'error.log', 0),
+(7298, 0, 'config', 'config_error_log', '1', 0),
+(7297, 0, 'config', 'config_error_display', '1', 0),
+(7296, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', 0),
+(7292, 0, 'config', 'config_shared', '0', 0),
+(7293, 0, 'config', 'config_encryption', 'iQJn1aGILfXCrOaL62at61BC4NkzJIrZoX3bQXy82sgG4WL2WP79y1q6yS9a12dQk4swoieMmT0TaGOA8IYfEJwMnFrnMAEXA3vvIKtpXspmHIhcpPVUtRlZk4WiiUYd3klEa73QyUwDkqbpvP806giyx4DLvSTXwyGbQxYKw4SYkV65RgOsbKXaRhxzlLEzWtGnP7AfidrQ2unTd4eheuBBqA307inCaCEeyT3i3v3XIDX7xo3q1EHi90Om642NafOlb5393NghwsvpNVW0SIlBb13TUIPjmmmUDVUZ53doUECJFnBMqaYsgXvrduHOphx5Oeg6OzsgDbeFGgH0c59JhNstnNLC3nTkv84ec3vPt5JlP5eEfu0tfBOTorAr9ldyIcQCZ8wRo67S9ELLfyoTBVrT5aivBTYuA1fNPSvMxUP2axaT4cGYBa9PaEC0ht0ISM8G0GQKin0haPQ8gaEjp95mf4Kpzu041I1pzlxz70146BV40RAOXcKTSJLhvBPV10CEMrUbm2uVpxGn7hNTwUiiWc2kIOR5V3I46wJy3e51KgOMPyhziiVrWjF2surp7kGYu4m3HxxDXYqumb2RpdpqcDS49J5BYhBt83pyHlrpPx4xYmXnH47QO5EMd8mJyimI9YGHs1OKRLuLfYq8WYbZVK4UTOJVfZC9LrxVEtRAMguS5e3BAqd2nGi45xxOdLb4f0K4ZheSjPRZNpQKkv4kRgmUzsmlYrfqpT4i9jZbhQQnmzJ7SL07OeCDWxPE74v1P9mDpOqKMvNn3OhbPWWCm8mp9T9DKHK5zcET1cBkYP9xDap9tOZpH36J8Ig5nxX6LvfAxoZttXuMr4mHKe57pKnKZCzGkAYkqINxLbijpkIQZJJwTArdQhnHvfSxqe4KngdOFCMbAl7oUyvHzSIGsiXco5NUZQeDCLiHqLD6zjq7rhFik3Rq75JKaYgzyq295wYltMVpzDwGmefRUMVJgag4UpmNsTwORS6l4lXsQfgunHwlIfyv36zd', 0),
+(7287, 0, 'config', 'config_seo_url', '0', 0),
+(7288, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai''hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
+(7294, 0, 'config', 'config_file_max_size', '300000', 0),
+(7295, 0, 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', 0),
 (2982, 0, 'pavblog', 'pavblog', '{"general_lwidth":"470","general_lheight":"470","general_swidth":"470","general_sheight":"470","general_xwidth":"80","general_xheight":"80","rss_limit_item":"12","keyword_listing_blogs_page":"blogs","children_columns":"3","general_cwidth":"900","general_cheight":"608","cat_limit_leading_blog":"1","cat_limit_secondary_blog":"3","cat_leading_image_type":"l","cat_secondary_image_type":"s","cat_columns_leading_blog":"1","cat_columns_secondary_blogs":"1","cat_show_title":"1","cat_show_description":"1","cat_show_readmore":"1","cat_show_image":"1","cat_show_author":"1","cat_show_category":"1","cat_show_created":"1","cat_show_hits":"1","cat_show_comment_counter":"1","blog_image_type":"l","blog_show_title":"1","blog_show_image":"1","blog_show_author":"1","blog_show_category":"1","blog_show_created":"1","blog_show_comment_counter":"1","blog_show_hits":"1","blog_show_comment_form":"1","comment_engine":"local","diquis_account":"pavothemes","facebook_appid":"100858303516","comment_limit":"10","facebook_width":"600","auto_publish_comment":"0","enable_recaptcha":"1"}', 1),
 (3706, 0, 'basic_captcha', 'basic_captcha_status', '1', 0),
 (3707, 0, 'google_captcha', 'google_captcha_key', '6LcTyAYTAAAAAD3hKJNuJVIZbRjJRo33MbF4qF7n', 0),
 (3708, 0, 'google_captcha', 'google_captcha_secret', '6LcTyAYTAAAAAFh2-uDzQ_2N-npBtZS1oZbXe31z', 0),
 (3709, 0, 'google_captcha', 'google_captcha_status', '1', 0),
-(4298, 0, 'config', 'config_stock_checkout', '0', 0),
 (4241, 0, 'theme_default', 'theme_default_image_location_height', '81', 0),
 (4240, 0, 'theme_default', 'theme_default_image_location_width', '62', 0),
-(3923, 0, 'pavmegamenu_params', 'pavmegamenu_params', '[{"submenu":1,"subwidth":800,"id":2,"align":"aligned-fullwidth","group":0,"cols":3,"rows":[{"cols":[]},{"cols":[{"widgets":"wid-20","colwidth":4},{"widgets":"wid-21","colwidth":4},{"widgets":"wid-22","colwidth":4}]}]},{"id":5,"group":0,"cols":1,"subwidth":900,"submenu":1,"align":"aligned-fullwidth","rows":[{"cols":[{"widgets":"wid-10|wid-13","colwidth":3},{"widgets":"wid-15","colwidth":3},{"widgets":"wid-18","colwidth":4}]}]},{"id":23,"group":0,"cols":1,"subwidth":200,"submenu":1,"align":"aligned-left","rows":[{"cols":[{"type":"menu","colwidth":12}]}]},{"id":11,"group":0,"cols":1,"submenu":1,"align":"aligned-left","rows":[{"cols":[{"type":"menu","colwidth":12}]}]},{"id":12,"group":0,"cols":1,"submenu":1,"align":"aligned-left","rows":[{"cols":[{"type":"menu","colwidth":12}]}]},{"id":45,"group":0,"cols":1,"submenu":1,"align":"aligned-left","rows":[{"cols":[{"type":"menu","colwidth":12}]}]}]', 0),
+(4625, 0, 'pavmegamenu_params', 'pavmegamenu_params', '', 0),
 (4239, 0, 'theme_default', 'theme_default_image_cart_height', '81', 0),
 (4238, 0, 'theme_default', 'theme_default_image_cart_width', '62', 0),
 (4237, 0, 'theme_default', 'theme_default_image_wishlist_height', '81', 0),
@@ -4384,65 +4516,90 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (4220, 0, 'theme_default', 'theme_default_product_limit', '15', 0),
 (4219, 0, 'theme_default', 'theme_default_status', '1', 0),
 (4218, 0, 'theme_default', 'theme_default_directory', 'pav_vigoss', 0),
-(4297, 0, 'config', 'config_stock_warning', '0', 0),
-(4295, 0, 'config', 'config_api_id', '3', 0),
-(4296, 0, 'config', 'config_stock_display', '0', 0),
-(4294, 0, 'config', 'config_order_mail', '0', 0),
-(4293, 0, 'config', 'config_fraud_status_id', '7', 0),
-(4292, 0, 'config', 'config_complete_status', '["5","3"]', 1),
-(4291, 0, 'config', 'config_processing_status', '["5","1","2","12","3"]', 1),
-(4290, 0, 'config', 'config_order_status_id', '1', 0),
-(4289, 0, 'config', 'config_checkout_id', '5', 0),
-(4288, 0, 'config', 'config_checkout_guest', '1', 0),
-(4287, 0, 'config', 'config_cart_weight', '1', 0),
-(4286, 0, 'config', 'config_invoice_prefix', 'INV-2013-00', 0),
-(4285, 0, 'config', 'config_account_mail', '0', 0),
-(4284, 0, 'config', 'config_account_id', '3', 0),
-(4283, 0, 'config', 'config_login_attempts', '5', 0),
-(4282, 0, 'config', 'config_customer_price', '0', 0),
-(4281, 0, 'config', 'config_customer_group_display', '["1"]', 1),
-(4280, 0, 'config', 'config_customer_group_id', '1', 0),
-(4279, 0, 'config', 'config_customer_online', '0', 0),
-(4278, 0, 'config', 'config_tax_customer', 'shipping', 0),
-(4277, 0, 'config', 'config_tax_default', 'shipping', 0),
-(4276, 0, 'config', 'config_tax', '1', 0),
-(4275, 0, 'config', 'config_voucher_max', '1000', 0),
-(4274, 0, 'config', 'config_voucher_min', '1', 0),
-(4273, 0, 'config', 'config_review_mail', '0', 0),
-(4272, 0, 'config', 'config_review_guest', '1', 0),
-(4271, 0, 'config', 'config_review_status', '1', 0),
-(4270, 0, 'config', 'config_limit_admin', '20', 0),
-(4269, 0, 'config', 'config_product_count', '1', 0),
-(4268, 0, 'config', 'config_weight_class_id', '1', 0),
-(4267, 0, 'config', 'config_length_class_id', '1', 0),
-(4266, 0, 'config', 'config_currency_auto', '1', 0),
-(4265, 0, 'config', 'config_currency', 'USD', 0),
-(4264, 0, 'config', 'config_admin_language', 'pl-PL', 0),
-(4263, 0, 'config', 'config_language', 'pl-PL', 0),
-(4262, 0, 'config', 'config_zone_id', '3563', 0),
-(4261, 0, 'config', 'config_country_id', '222', 0),
-(4260, 0, 'config', 'config_comment', '', 0),
-(4259, 0, 'config', 'config_open', '', 0),
-(4258, 0, 'config', 'config_image', '', 0),
-(4257, 0, 'config', 'config_fax', '', 0),
-(4256, 0, 'config', 'config_telephone', '(801)2345 - 6789', 0),
-(4255, 0, 'config', 'config_email', 'jaazzz89@gmail.com', 0),
-(4254, 0, 'config', 'config_geocode', '', 0),
-(4253, 0, 'config', 'config_address', 'Address 1', 0),
-(4252, 0, 'config', 'config_owner', 'Your Name', 0),
-(4251, 0, 'config', 'config_name', 'Your Store', 0),
-(4250, 0, 'config', 'config_layout_id', '4', 0),
-(4249, 0, 'config', 'config_theme', 'theme_default', 0),
-(4248, 0, 'config', 'config_meta_keyword', '', 0),
-(4247, 0, 'config', 'config_meta_description', 'My Store', 0),
-(4217, 0, 'themecontrol', 'themecontrol', '{"layout_id":"1","position":"1","cateogry_display_mode":"grid","listing_products_columns":"0","listing_products_columns_small":"2","listing_products_columns_minismall":"1","category_pzoom":"1","product_enablezoom":"1","product_zoomgallery":"slider","product_zoommode":"basic","product_zoomlenssize":"150","product_zoomeasing":"1","product_zoomlensshape":"basic","product_related_column":"0","enable_product_customtab":"1","product_customtab_name":{"2":"fsdfdsfdsfdfdf","1":"sdfgsdg"},"product_customtab_content":{"2":"","1":"&lt;p&gt;dsgfsdgfsdgf&lt;br&gt;&lt;\\/p&gt;"},"location_address":"79-99 Beaver Street, New York, NY 10005, USA","location_latitude":"40.705423","location_longitude":"-74.008616","contact_customhtml":{"2":"","1":"&lt;p&gt;&lt;b&gt;&lt;small&gt;This is a CMS block edited from admin panel.&lt;\\/small&gt;&lt;br&gt;&lt;small&gt;You can insert any content here.&lt;\\/small&gt;&lt;\\/b&gt;&lt;\\/p&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non dui at sapien tempor gravida ut vel arcu. Nullam ac eros eros, et ullamcorper leo.&lt;\\/p&gt;&lt;p&gt;&lt;b&gt;&lt;small&gt;Customer Service:&lt;\\/small&gt;&lt;\\/b&gt;&lt;br&gt;&lt;a href=&quot;mailto:info@yourstore.com&quot;&gt;info@yourstore.com&lt;\\/a&gt;&lt;\\/p&gt;&lt;p&gt;&lt;b&gt;&lt;small&gt;Returns and Refunds:&lt;\\/small&gt;&lt;\\/b&gt;&lt;br&gt;&lt;a href=&quot;mailto:returns@yourstore.com&quot;&gt;returns@yourstore.com&lt;\\/a&gt;&lt;\\/p&gt;"},"skin":"","theme_width":"auto","enable_custom_copyright":"1","copyright":"&amp;copy; 2016 Opencart Demo Store. All Rights Reserved. Developed By &lt;a href=&quot;http:\\/\\/www.pavothemes.com\\/&quot;&gt;PavoThemes&lt;\\/a&gt;","enable_offsidebars":"1","enable_paneltool":"1","logo_type":"logo-theme","offcanvas":"megamenu","home_container_full":"1","quickview":"1","layout_pinfo":"accordion","t_widgetid":"366766896986591232","t_username":"pavothemes","t_name":"9CB3FF","t_title":"FFC9C9","t_link":"EF5D5D","t_border":"FFFFFF","widget_address":{"2":"&lt;div class=&quot;panel box-infor&quot;&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;div class=&quot;panel-heading&quot;&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;h4 class=&quot;panel-title&quot;&gt;About us&lt;\\/h4&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;\\/div&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;div class=&quot;panel-body&quot;&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;p&gt;This is Photoshop''s version of Lorem Ipsum. Proin gravida nibh vel velit autor aliquet. Aenean sollicitudin, lorem quis bibendum aucto nisi elit consequat ipsum.\\r\\n\\t\\t\\t\\t\\t    &lt;\\/p&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;hr&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;ul class=&quot;list-inline social&quot;&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-facebook&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-twitter&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;    \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-google-plus&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-tumblr&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-wifi&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-skype&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;\\/ul&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;\\/div&gt;\\r\\n\\t\\t\\t\\t\\t&lt;\\/div&gt;","1":"&lt;div class=&quot;panel box-infor&quot;&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;div class=&quot;panel-heading&quot;&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;h4 class=&quot;panel-title&quot;&gt;About us&lt;\\/h4&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;\\/div&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;div class=&quot;panel-body&quot;&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;p&gt;This is Photoshop''s version of Lorem Ipsum. Proin gravida nibh vel velit autor aliquet. Aenean sollicitudin, lorem quis bibendum aucto nisi elit consequat ipsum.\\r\\n\\t\\t\\t\\t\\t    &lt;\\/p&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;hr&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;ul class=&quot;list-inline social&quot;&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-facebook&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-twitter&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;    \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-google-plus&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-tumblr&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-wifi&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-skype&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;\\/ul&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;\\/div&gt;\\r\\n\\t\\t\\t\\t\\t&lt;\\/div&gt;"},"widget_logo_footer":{"2":"&lt;div class=&quot;logo-footer&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;image\\/catalog\\/logo-footer.png&quot; class=&quot;img-responsive&quot;&gt; &lt;\\/a&gt;\\r\\n&lt;p&gt;This is Photoshop''s version of Lorem Ipsum.&lt;br&gt;gravida nibh vel velit autor aliquet. Aenean sollici&lt;br&gt;tudin, lorem quis bibendum aucto.&lt;\\/p&gt;\\r\\n&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;&lt;span&gt; PURCHASE NOW &lt;\\/span&gt;&lt;\\/a&gt;&lt;\\/div&gt;","1":"&lt;div class=&quot;logo-footer&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;image\\/catalog\\/logo-footer.png&quot; class=&quot;img-responsive&quot;&gt; &lt;\\/a&gt;&lt;p&gt;This is Photoshop''s version of Lorem Ipsum.&lt;br&gt;gravida nibh vel velit autor aliquet. Aenean sollici&lt;br&gt;tudin, lorem quis bibendum aucto.&lt;\\/p&gt;&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;&lt;span&gt; PURCHASE NOW &lt;\\/span&gt;&lt;\\/a&gt;&lt;\\/div&gt;"},"enable_customfont":"0","type_fonts1":"standard","normal_fonts1":"inherit","google_url1":"","google_family1":"","fontsize1":"inherit","type_fonts2":"standard","normal_fonts2":"inherit","google_url2":"","google_family2":"","fontsize2":"inherit","type_fonts3":"standard","normal_fonts3":"inherit","google_url3":"","google_family3":"","fontsize3":"inherit","type_fonts4":"standard","normal_fonts4":"Verdana, Geneva, sans-serif","google_url4":"","google_family4":"","body_selector4":"","block_showcase":"","block_promotion":"","block_footer_top":"","block_footer_center":"","block_footer_bottom":"","enable_compress_css":"","exclude_css_files":"bootstrap.css","customize_theme":"","custom_css":"","custom_javascript":""}', 1),
-(4246, 0, 'config', 'config_meta_title', 'Your Store', 0),
-(4332, 0, 'config', 'config_file_max_size', '300000', 0),
-(4333, 0, 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', 0),
-(4334, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', 0),
-(4335, 0, 'config', 'config_error_display', '1', 0),
-(4336, 0, 'config', 'config_error_log', '1', 0),
-(4337, 0, 'config', 'config_error_filename', 'error.log', 0);
+(7289, 0, 'config', 'config_compression', '0', 0),
+(7290, 0, 'config', 'config_secure', '1', 0),
+(7291, 0, 'config', 'config_password', '1', 0),
+(7286, 0, 'config', 'config_maintenance', '0', 0),
+(7285, 0, 'config', 'config_mail_alert', '', 0),
+(7284, 0, 'config', 'config_mail_smtp_timeout', '15', 0),
+(7283, 0, 'config', 'config_mail_smtp_port', '465', 0),
+(7282, 0, 'config', 'config_mail_smtp_password', 'konstruktor1', 0),
+(7281, 0, 'config', 'config_mail_smtp_username', 'admin@silverwega.xaa.pl', 0),
+(7280, 0, 'config', 'config_mail_smtp_hostname', 'ssl://s29.proserwer.pl', 0),
+(5183, 0, 'themecontrol', 'themecontrol', '{"default_theme":"","skin":"","theme_width":"auto","fontsize":"12","enable_custom_copyright":0,"copyright":"Copyright 2013 ThemeLexus.Com.","responsive":1,"enable_offsidebars":1,"enable_customfont":0,"enable_paneltool":0,"enable_footer_center":1,"block_showcase":"","block_promotion":"","block_footer_top":"","block_footer_center":"","block_footer_bottom":"","body_pattern":"","enable_product_customtab":"","product_related_column":"","product_customtab_content":"","product_customtab_name":"","fontsize1":"","type_fonts1":[],"normal_fonts1":[],"google_url1":"","google_family1":"","body_selector1":"","fontsize2":"","type_fonts2":[],"normal_fonts2":[],"google_url2":"","google_family2":"","body_selector2":"","fontsize3":"","type_fonts3":[],"normal_fonts3":[],"google_url3":"","google_family3":"","body_selector3":"","fontsize4":"","type_fonts4":[],"normal_fonts4":[],"google_url4":"","google_family4":"","body_selector4":"","custom_css":"","custom_javascript":"","bg_image":"","use_custombg":0,"enable_custom_background":"","bg_repeat":"repeat","bg_position":"left top","listing_products_columns":"0","listing_products_columns_small":"2","listing_products_columns_minismall":"1","cateogry_display_mode":"grid","category_saleicon":1,"category_pzoom":1,"product_enablezoom":1,"product_zoommode":"basic","product_zoomeasing":1,"product_zoomlenssize":150,"product_zoomlensshape":"normal","product_zoomgallery":0,"show_swap_image":0,"location_address":"79-99 Beaver Street, New York, NY 10005, USA","location_latitude":"40.705423","location_longitude":"-74.008616","contact_customhtml":"","enable_compress_css":0,"exclude_css_files":"bootstrap.css","enable_development_mode":0,"customize_theme":""}', 1),
+(4998, 0, 'themecontrol', 'themecontrol', '{"layout_id":"1","position":"1","cateogry_display_mode":"grid","listing_products_columns":"0","listing_products_columns_small":"2","listing_products_columns_minismall":"1","category_pzoom":"1","product_enablezoom":"1","product_zoomgallery":"slider","product_zoommode":"basic","product_zoomlenssize":"150","product_zoomeasing":"1","product_zoomlensshape":"basic","product_related_column":"0","enable_product_customtab":"1","product_customtab_name":{"3":"","1":"sdfgsdg"},"product_customtab_content":{"3":"","1":"&lt;p&gt;dsgfsdgfsdgf&lt;br&gt;&lt;\\/p&gt;"},"location_latitude":"40.705423","location_longitude":"-74.008616","contact_customhtml":{"3":"","1":"&lt;p&gt;&lt;b&gt;&lt;small&gt;This is a CMS block edited from admin panel.&lt;\\/small&gt;&lt;br&gt;&lt;small&gt;You can insert any content here.&lt;\\/small&gt;&lt;\\/b&gt;&lt;\\/p&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non dui at sapien tempor gravida ut vel arcu. Nullam ac eros eros, et ullamcorper leo.&lt;\\/p&gt;&lt;p&gt;&lt;b&gt;&lt;small&gt;Customer Service:&lt;\\/small&gt;&lt;\\/b&gt;&lt;br&gt;&lt;a href=&quot;mailto:info@yourstore.com&quot;&gt;info@yourstore.com&lt;\\/a&gt;&lt;\\/p&gt;&lt;p&gt;&lt;b&gt;&lt;small&gt;Returns and Refunds:&lt;\\/small&gt;&lt;\\/b&gt;&lt;br&gt;&lt;a href=&quot;mailto:returns@yourstore.com&quot;&gt;returns@yourstore.com&lt;\\/a&gt;&lt;\\/p&gt;"},"skin":"","theme_width":"auto","enable_custom_copyright":"0","copyright":"&amp;copy; 2016 Opencart Demo Store. All Rights Reserved. Developed By &lt;a href=&quot;http:\\/\\/www.pavothemes.com\\/&quot;&gt;PavoThemes&lt;\\/a&gt;","enable_offsidebars":"0","enable_paneltool":"0","logo_type":"logo-theme","offcanvas":"category","home_container_full":"1","quickview":"1","layout_pinfo":"accordion","t_widgetid":"366766896986591232","t_username":"pavothemes","t_name":"9CB3FF","t_title":"FFC9C9","t_link":"EF5D5D","t_border":"FFFFFF","widget_address":{"3":"&lt;div class=&quot;panel box-infor&quot;&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;div class=&quot;panel-heading&quot;&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;h4 class=&quot;panel-title&quot;&gt;About us&lt;\\/h4&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;\\/div&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;div class=&quot;panel-body&quot;&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;p&gt;This is Photoshop''s version of Lorem Ipsum. Proin gravida nibh vel velit autor aliquet. Aenean sollicitudin, lorem quis bibendum aucto nisi elit consequat ipsum.\\r\\n\\t\\t\\t\\t\\t    &lt;\\/p&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;hr&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;ul class=&quot;list-inline social&quot;&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-facebook&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-twitter&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;    \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-google-plus&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-tumblr&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-wifi&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-skype&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;\\/ul&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;\\/div&gt;\\r\\n\\t\\t\\t\\t\\t&lt;\\/div&gt;","1":"&lt;div class=&quot;panel box-infor&quot;&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;div class=&quot;panel-heading&quot;&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;h4 class=&quot;panel-title&quot;&gt;About us&lt;\\/h4&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;\\/div&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;div class=&quot;panel-body&quot;&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;p&gt;This is Photoshop''s version of Lorem Ipsum. Proin gravida nibh vel velit autor aliquet. Aenean sollicitudin, lorem quis bibendum aucto nisi elit consequat ipsum.\\r\\n\\t\\t\\t\\t\\t    &lt;\\/p&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;hr&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;ul class=&quot;list-inline social&quot;&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-facebook&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-twitter&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;    \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-google-plus&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-tumblr&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;  \\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-wifi&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icons icons-outline icons-sm fa fa-skype&quot;&gt;&lt;\\/i&gt;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n\\t\\t\\t\\t\\t    &lt;\\/ul&gt;\\r\\n\\t\\t\\t\\t\\t  &lt;\\/div&gt;\\r\\n\\t\\t\\t\\t\\t&lt;\\/div&gt;"},"widget_logo_footer":{"3":"&lt;div class=&quot;logo-footer&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;image\\/catalog\\/logo-footer.png&quot; class=&quot;img-responsive&quot;&gt; &lt;\\/a&gt;\\r\\n&lt;p&gt;This is Photoshop''s version of Lorem Ipsum.&lt;br&gt;gravida nibh vel velit autor aliquet. Aenean sollici&lt;br&gt;tudin, lorem quis bibendum aucto.&lt;\\/p&gt;\\r\\n&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;&lt;span&gt; PURCHASE NOW &lt;\\/span&gt;&lt;\\/a&gt;&lt;\\/div&gt;","1":"&lt;div class=&quot;logo-footer&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;image\\/catalog\\/logo-footer.png&quot; class=&quot;img-responsive&quot;&gt; &lt;\\/a&gt;&lt;p&gt;This is Photoshop''s version of Lorem Ipsum.&lt;br&gt;gravida nibh vel velit autor aliquet. Aenean sollici&lt;br&gt;tudin, lorem quis bibendum aucto.&lt;\\/p&gt;&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;&lt;span&gt; PURCHASE NOW &lt;\\/span&gt;&lt;\\/a&gt;&lt;\\/div&gt;"},"enable_customfont":"0","type_fonts1":"standard","normal_fonts1":"inherit","google_url1":"","google_family1":"","fontsize1":"inherit","type_fonts2":"standard","normal_fonts2":"inherit","google_url2":"","google_family2":"","fontsize2":"inherit","type_fonts3":"standard","normal_fonts3":"inherit","google_url3":"","google_family3":"","fontsize3":"inherit","type_fonts4":"standard","normal_fonts4":"Verdana, Geneva, sans-serif","google_url4":"","google_family4":"","body_selector4":"","block_showcase":"","block_promotion":"","block_footer_top":"","block_footer_center":"","block_footer_bottom":"","enable_compress_css":"","exclude_css_files":"bootstrap.css","customize_theme":"","custom_css":"","custom_javascript":""}', 1),
+(7278, 0, 'config', 'config_mail_protocol', 'mail', 0),
+(7279, 0, 'config', 'config_mail_parameter', '', 0),
+(7277, 0, 'config', 'config_ftp_status', '1', 0),
+(7276, 0, 'config', 'config_ftp_root', '', 0),
+(7275, 0, 'config', 'config_ftp_password', 'admin', 0),
+(7273, 0, 'config', 'config_ftp_port', '21', 0),
+(7274, 0, 'config', 'config_ftp_username', 'admin', 0),
+(7272, 0, 'config', 'config_ftp_hostname', 'localhost', 0),
+(7271, 0, 'config', 'config_icon', 'catalog/cart.png', 0),
+(7267, 0, 'config', 'config_return_status_id', '2', 0),
+(7268, 0, 'config', 'config_captcha', 'basic_captcha', 0),
+(7269, 0, 'config', 'config_captcha_page', '["guest","review","return","contact"]', 1),
+(7270, 0, 'config', 'config_logo', 'catalog/logo.png', 0),
+(7266, 0, 'config', 'config_return_id', '0', 0),
+(7265, 0, 'config', 'config_affiliate_mail', '1', 0),
+(7264, 0, 'config', 'config_affiliate_id', '4', 0),
+(7263, 0, 'config', 'config_affiliate_commission', '5', 0),
+(7262, 0, 'config', 'config_affiliate_auto', '0', 0),
+(7261, 0, 'config', 'config_affiliate_approval', '0', 0),
+(7260, 0, 'config', 'config_stock_checkout', '0', 0),
+(7259, 0, 'config', 'config_stock_warning', '0', 0),
+(7258, 0, 'config', 'config_stock_display', '0', 0),
+(7257, 0, 'config', 'config_api_id', '3', 0),
+(7256, 0, 'config', 'config_order_mail', '1', 0),
+(7255, 0, 'config', 'config_fraud_status_id', '7', 0),
+(7254, 0, 'config', 'config_complete_status', '["5","3"]', 1),
+(7248, 0, 'config', 'config_invoice_prefix', 'INV-2013-00', 0),
+(7253, 0, 'config', 'config_processing_status', '["5","1","2","12","3"]', 1),
+(7252, 0, 'config', 'config_order_status_id', '1', 0),
+(7251, 0, 'config', 'config_checkout_id', '5', 0),
+(7250, 0, 'config', 'config_checkout_guest', '1', 0),
+(7249, 0, 'config', 'config_cart_weight', '1', 0),
+(7247, 0, 'config', 'config_account_mail', '1', 0),
+(7246, 0, 'config', 'config_account_id', '3', 0),
+(7245, 0, 'config', 'config_login_attempts', '5', 0),
+(7244, 0, 'config', 'config_customer_price', '0', 0),
+(7243, 0, 'config', 'config_customer_group_display', '["1"]', 1),
+(7242, 0, 'config', 'config_customer_group_id', '1', 0),
+(7241, 0, 'config', 'config_customer_online', '0', 0),
+(7240, 0, 'config', 'config_tax_customer', 'shipping', 0),
+(7239, 0, 'config', 'config_tax_default', 'shipping', 0),
+(7238, 0, 'config', 'config_tax', '1', 0),
+(7237, 0, 'config', 'config_voucher_max', '1000', 0),
+(7236, 0, 'config', 'config_voucher_min', '1', 0),
+(7235, 0, 'config', 'config_review_mail', '0', 0),
+(7234, 0, 'config', 'config_review_guest', '0', 0),
+(7233, 0, 'config', 'config_review_status', '0', 0),
+(7232, 0, 'config', 'config_limit_admin', '20', 0),
+(7231, 0, 'config', 'config_product_count', '1', 0),
+(7230, 0, 'config', 'config_weight_class_id', '1', 0),
+(7229, 0, 'config', 'config_length_class_id', '1', 0),
+(7228, 0, 'config', 'config_currency_auto', '1', 0),
+(7227, 0, 'config', 'config_currency', 'PLN', 0),
+(7226, 0, 'config', 'config_admin_language', 'pl-PL', 0),
+(7225, 0, 'config', 'config_language', 'pl-PL', 0),
+(7224, 0, 'config', 'config_zone_id', '2645', 0),
+(7223, 0, 'config', 'config_country_id', '170', 0),
+(7222, 0, 'config', 'config_comment', '', 0),
+(7221, 0, 'config', 'config_open', '', 0),
+(7220, 0, 'config', 'config_image', '', 0),
+(7219, 0, 'config', 'config_fax', '', 0),
+(7218, 0, 'config', 'config_telephone', '(801)2345 - 6789', 0),
+(7216, 0, 'config', 'config_geocode', '', 0),
+(7217, 0, 'config', 'config_email', 'marek.styzinski@gmail.com', 0),
+(7215, 0, 'config', 'config_address', 'Address 1', 0),
+(7214, 0, 'config', 'config_owner', 'Ewa Wiśniewska', 0),
+(7213, 0, 'config', 'config_name', 'Wega Srebro', 0),
+(7212, 0, 'config', 'config_layout_id', '4', 0),
+(7211, 0, 'config', 'config_theme', 'theme_default', 0),
+(7210, 0, 'config', 'config_meta_keyword', 'Wega Srebro', 0),
+(7209, 0, 'config', 'config_meta_description', 'Wega Srebro', 0),
+(7208, 0, 'config', 'config_meta_title', 'Wega Srebro', 0);
 
 -- --------------------------------------------------------
 
@@ -4606,7 +4763,7 @@ CREATE TABLE IF NOT EXISTS `oc_url_alias` (
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`),
   KEY `keyword` (`keyword`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=852 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=890 ;
 
 --
 -- Zrzut danych tabeli `oc_url_alias`
@@ -4614,11 +4771,11 @@ CREATE TABLE IF NOT EXISTS `oc_url_alias` (
 
 INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (824, 'product_id=48', 'ipod-classic'),
-(836, 'category_id=20', 'desktops'),
+(852, 'category_id=76', ''),
 (834, 'category_id=26', 'pc'),
-(835, 'category_id=27', 'mac'),
+(856, 'category_id=80', ''),
 (730, 'manufacturer_id=8', 'apple'),
-(848, 'information_id=4', 'about_us'),
+(888, 'information_id=4', 'about_us'),
 (768, 'product_id=42', 'test'),
 (789, 'category_id=34', 'mp3-players'),
 (781, 'category_id=36', 'test2'),
@@ -4632,8 +4789,8 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (782, 'category_id=30', 'printer'),
 (783, 'category_id=31', 'scanner'),
 (784, 'category_id=32', 'web-camera'),
-(785, 'category_id=57', 'tablet'),
-(786, 'category_id=17', 'software'),
+(855, 'category_id=79', ''),
+(854, 'category_id=78', ''),
 (787, 'category_id=24', 'smartphone'),
 (788, 'category_id=33', 'camera'),
 (790, 'category_id=43', 'test11'),
@@ -4660,7 +4817,7 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (811, 'product_id=28', 'htc-touch-hd'),
 (812, 'product_id=43', 'macbook'),
 (813, 'product_id=44', 'macbook-air'),
-(814, 'product_id=45', 'macbook-pro'),
+(878, 'product_id=45', 'macbook-pro'),
 (816, 'product_id=31', 'nikon-d300'),
 (817, 'product_id=29', 'palm-treo-pro'),
 (818, 'product_id=35', 'product-8'),
@@ -4668,7 +4825,7 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (820, 'product_id=33', 'samsung-syncmaster-941bw'),
 (821, 'product_id=46', 'sony-vaio'),
 (837, 'product_id=41', 'imac'),
-(823, 'product_id=40', 'iphone'),
+(877, 'product_id=40', 'iphone'),
 (825, 'product_id=36', 'ipod-nano'),
 (826, 'product_id=34', 'ipod-shuffle'),
 (827, 'product_id=32', 'ipod-touch'),
@@ -4677,9 +4834,30 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (830, 'manufacturer_id=7', 'hewlett-packard'),
 (831, 'manufacturer_id=6', 'palm'),
 (832, 'manufacturer_id=10', 'sony'),
-(849, 'information_id=6', 'delivery'),
-(850, 'information_id=3', 'privacy'),
-(851, 'information_id=5', 'terms');
+(881, 'information_id=6', 'delivery'),
+(882, 'information_id=3', 'privacy'),
+(883, 'information_id=5', 'terms'),
+(857, 'category_id=81', ''),
+(858, 'category_id=82', ''),
+(859, 'category_id=83', ''),
+(860, 'category_id=84', ''),
+(861, 'category_id=85', ''),
+(862, 'category_id=86', ''),
+(863, 'category_id=87', ''),
+(864, 'category_id=88', ''),
+(865, 'category_id=89', ''),
+(866, 'category_id=90', ''),
+(867, 'category_id=91', ''),
+(868, 'category_id=92', ''),
+(869, 'category_id=93', ''),
+(870, 'category_id=94', ''),
+(871, 'category_id=95', ''),
+(872, 'category_id=96', ''),
+(873, 'category_id=97', ''),
+(874, 'category_id=98', ''),
+(875, 'category_id=99', ''),
+(876, 'category_id=100', ''),
+(889, 'information_id=8', '');
 
 -- --------------------------------------------------------
 
@@ -4709,7 +4887,7 @@ CREATE TABLE IF NOT EXISTS `oc_user` (
 --
 
 INSERT INTO `oc_user` (`user_id`, `user_group_id`, `username`, `password`, `salt`, `firstname`, `lastname`, `email`, `image`, `code`, `ip`, `status`, `date_added`) VALUES
-(1, 1, 'admin', '85d170e2c4faaa58d530e8cb5e8bef4376cb42e2', 'lWrzoThya', 'John', 'Doe', 'jaazzz89@gmail.com', '', '', '213.146.33.192', 1, '2017-04-07 04:28:17'),
+(1, 1, 'admin', '85d170e2c4faaa58d530e8cb5e8bef4376cb42e2', 'lWrzoThya', 'John', 'Doe', 'jaazzz89@gmail.com', '', '', '178.37.161.126', 1, '2017-04-07 04:28:17'),
 (2, 10, 'demo', 'b3aaceb529991c65674b3a17e79b304d1bce10ab', 'u1TZ1euug', 'demo', 'demo', 'demo@gmail.com', '', '', '', 1, '2016-03-30 09:03:56');
 
 -- --------------------------------------------------------

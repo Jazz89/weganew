@@ -12,20 +12,19 @@
 	.rev_slider{
 		position: relative;
 		overflow: hidden;
-		height:300px; 
-		width:940px; 
+		height:300px;
+		width:940px;
 	}
 	.bannercontainer {
 		position: relative;margin: 0px auto;
 		overflow:hidden;
-	
+
 	}
 	.bannercontainer .banner-fullwidth{
 		  width: 100% !important;
 		  max-height: 500px !important;
 	}
 	.bannercontainer .fullwidthbanner{
-	  	max-height: 500px !important;
 	    overflow: hidden!important;
 	    padding: 0;
 	    position: relative;
@@ -39,7 +38,7 @@
 
 .tp-hide-revslider,.tp-caption.tp-hidden-caption	{	visibility:hidden !important; display:none !important;}
 
-.tp-caption { 
+.tp-caption {
 	z-index:1;
 	font-family: 'proxima_regular', sans-serif;
 	color: #fff;
@@ -51,7 +50,7 @@
 	font-weight: 300;
 }
 .tp-caption.text1 span{
-	color: #ef5d5d;
+	color: #8d1632;
 	font-weight: 900;
 }
 .tp-caption.text2{
@@ -94,12 +93,12 @@
 .tp-caption.text-grayer-14{
 	font-size: 14px;
 	color: #343434;
-	line-height: 14px;	
+	line-height: 14px;
 }
 .tp-caption.text-grayer-18{
 	font-size: 18px;
 	color: #343434;
-	line-height: 18px;	
+	line-height: 18px;
 }
 .tp-caption.text-gray-18 {
 	font-size: 18px;
@@ -129,7 +128,7 @@
 	line-height: 90px;
 	font-family: 'proxima_regular', sans-serif;
 	font-weight: bold;
-}	
+}
 .tp-caption.text-blue-60 {
 	font-size: 60px;
 	color: #8493a7;
@@ -622,7 +621,7 @@
 .tp-bullets.simplebullets.navbar-old					{ 	 background:url(../assets/navigdots_bgtile.png); height:35px; padding:0px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px ;}
 
 
-.tp-bullets.simplebullets.round .bullet					{	
+.tp-bullets.simplebullets.round .bullet					{
 	cursor:pointer; position:relative;	background:#fff;	width:10px;	height:10px;  margin-right:10px; float:left;
 	border-radius: 100%;
 	-moz-border-radius: 100%;

@@ -4,7 +4,7 @@
               <button data-toggle="offcanvas" class="btn btn btn-primary" type="button"> <span class="fa fa-times"></span></button>
           </div>
           <div class="offcanvas-body">
-                <div id="offcanvasmenu"></div> 
+                <div id="offcanvasmenu"></div>
           </div>
           <div class="offcanvas-footer panel-footer">
               <div class="input-group" id="offcanvas-search">
@@ -14,7 +14,7 @@
                 </span>
               </div>
           </div>
-       </div> 
+       </div>
  </div>
 
 <script type="text/javascript">

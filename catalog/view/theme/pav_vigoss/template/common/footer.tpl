@@ -1,13 +1,13 @@
 </div>
 
-<?php 
-   global $config; 
+<?php
+   global $config;
 ?>
 
 <?php
   $blockid = 'mass_bottom';
   $blockcls = '';
- 
+
   $ospans = array(1=>12);
   $tmcols = 'col-sm-12 col-xs-12';
   require( ThemeControlHelper::getLayoutPath( 'common/block-cols.tpl' ) );
@@ -55,32 +55,27 @@
           <li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>
         </ul>
       </div>
-    </div>   
+    </div>
   </div>
 </footer>
 <?php } else { ?>
 
 <footer id="footer" class="nostylingboxs">
- 
+
   <?php
     $blockid = 'footer_top';
     $blockcls = '';
     require( ThemeControlHelper::getLayoutPath( 'common/footer/footer_top.tpl' ) );
   ?>
 
-  <?php
+  <!-- <?php
 
     $blockid = 'footer_center';
     $blockcls = '';
     require( ThemeControlHelper::getLayoutPath( 'common/footer/footer_center.tpl' ) );
-  ?>
+  ?> -->
 
-  <?php
-    $blockid = 'footer_bottom';
-    $blockcls = '';
-    $ospans = array();
-    require( ThemeControlHelper::getLayoutPath( 'common/block-footcols.tpl' ) );
-  ?>
+
 
 
 </footer>
@@ -92,10 +87,10 @@
       <?php if( $helper->getConfig('enable_custom_copyright', 0) ) { ?>
           <?php echo html_entity_decode($helper->getConfig('copyright')); ?>
         <?php } else { ?>
-          <?php echo $powered; ?>. 
+          <?php echo $powered; ?>.
         <?php } ?>
     </div>
-   
+
   </div>
 </div>
 <div id="top-scroll" class="bo-social-icons">
@@ -112,7 +107,7 @@
       echo $helper->renderAddon( 'offcanvas-category');
   }
 
-  ?> 
+  ?>
 <!--
 OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
 Please donate via PayPal to donate@opencart.com

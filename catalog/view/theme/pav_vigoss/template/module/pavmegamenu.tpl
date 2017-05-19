@@ -1,4 +1,4 @@
-<nav id="pav-megamenu" class="pav-megamenu hidden-sm hidden-xs">
+<nav id="pav-megamenu" class="pav-megamenu hidden-xs">
 	<div class="navbar">
 		<div id="mainmenutop" class="megamenu" role="navigation">
 			<div class="navbar-header">

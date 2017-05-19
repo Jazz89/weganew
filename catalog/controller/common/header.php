@@ -1,4 +1,4 @@
-<?php 
+<?php
 class ControllerCommonHeader extends Controller {
 	public function index() {
 
@@ -17,10 +17,11 @@ class ControllerCommonHeader extends Controller {
 
 		$themeConfig = (array)$config->get('themecontrol');
 
-		$headerlayout = $helper->getConfig('header_layout','header-v1');
+		//$headerlayout = $helper->getConfig('header_layout','header-v1');
+		$headerlayout = $helper->getConfig('header_layout','header-v2');
 		$data['headerlayout'] = $headerlayout;
 		// Pavo 2.2 end fixheader
-		
+
 		// Analytics
 		$this->load->model('extension/extension');
 
@@ -169,7 +170,7 @@ class ControllerCommonHeader extends Controller {
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('theme_default_directory') . '/template/common/'.$headerlayout.'.tpl')) {
 			$header = $headerlayout;
-		} else { 
+		} else {
 			$header = "header";
 		}
 

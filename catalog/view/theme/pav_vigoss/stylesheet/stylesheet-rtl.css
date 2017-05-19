@@ -2248,7 +2248,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-danger {
   color: #fff;
-  background-color: #ef5d5d;
+  background-color: #8d1632;
   border-color: #ed4646; }
   .btn-danger:focus, .btn-danger.focus {
     color: #fff;
@@ -2268,10 +2268,10 @@ a.btn.disabled, fieldset[disabled] a.btn {
   .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
     background-image: none; }
   .btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled.focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled].focus, .btn-danger[disabled]:active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger.focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active {
-    background-color: #ef5d5d;
+    background-color: #8d1632;
     border-color: #ed4646; }
   .btn-danger .badge {
-    color: #ef5d5d;
+    color: #8d1632;
     background-color: #fff; }
 
 .btn-link {
@@ -3396,7 +3396,7 @@ a.label:hover, a.label:focus {
     background-color: #e6b612; }
 
 .label-danger {
-  background-color: #ef5d5d; }
+  background-color: #8d1632; }
   .label-danger[href]:hover, .label-danger[href]:focus {
     background-color: #ea2f2f; }
 
@@ -3623,7 +3623,7 @@ a.thumbnail.active {
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
 
 .progress-bar-danger {
-  background-color: #ef5d5d; }
+  background-color: #8d1632; }
   .progress-striped .progress-bar-danger {
     background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -6311,7 +6311,7 @@ header, .container {
   border-bottom: 1px solid #f1f1f1;
   color: #bbb; }
   #top .phone {
-    color: #ef5d5d; }
+    color: #8d1632; }
   #top .fa-user, #top .fa-cog, #top .fa-phone {
     padding-right: 3px; }
     .rtl #top .fa-user, .rtl #top .fa-cog, .rtl #top .fa-phone {
@@ -6510,7 +6510,7 @@ header, .container {
     font-weight: 700;
     margin-bottom: -8px; }
   #cart #cart-total {
-    color: #ef5d5d;
+    color: #8d1632;
     font-size: 12px; }
   #cart .dropdown-menu {
     z-index: 1001;
@@ -6941,9 +6941,9 @@ footer .social > li {
     font-size: 9px;
     color: #FFFFFF; }
     .navbar-mega .text-label.text-hot {
-      background: #ef5d5d; }
+      background: #8d1632; }
       .navbar-mega .text-label.text-hot:after {
-        border-top-color: #ef5d5d; }
+        border-top-color: #8d1632; }
     .navbar-mega .text-label.text-new {
       background: #80b2a7; }
       .navbar-mega .text-label.text-new:after {
@@ -7037,7 +7037,7 @@ footer .social > li {
   color: #2f2f2f;
   font-weight: 400; }
   .price .price-new {
-    color: #ef5d5d;
+    color: #8d1632;
     font-size: 16px; }
   .price .price-old {
     color: #cccccc;
@@ -7177,7 +7177,7 @@ footer .social > li {
       left: -2px;
       top: 12px;
       width: 120px;
-      background-color: #ef5d5d;
+      background-color: #8d1632;
       color: #000000;
       -webkit-box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.3);
       box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.3); }
@@ -7224,7 +7224,7 @@ footer .social > li {
     padding: 0 10px;
     position: absolute;
     top: 20px;
-    background-color: #ef5d5d;
+    background-color: #8d1632;
     left: 20px; }
     .rtl .product-label.bts {
       right: 20px;
@@ -7314,7 +7314,7 @@ footer .social > li {
     color: #2f2f2f; }
     .product-block .action button:hover {
       color: #FFFFFF;
-      background-color: #ef5d5d;
+      background-color: #8d1632;
       border: none; }
   .product-block .action .quickview .btn-outline-light, .product-block .action .zoom .btn-outline-light {
     background-color: #FFFFFF;
@@ -7322,7 +7322,7 @@ footer .social > li {
     color: #2f2f2f; }
     .product-block .action .quickview .btn-outline-light:hover, .product-block .action .zoom .btn-outline-light:hover {
       color: #FFFFFF;
-      background-color: #ef5d5d;
+      background-color: #8d1632;
       border: none; }
 .product-block:hover .action > div {
   opacity: 1; }
@@ -7505,7 +7505,7 @@ footer .social > li {
     .btn-outline.btn-info:hover {
       color: #FFFFFF; }
   .btn-outline.btn-danger {
-    color: #ef5d5d; }
+    color: #8d1632; }
     .btn-outline.btn-danger:hover {
       color: #FFFFFF; }
   .btn-outline.btn-warning {
@@ -7523,7 +7523,7 @@ footer .social > li {
   color: #80b2a7;
   background: transparent; }
 .btn-inverse.btn-danger:hover {
-  color: #ef5d5d;
+  color: #8d1632;
   background: transparent; }
 .btn-inverse.btn-warning:hover {
   color: #f0c73b;
@@ -9102,7 +9102,7 @@ ul.menu {
     font-size: 15px;
     font-weight: 400; }
     .latest-posts-v1 .media-body .latest-posts-title a:hover {
-      color: #ef5d5d; }
+      color: #8d1632; }
   .latest-posts-v1 .media-body .latest-posts-profile {
     line-height: 1px;
     margin-top: -5px;
@@ -9132,7 +9132,7 @@ ul.menu {
     color: #747474;
     font-size: 13px; }
     .latest-posts-v1 .media-body .shortinfo a {
-      color: #ef5d5d; }
+      color: #8d1632; }
       .latest-posts-v1 .media-body .shortinfo a:hover {
         color: #2f2f2f; }
 .latest-posts-v1.none-readmore .blog-readmore {
@@ -9367,7 +9367,7 @@ ul.menu {
   background: #FFFFFF;
   color: #2f2f2f; }
   .product-buttons-wrap .btn-inverse-light:hover {
-    background: #ef5d5d;
+    background: #8d1632;
     color: #FFFFFF;
     border: none; }
 
@@ -9860,9 +9860,9 @@ div.required .control-label:before {
     left: 7px;
     position: absolute; }
 .badges.new {
-  background-color: #ef5d5d; }
+  background-color: #8d1632; }
   .badges.new:before {
-    border-color: #ef5d5d transparent transparent #ef5d5d; }
+    border-color: #8d1632 transparent transparent #8d1632; }
 .badges.hot {
   background-color: #80b2a7; }
   .badges.hot:before {
@@ -11258,7 +11258,7 @@ iframe {
   .productdeals .product-block .bottom:hover {
     bottom: 20%; }
   .productdeals .product-block .bottom .cart button {
-    background: #ef5d5d; }
+    background: #8d1632; }
     .productdeals .product-block .bottom .cart button:hover {
       background: #2f2f2f; }
 .productdeals .item-countdown ul {

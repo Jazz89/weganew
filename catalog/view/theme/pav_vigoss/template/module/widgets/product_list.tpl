@@ -13,11 +13,11 @@
 	$categoryPzoom = $listingConfig['category_pzoom'];
 	$quickview     = $listingConfig['quickview'];
 	$swapimg       = $listingConfig['show_swap_image'];
-	$categoryPzoom = isset($themeConfig['category_pzoom']) ? $themeConfig['category_pzoom']:0; 
+	$categoryPzoom = isset($themeConfig['category_pzoom']) ? $themeConfig['category_pzoom']:0;
 
 	$span = 12/$cols;
 
-	$productLayout = DIR_TEMPLATE.$theme.'/template/common/product/'.$listingConfig['product_layout'].'.tpl';	
+	$productLayout = DIR_TEMPLATE.$theme.'/template/common/product/'.$listingConfig['product_layout'].'.tpl';
 	if( !is_file($productLayout) ){
 		$listingConfig['product_layout'] = 'default';
 	}
@@ -31,13 +31,13 @@
 	<?php if( $show_title ) { ?>
 	<div class="widget-heading panel-heading"><h3 class="panel-title"><?php echo $heading_title?></h3></div>
 	<?php } ?>
-	
+
 	<?php if ( isset($imagefile) && $imagefile )  { ?>
 	 <div class="image-item pull-left hidden-xs hidden-sm">
-		<img class="img-responsive" alt=" " src="<?php echo $thumbnailurl; ?>"/>						
+		<img class="img-responsive" alt=" " src="<?php echo $thumbnailurl; ?>"/>
 	 </div>
 	<?php } ?>
-		
+
 	<div class="list box-products owl-carousel-play product-grid <?php echo $addition_cls;?> <?php if ( isset($stylecls)&&$stylecls) { ?>box-<?php echo $stylecls; ?><?php } ?>" id="product_list<?php echo $id;?>" data-ride="owlcarousel">
 			<?php if( count($products) > $itemsperpage ) { ?>
 			<div class="carousel-controls-v1">
@@ -54,7 +54,7 @@
 							<?php if( $i%$cols == 1 || $cols == 1) { ?>
 							<div class="row products-row <?php ;if($i == count($tproducts) - $cols +1) { echo "last";} ?>"><?php //start box-product?>
 							<?php } ?>
-								<div class="col-lg-<?php echo $span;?> col-md-<?php echo $span;?> col-sm-6 col-xs-12 <?php if($i%$cols == 0) { echo "last";} ?> product-col">
+								<div class="col-lg-<?php echo $span;?> col-md-<?php echo $span;?> col-sm-6 col-xs-6 <?php if($i%$cols == 0) { echo "last";} ?> product-col">
 									<?php require( $productLayout );  ?>
 								</div>
 
@@ -64,7 +64,7 @@
 						<?php } //endforeach; ?>
 					</div>
 			  <?php } ?>
-			</div>	
-	</div>	
+			</div>
+	</div>
 	<div class="clearfix"></div>
 </div>

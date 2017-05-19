@@ -16,8 +16,9 @@ $helper->addScript('catalog/view/javascript/jquery/magnific/jquery.magnific-popu
 $helper->addScript( 'catalog/view/javascript/bootstrap/js/bootstrap.min.js' );
 $helper->addScript( 'catalog/view/javascript/common.js' );
 $helper->addScript( 'catalog/view/theme/'.$themeName.'/javascript/common.js' );
-$helper->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');     
-$helper->addScript('catalog/view/javascript/pavdeals/countdown.js');       
+$helper->addScript( 'catalog/view/theme/'.$themeName.'/javascript/smoothscroll.js' );
+$helper->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');
+$helper->addScript('catalog/view/javascript/pavdeals/countdown.js');
 
 
 if( isset($themeConfig['catalog_mode']) && $themeConfig['catalog_mode'] ){
@@ -27,6 +28,7 @@ $logoType = $helper->getConfig('logo_type','logo-theme');
 $headerlayout = $themeConfig['header'];
 $template_layout = $helper->getConfig('template_layout');
 $skin = $helper->getConfig('skin');
+$account = $helper->getConfig('account');
 if( $helper->getConfig('enable_paneltool') ){
 
 if( $helper->getParam('headerlayout') ){
@@ -86,7 +88,7 @@ $logoType = $helper->getConfig('logo_type','logo-theme'); ?>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300,900' rel='stylesheet' type='text/css'>
 
     <!-- FONT -->
-    <?php 
+    <?php
       if( isset($themeConfig['enable_customfont']) && $themeConfig['enable_customfont'] ){
       $css=array();
       $link = array();
@@ -103,7 +105,7 @@ $logoType = $helper->getConfig('logo_type','logo-theme'); ?>
       #header-main {font-family: <?php echo $themeConfig['normal_fonts2']; ?>; font-size: <?php echo $themeConfig['fontsize2']; ?>}
       #module-container {font-family: <?php echo $themeConfig['normal_fonts3']; ?>; font-size: <?php echo $themeConfig['fontsize3']; ?>}
 
-      <?php 
+      <?php
         if( trim($themeConfig['body_selector4']) && trim($themeConfig['normal_fonts4']) ){
           $css[]= trim($themeConfig['body_selector4'])." {font-family:".str_replace("'",'"',htmlspecialchars_decode(trim($themeConfig['normal_fonts4'])))."}\r\n" ;
         }

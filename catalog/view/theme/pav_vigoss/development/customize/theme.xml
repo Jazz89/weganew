@@ -54,7 +54,7 @@
 		</module>
 	</social>
 	<!-- config social -->
-	
+
 	<footer>
 		<title>Footer Bottom Block</title>
 		<description></description>
@@ -68,17 +68,19 @@
 	 	 		<default><![CDATA[
 	 	 			<div class="panel box-infor">
 					  <div class="panel-heading">
-					    <h4 class="panel-title">About us</h4>
+					    <h4 class="panel-title">O Nas</h4>
 					  </div>
 					  <div class="panel-body">
-					    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit autor aliquet. Aenean sollicitudin, lorem quis bibendum aucto nisi elit consequat ipsum.
-					    </p>
+					    <p>Firma Wega od 1998r zajmuję się hurtową sprzedażą biżuterii srebrnej 925 na terenie całego kraju.
+								W 2012 roku został otwarty sklep jubilerski, dzięki czemu wyszliśmy z ofertą naszych produktów do klienta indywidualnego. Jako jedyni w Lesznie posiadamy usługi naprawcze, najnowszą mikrospawarką PUK.             W 2016r poszerzyliśmy usługi o Laser Fibrowy, który umożliwia nam znakowanie tworzyw takich jak srebro, złoto oraz skóra, drewno, plastik, stal, miedź itd.
+								Naszą pasją jest biżuteria. Jesteśmy otwarci na wszystkie pomysły i propozycje. Sumiennie realizujemy wszystkie projekty zlecone przez naszych klientów.
+							</p>
 					    <hr>
-					    <ul class="list-inline social">  
-					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-facebook"></i></a></li>  
-					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-twitter"></i></a></li>    
-					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-google-plus"></i></a></li>  
-					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-tumblr"></i></a></li>  
+					    <ul class="list-inline social">
+					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-facebook"></i></a></li>
+					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-twitter"></i></a></li>
+					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-google-plus"></i></a></li>
+					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-tumblr"></i></a></li>
 					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-wifi"></i></a></li>
 					    <li><a href="#"><i class="icons icons-outline icons-sm fa fa-skype"></i></a></li>
 					    </ul>
@@ -88,7 +90,7 @@
 	 	 		]]></default>
 	 		</field>
 	 	</module>
-	 
+
 		<module>
 	 	 	<title>Logo Footer</title>
 	 	 	<field>
@@ -99,10 +101,9 @@
 	 	 		<default><![CDATA[
 	 	 			<div class="logo-footer"><a href="#"><img alt="" src="image/catalog/logo-footer.png" class="img-responsive"> </a>
 <p>This is Photoshop's version of Lorem Ipsum.<br>gravida nibh vel velit autor aliquet. Aenean sollici<br>tudin, lorem quis bibendum aucto.</p>
-<a href="#" class="btn"><span> PURCHASE NOW </span></a></div>	
+<a href="#" class="btn"><span> PURCHASE NOW </span></a></div>
 	 	 			]]></default>
 	 		</field>
-	 	</module>	
-	</footer>	
+	 	</module>
+	</footer>
 </theme>
-
